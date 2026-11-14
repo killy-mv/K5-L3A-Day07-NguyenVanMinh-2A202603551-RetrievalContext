@@ -61,3 +61,12 @@ Một cấu hình có thể đồng thời là phương pháp mới và cải th
 - `artifacts/cp3_smoke/D7-D16.json`: câu ngoài corpus, 2 lần tìm, 3 lần gọi model, trạng thái `abstain`, không có citation giả.
 - Các trace đầy đủ gồm query, tool calls, passages, context và mô hình; không chứa gold. Các thử nghiệm lỗi trước khi sửa parser/schema giữ trong thư mục local `starter/results/cp3/` (không đưa vào điểm thành công).
 - Chưa kết luận tỷ lệ chất lượng retrieval/grounding trên toàn bộ dev/test; không tính unit test mock là số đo agent thực tế.
+
+### CP4 — Triển khai ba phương pháp retrieval (chưa benchmark)
+
+- `dense`: embedding MiniLM-L6-v2 384 chiều từ Lab 6, vector store PostgreSQL/pgvector (cosine, read-only).
+- `lexical`: BM25 trên 160 chunks B, `k1=1.5`, `b=0.75`, tokenizer Unicode NFC/casefold. Trả ranking, normalized score, raw BM25 score.
+- `hybrid`: RRF (`rrf_k=60`, candidate=12 mỗi nguồn), giữ ranks/components, không cộng trực tiếp raw score không cùng thang đo.
+- Smoke retrieval thực tế `artifacts/cp4_smoke.json`: 2 câu hỏi không thuộc benchmark x 3 phương pháp, đủ top-3 với source, page, score và chapter filter chính xác.
+- Smoke tích hợp Gemini thật trên dev D7-D06: lexical `answered`, 1 search/2 model calls, 2,77 giây, citation trang 36; hybrid `answered`, 1 search/2 model calls, 15,77 giây, citation trang 31/36. Trace nộp tại `artifacts/cp4_agent_smoke/`.
+- Kết quả trên mới là kiểm tra triển khai, **không phải bảng điểm Hit@1/Hit@3 hoặc grounded answer trên toàn bộ dev/test**. Sẽ đo và phân tích ở CP5.

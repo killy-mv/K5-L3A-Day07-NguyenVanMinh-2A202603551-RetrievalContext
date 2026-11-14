@@ -45,3 +45,7 @@ Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/i
 [CP3 agent thực tế](docs/CP3_AGENT.md) đã triển khai Gemini function calling `search_documents` nối pgvector Lab 6 và kiểm chứng hai case dev thật: một câu có citation, một câu từ chối khi thiếu bằng chứng. Mã chạy ở `src/agent.py`, `src/gemini_client.py`, `scripts/cp3_run.py`; test ở `tests/test_cp3_agent.py`. Không dùng test/gold CP2 trong vòng chạy agent. Các trace thực tế ở `starter/results/cp3/` (Git-ignored), xem tài liệu CP3 để tái lập.
 
 CP3 có hai trace thực tế dùng để nộp tại `artifacts/cp3_smoke/` (`D7-D06.json` và `D7-D16.json`). Có thể tạo lại bằng `py scripts/cp3_export_smoke.py` sau khi chạy live smoke. Mọi thay đổi vẫn chưa commit.
+
+## Bài làm cá nhân — CP4
+
+Đã hoàn thiện [CP4: ba retrieval methods](docs/CP4_RETRIEVAL.md): Dense pgvector, Lexical BM25, Hybrid RRF; hỗ trợ chọn bằng `scripts/cp3_run.py --strategy dense|lexical|hybrid`. Các smoke thực tế dùng dữ liệu gốc và không chạm tập test: `artifacts/cp4_smoke.json` (6 truy vấn retrieval với top-3), `artifacts/cp4_agent_smoke/` (2 trace Gemini dev có citation). Chưa thực hiện benchmark CP5.

@@ -1,0 +1,172 @@
+{
+  "status": "answered",
+  "question": "How does Chapter 2 define a variable?",
+  "filters": null,
+  "answer": "Chapter 2 defines a variable as a name that refers to a value [paragraph-6f986a6b4992bad3a7a7].",
+  "citations": [
+    "paragraph-6f986a6b4992bad3a7a7"
+  ],
+  "citation_details": [
+    {
+      "id": "paragraph-6f986a6b4992bad3a7a7",
+      "source_id": "thinkpython2_pdf",
+      "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+      "page": 36,
+      "metadata": {
+        "page_id": "thinkpython2_pdf_p036",
+        "pdf_page": 36,
+        "printed_page": 14,
+        "chapter": "chapter_2",
+        "char_count": 1922,
+        "normalized_char_count": 2003,
+        "text_sha256": "c91a4447015ebe8d9b76791513ee0045f69cf13e1c6e8a4ca9ce89834ceba765",
+        "chunk_method": "paragraph",
+        "chunk_index": 0,
+        "chunk_char_count": 550,
+        "max_size": 650
+      }
+    }
+  ],
+  "events": [
+    {
+      "event": "model",
+      "call": 1,
+      "finish_reason": "STOP",
+      "requested_tools": [
+        "search_documents"
+      ],
+      "usage": {
+        "input_tokens": 303,
+        "output_tokens": 26,
+        "total_tokens": 329
+      }
+    },
+    {
+      "event": "search",
+      "tool": "search_documents",
+      "query": "Chapter 2 define a variable variable is a assignment statement",
+      "filters": null,
+      "top_k": 3,
+      "results": [
+        {
+          "id": "paragraph-6f986a6b4992bad3a7a7",
+          "source_id": "thinkpython2_pdf",
+          "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+          "page": 36,
+          "text": "14 Chapter 2. Variables, expressions and statements\n2.9 Glossary\n\nvariable:A name that refers to a value.\n\nassignment:A statement that assigns a value to a variable.\n\nstate diagram:A graphical representation of a set of variables and the values they refer to.\n\nkeyword:A reserved word that is used to parse a program; you cannot use keywords like\n       if,def, andwhileas variable names.\n\noperand:One of the values on which an operator operates.\n\nexpression:A combination of variables, operators, and values that represents a single re-\n       sult.",
+          "metadata": {
+            "page_id": "thinkpython2_pdf_p036",
+            "pdf_page": 36,
+            "printed_page": 14,
+            "chapter": "chapter_2",
+            "char_count": 1922,
+            "normalized_char_count": 2003,
+            "text_sha256": "c91a4447015ebe8d9b76791513ee0045f69cf13e1c6e8a4ca9ce89834ceba765",
+            "chunk_method": "paragraph",
+            "chunk_index": 0,
+            "chunk_char_count": 550,
+            "max_size": 650
+          },
+          "score": 0.9233868601949669,
+          "raw_score": 12.052591272787184,
+          "score_type": "bm25_normalized",
+          "strategy": "lexical"
+        },
+        {
+          "id": "paragraph-b775da5494ec6d054b18",
+          "source_id": "thinkpython2_pdf",
+          "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+          "page": 33,
+          "text": "2.4. Script mode 11\n\nThe first line is an assignment statement that gives a value ton. The second line is a print\nstatement that displays the value ofn.\nWhen you type a statement, the interpreterexecutesit, which means that it does whatever\nthe statement says. In general, statements don’t have values.",
+          "metadata": {
+            "page_id": "thinkpython2_pdf_p033",
+            "pdf_page": 33,
+            "printed_page": 11,
+            "chapter": "chapter_2",
+            "char_count": 2382,
+            "normalized_char_count": 2387,
+            "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+            "chunk_method": "paragraph",
+            "chunk_index": 0,
+            "chunk_char_count": 302,
+            "max_size": 650
+          },
+          "score": 0.9127117139215295,
+          "raw_score": 10.45629092889989,
+          "score_type": "bm25_normalized",
+          "strategy": "lexical"
+        },
+        {
+          "id": "paragraph-5e154eeea8249595efb2",
+          "source_id": "thinkpython2_pdf",
+          "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+          "page": 41,
+          "text": "So far, we have looked at the elements of a program—variables, expressions, and\nstatements—in isolation, without talking about how to combine them.\nOne of the most useful features of programming languages is their ability to take small\nbuilding blocks andcomposethem. For example, the argument of a function can be any\nkind of expression, including arithmetic operators:\nx = math.sin(degrees / 360.0 * 2 * math.pi)\nAnd even function calls:\nx = math.exp(math.log(x+1))\nAlmost anywhere you can put a value, you can put an arbitrary expression, with one ex-\nception: the left side of an assignment statement has to be a variable name.",
+          "metadata": {
+            "page_id": "thinkpython2_pdf_p041",
+            "pdf_page": 41,
+            "printed_page": 19,
+            "chapter": "chapter_3",
+            "char_count": 2578,
+            "normalized_char_count": 2594,
+            "text_sha256": "dff2389606ead057a501caadeca15cb1ab10f33afb97567443c8894a8a3a0b87",
+            "chunk_method": "paragraph",
+            "chunk_index": 1,
+            "chunk_char_count": 631,
+            "max_size": 650
+          },
+          "score": 0.8863552758635695,
+          "raw_score": 7.799352610504824,
+          "score_type": "bm25_normalized",
+          "strategy": "lexical"
+        }
+      ],
+      "context": "[paragraph-6f986a6b4992bad3a7a7] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=36 chapter=chapter_2\n<retrieved_document>\n14 Chapter 2. Variables, expressions and statements\n2.9 Glossary\n\nvariable:A name that refers to a value.\n\nassignment:A statement that assigns a value to a variable.\n\nstate diagram:A graphical representation of a set of variables and the values they refer to.\n\nkeyword:A reserved word that is used to parse a program; you cannot use keywords like\n       if,def, andwhileas variable names.\n\noperand:One of the values on which an operator operates.\n\nexpression:A combination of variables, operators, and values that represents a single re-\n       sult.\n</retrieved_document>\n\n[paragraph-b775da5494ec6d054b18] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\n2.4. Script mode 11\n\nThe first line is an assignment statement that gives a value ton. The second line is a print\nstatement that displays the value ofn.\nWhen you type a statement, the interpreterexecutesit, which means that it does whatever\nthe statement says. In general, statements don’t have values.\n</retrieved_document>\n\n[paragraph-5e154eeea8249595efb2] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=41 chapter=chapter_3\n<retrieved_document>\nSo far, we have looked at the elements of a program—variables, expressions, and\nstatements—in isolation, without talking about how to combine them.\nOne of the most useful features of programming languages is their ability to take small\nbuilding blocks andcomposethem. For example, the argument of a function can be any\nkind of expression, including arithmetic operators:\nx = math.sin(degrees / 360.0 * 2 * math.pi)\nAnd even function calls:\nx = math.exp(math.log(x+1))\nAlmost anywhere you can put a value, you can put an arbitrary expression, with one ex-\nception: the left side of an assignment statement has to be a variable name.\n</retrieved_document>",
+      "context_ids": [
+        "paragraph-6f986a6b4992bad3a7a7",
+        "paragraph-b775da5494ec6d054b18",
+        "paragraph-5e154eeea8249595efb2"
+      ],
+      "elapsed_ms": 0.98
+    },
+    {
+      "event": "model",
+      "call": 2,
+      "finish_reason": "STOP",
+      "requested_tools": [],
+      "usage": {
+        "input_tokens": 990,
+        "output_tokens": 36,
+        "total_tokens": 1026
+      }
+    },
+    {
+      "event": "draft_answer",
+      "text": "Chapter 2 defines a variable as a name that refers to a value [paragraph-6f986a6b4992bad3a7a7]."
+    }
+  ],
+  "context": "[paragraph-6f986a6b4992bad3a7a7] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=36 chapter=chapter_2\n<retrieved_document>\n14 Chapter 2. Variables, expressions and statements\n2.9 Glossary\n\nvariable:A name that refers to a value.\n\nassignment:A statement that assigns a value to a variable.\n\nstate diagram:A graphical representation of a set of variables and the values they refer to.\n\nkeyword:A reserved word that is used to parse a program; you cannot use keywords like\n       if,def, andwhileas variable names.\n\noperand:One of the values on which an operator operates.\n\nexpression:A combination of variables, operators, and values that represents a single re-\n       sult.\n</retrieved_document>\n\n[paragraph-b775da5494ec6d054b18] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\n2.4. Script mode 11\n\nThe first line is an assignment statement that gives a value ton. The second line is a print\nstatement that displays the value ofn.\nWhen you type a statement, the interpreterexecutesit, which means that it does whatever\nthe statement says. In general, statements don’t have values.\n</retrieved_document>\n\n[paragraph-5e154eeea8249595efb2] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=41 chapter=chapter_3\n<retrieved_document>\nSo far, we have looked at the elements of a program—variables, expressions, and\nstatements—in isolation, without talking about how to combine them.\nOne of the most useful features of programming languages is their ability to take small\nbuilding blocks andcomposethem. For example, the argument of a function can be any\nkind of expression, including arithmetic operators:\nx = math.sin(degrees / 360.0 * 2 * math.pi)\nAnd even function calls:\nx = math.exp(math.log(x+1))\nAlmost anywhere you can put a value, you can put an arbitrary expression, with one ex-\nception: the left side of an assignment statement has to be a variable name.\n</retrieved_document>",
+  "context_ids": [
+    "paragraph-6f986a6b4992bad3a7a7",
+    "paragraph-b775da5494ec6d054b18",
+    "paragraph-5e154eeea8249595efb2"
+  ],
+  "model": "gemini-3.5-flash-lite",
+  "config": {
+    "top_k": 3,
+    "max_searches": 3,
+    "context_budget_chars": 3800
+  },
+  "model_calls": 2,
+  "search_calls": 1,
+  "token_usage": {
+    "input_tokens": 1293,
+    "output_tokens": 62,
+    "total_tokens": 1355
+  },
+  "api_cost_usd": null,
+  "elapsed_ms": 2773.01,
+  "retrieval_strategy": "lexical",
+  "query_id": "D7-D06",
+  "split": "dev"
+}

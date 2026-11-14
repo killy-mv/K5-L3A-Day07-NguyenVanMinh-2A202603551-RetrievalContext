@@ -1,0 +1,328 @@
+{
+  "stage": "CP4",
+  "created_utc": "2026-11-14T08:34:01.312377+00:00",
+  "purpose": "non-benchmark smoke only; no dev/test answers, no gold",
+  "corpus": "Think Python chapters 1-4, 160 strategy-B chunks from Day 6",
+  "methods": [
+    "dense",
+    "lexical",
+    "hybrid"
+  ],
+  "dense": {
+    "model": "all-MiniLM-L6-v2",
+    "dimensions": 384,
+    "store": "pgvector cosine"
+  },
+  "lexical": {
+    "model": "BM25",
+    "k1": 1.5,
+    "b": 0.75,
+    "tokenizer": "NFC unicode word tokens, casefold"
+  },
+  "hybrid": {
+    "fusion": "RRF",
+    "rrf_k": 60,
+    "candidate_k_per_retriever": 12
+  },
+  "benchmark_test_evaluated": false,
+  "cases": [
+    {
+      "id": "SMOKE-01",
+      "question": "In Python, what happens when you evaluate a numerical expression?",
+      "filters": null,
+      "retrievals": {
+        "dense": {
+          "elapsed_ms": 29421.53,
+          "top3": [
+            {
+              "id": "paragraph-ce2dc9e967e781300bab",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 33,
+              "chapter": "chapter_2",
+              "score": 0.618367,
+              "score_type": "cosine_similarity",
+              "raw_score": null,
+              "ranks": null,
+              "component_scores": null
+            },
+            {
+              "id": "paragraph-d967ebe299ed0d1f6b9f",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 25,
+              "chapter": "chapter_1",
+              "score": 0.570621,
+              "score_type": "cosine_similarity",
+              "raw_score": null,
+              "ranks": null,
+              "component_scores": null
+            },
+            {
+              "id": "paragraph-f3a869194d5511d28659",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 36,
+              "chapter": "chapter_2",
+              "score": 0.569414,
+              "score_type": "cosine_similarity",
+              "raw_score": null,
+              "ranks": null,
+              "component_scores": null
+            }
+          ]
+        },
+        "lexical": {
+          "elapsed_ms": 1.18,
+          "top3": [
+            {
+              "id": "paragraph-918a5499e5daba9fd150",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 37,
+              "chapter": "chapter_2",
+              "score": 0.922338,
+              "score_type": "bm25_normalized",
+              "raw_score": 11.876392,
+              "ranks": null,
+              "component_scores": null
+            },
+            {
+              "id": "paragraph-752f04cbc262867a5272",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 30,
+              "chapter": "chapter_1",
+              "score": 0.917143,
+              "score_type": "bm25_normalized",
+              "raw_score": 11.068971,
+              "ranks": null,
+              "component_scores": null
+            },
+            {
+              "id": "paragraph-db6272acb122be55283b",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 29,
+              "chapter": "chapter_1",
+              "score": 0.915639,
+              "score_type": "bm25_normalized",
+              "raw_score": 10.853778,
+              "ranks": null,
+              "component_scores": null
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 48.57,
+          "top3": [
+            {
+              "id": "paragraph-f3a869194d5511d28659",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 36,
+              "chapter": "chapter_2",
+              "score": 0.960689,
+              "score_type": "rrf_normalized",
+              "raw_score": null,
+              "ranks": {
+                "dense": 3,
+                "lexical": 4
+              },
+              "component_scores": {
+                "dense": 0.5694144285423285,
+                "lexical": 0.9099802949428207
+              }
+            },
+            {
+              "id": "paragraph-09593acb3b4cc5786177",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 33,
+              "chapter": "chapter_2",
+              "score": 0.945793,
+              "score_type": "rrf_normalized",
+              "raw_score": null,
+              "ranks": {
+                "dense": 4,
+                "lexical": 5
+              },
+              "component_scores": {
+                "dense": 0.5453025969682586,
+                "lexical": 0.9057275836227023
+              }
+            },
+            {
+              "id": "paragraph-ce2dc9e967e781300bab",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 33,
+              "chapter": "chapter_2",
+              "score": 0.935714,
+              "score_type": "rrf_normalized",
+              "raw_score": null,
+              "ranks": {
+                "dense": 1,
+                "lexical": 10
+              },
+              "component_scores": {
+                "dense": 0.6183665990829468,
+                "lexical": 0.8842201747718333
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SMOKE-02",
+      "question": "How can a turtle move and turn repeatedly to draw a geometric shape?",
+      "filters": {
+        "chapter": "chapter_4"
+      },
+      "retrievals": {
+        "dense": {
+          "elapsed_ms": 55.18,
+          "top3": [
+            {
+              "id": "paragraph-6b3863c3810c03f5e917",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 52,
+              "chapter": "chapter_4",
+              "score": 0.642412,
+              "score_type": "cosine_similarity",
+              "raw_score": null,
+              "ranks": null,
+              "component_scores": null
+            },
+            {
+              "id": "paragraph-a5bfd1146397961df166",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 53,
+              "chapter": "chapter_4",
+              "score": 0.621444,
+              "score_type": "cosine_similarity",
+              "raw_score": null,
+              "ranks": null,
+              "component_scores": null
+            },
+            {
+              "id": "paragraph-9e3e00f15ee4f3ca782b",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 53,
+              "chapter": "chapter_4",
+              "score": 0.513466,
+              "score_type": "cosine_similarity",
+              "raw_score": null,
+              "ranks": null,
+              "component_scores": null
+            }
+          ]
+        },
+        "lexical": {
+          "elapsed_ms": 0.64,
+          "top3": [
+            {
+              "id": "paragraph-6b3863c3810c03f5e917",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 52,
+              "chapter": "chapter_4",
+              "score": 0.939592,
+              "score_type": "bm25_normalized",
+              "raw_score": 15.554067,
+              "ranks": null,
+              "component_scores": null
+            },
+            {
+              "id": "paragraph-6574bbbbe588b8f2ae51",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 52,
+              "chapter": "chapter_4",
+              "score": 0.915342,
+              "score_type": "bm25_normalized",
+              "raw_score": 10.812166,
+              "ranks": null,
+              "component_scores": null
+            },
+            {
+              "id": "paragraph-fb2c35c5ca9e46812a7f",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 59,
+              "chapter": "chapter_4",
+              "score": 0.904394,
+              "score_type": "bm25_normalized",
+              "raw_score": 9.459599,
+              "ranks": null,
+              "component_scores": null
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 47.25,
+          "top3": [
+            {
+              "id": "paragraph-6b3863c3810c03f5e917",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 52,
+              "chapter": "chapter_4",
+              "score": 1.0,
+              "score_type": "rrf_normalized",
+              "raw_score": null,
+              "ranks": {
+                "dense": 1,
+                "lexical": 1
+              },
+              "component_scores": {
+                "dense": 0.6424115108725004,
+                "lexical": 0.9395918846779486
+              }
+            },
+            {
+              "id": "paragraph-a5bfd1146397961df166",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 53,
+              "chapter": "chapter_4",
+              "score": 0.968498,
+              "score_type": "rrf_normalized",
+              "raw_score": null,
+              "ranks": {
+                "dense": 2,
+                "lexical": 4
+              },
+              "component_scores": {
+                "dense": 0.6214439128108129,
+                "lexical": 0.896757742939952
+              }
+            },
+            {
+              "id": "paragraph-fb2c35c5ca9e46812a7f",
+              "source_id": "thinkpython2_pdf",
+              "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+              "page": 59,
+              "chapter": "chapter_4",
+              "score": 0.953358,
+              "score_type": "rrf_normalized",
+              "raw_score": null,
+              "ranks": {
+                "dense": 5,
+                "lexical": 3
+              },
+              "component_scores": {
+                "dense": 0.4983422459159952,
+                "lexical": 0.9043940431462008
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
