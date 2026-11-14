@@ -39,3 +39,9 @@ Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/i
 ## Bài làm cá nhân — CP2
 
 Đã tạo và khóa [benchmark CP2](docs/CP2_BENCHMARK.md): 17 câu dev (15 có evidence, 2 thiếu evidence) và 7 câu test mới (5 có evidence, 2 thiếu evidence), tổng 24 câu. Các gold câu có evidence đều đối chiếu được với chunk nguồn/trang. Chưa chạy test benchmark. Kiểm chứng: `py scripts/cp2_validate.py`.
+
+## Bài làm cá nhân — CP3
+
+[CP3 agent thực tế](docs/CP3_AGENT.md) đã triển khai Gemini function calling `search_documents` nối pgvector Lab 6 và kiểm chứng hai case dev thật: một câu có citation, một câu từ chối khi thiếu bằng chứng. Mã chạy ở `src/agent.py`, `src/gemini_client.py`, `scripts/cp3_run.py`; test ở `tests/test_cp3_agent.py`. Không dùng test/gold CP2 trong vòng chạy agent. Các trace thực tế ở `starter/results/cp3/` (Git-ignored), xem tài liệu CP3 để tái lập.
+
+CP3 có hai trace thực tế dùng để nộp tại `artifacts/cp3_smoke/` (`D7-D06.json` và `D7-D16.json`). Có thể tạo lại bằng `py scripts/cp3_export_smoke.py` sau khi chạy live smoke. Mọi thay đổi vẫn chưa commit.
