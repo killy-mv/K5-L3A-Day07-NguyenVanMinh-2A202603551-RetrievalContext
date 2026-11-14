@@ -1,0 +1,84 @@
+{
+  "price_source": "https://ai.google.dev/gemini-api/docs/pricing",
+  "price_date": "2026-11-14",
+  "paid_tier_rates_usd_per_1m": {
+    "gemini-3.5-flash-lite": {
+      "input_per_million_usd": 0.3,
+      "output_per_million_usd": 2.5
+    },
+    "gemini-3.8-flash": {
+      "input_per_million_usd": 0.75,
+      "output_per_million_usd": 3.75
+    }
+  },
+  "rows": [
+    {
+      "split": "cp5",
+      "strategy": "dense",
+      "model": "gemini-3.5-flash-lite",
+      "reported_usage": {
+        "input_tokens": 33048,
+        "output_tokens": 1644,
+        "total_tokens": 34692,
+        "valid_cases": 17,
+        "provider_error_cases": 0
+      },
+      "paid_tier_estimated_usd": 0.0140244
+    },
+    {
+      "split": "cp5",
+      "strategy": "lexical",
+      "model": "gemini-3.5-flash-lite",
+      "reported_usage": {
+        "input_tokens": 33555,
+        "output_tokens": 1625,
+        "total_tokens": 35180,
+        "valid_cases": 17,
+        "provider_error_cases": 0
+      },
+      "paid_tier_estimated_usd": 0.014129
+    },
+    {
+      "split": "cp5",
+      "strategy": "hybrid",
+      "model": "gemini-3.5-flash-lite",
+      "reported_usage": {
+        "input_tokens": 26583,
+        "output_tokens": 1517,
+        "total_tokens": 28100,
+        "valid_cases": 17,
+        "provider_error_cases": 0
+      },
+      "paid_tier_estimated_usd": 0.0117674
+    },
+    {
+      "split": "cp7",
+      "strategy": "dense",
+      "model": "gemini-3.5-flash-lite",
+      "reported_usage": {
+        "input_tokens": 14713,
+        "output_tokens": 815,
+        "total_tokens": 15528,
+        "valid_cases": 7,
+        "provider_error_cases": 0
+      },
+      "paid_tier_estimated_usd": 0.0064514
+    },
+    {
+      "split": "cp7",
+      "strategy": "hybrid",
+      "model": "gemini-3.5-flash-lite",
+      "reported_usage": {
+        "input_tokens": 14802,
+        "output_tokens": 903,
+        "total_tokens": 15705,
+        "valid_cases": 7,
+        "provider_error_cases": 0
+      },
+      "paid_tier_estimated_usd": 0.0066981
+    }
+  ],
+  "estimated_total_recorded_paid_tier_usd": 0.0530703,
+  "billing_confirmed": false,
+  "limits": "Estimated only for tokens with provider-reported usage. Excludes unsuccessful/abandoned requests with no usage metadata, cache charges, embeddings CPU cost, free-tier adjustments, and external apps. Do not present as invoice or zero actual cost."
+}

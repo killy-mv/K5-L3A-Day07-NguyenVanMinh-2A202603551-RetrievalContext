@@ -1,0 +1,33 @@
+{
+  "strategy": "dense",
+  "split": "dev",
+  "query_type": "original_user_question",
+  "processed": 7,
+  "answerable": 5,
+  "unanswerable": 2,
+  "hit1": {
+    "n": 3,
+    "N": 5,
+    "rate": 0.6
+  },
+  "evidence_hit3": {
+    "n": 5,
+    "N": 5,
+    "rate": 1.0
+  },
+  "context_evidence_rate": {
+    "n": 5,
+    "N": 5,
+    "rate": 1.0
+  },
+  "top_k": 3,
+  "context_budget_chars": 3800,
+  "mean_retrieval_ms": 1163.797,
+  "median_retrieval_ms": 26.214,
+  "mean_context_chars": 1897.3,
+  "retrieval_service_cost_usd": 0,
+  "note": "Machine exact gold substring/source/page matching only; independent semantic grading pending.",
+  "test_sha256": "598a74450f9fd24cfa68642c58837fce12e4b09ced6c33b1bbe1904bbd02c964",
+  "frozen_at_utc": "2026-11-14T09:34:42.644921+00:00",
+  "first_test_evaluation": true
+}

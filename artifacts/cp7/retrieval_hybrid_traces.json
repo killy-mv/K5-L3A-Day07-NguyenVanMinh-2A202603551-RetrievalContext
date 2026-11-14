@@ -1,0 +1,882 @@
+[
+  {
+    "query_id": "D7-T01",
+    "split": "dev",
+    "answerable": true,
+    "question": "When a function is called, how does the flow of execution return to where it left off?",
+    "filters": null,
+    "strategy": "hybrid",
+    "query_type": "original_user_question",
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "elapsed_ms": 24.231,
+    "results": [
+      {
+        "id": "paragraph-ceef3493bd5a59d82e5a",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 43,
+        "text": "A function call is like a detour in the flow of execution. Instead of going to the next state-\nment, the flow jumps to the body of the function, runs the statements there, and then comes\nback to pick up where it left off.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p043",
+          "max_size": 650,
+          "pdf_page": 43,
+          "char_count": 2486,
+          "chunk_index": 2,
+          "text_sha256": "56cff93e8e5da7baa3859c1cd35cbd1b86836ac171e71aa9502f4b3a98831ab8",
+          "chunk_method": "paragraph",
+          "printed_page": 21,
+          "chunk_char_count": 221,
+          "normalized_char_count": 2506
+        },
+        "score": 1.0,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03278688524590164,
+        "ranks": {
+          "dense": 1,
+          "lexical": 1
+        },
+        "component_scores": {
+          "dense": 0.7532279785599788,
+          "lexical": 0.9622536475863341
+        }
+      },
+      {
+        "id": "paragraph-4a5fa426f2eeaf309230",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 43,
+        "text": "3.6 Flow of execution\n\nTo ensure that a function is defined before its first use, you have to know the order state-\nments run in, which is called theflow of execution.\nExecution always begins at the first statement of the program. Statements are run one at a\ntime, in order from top to bottom.\n\nFunction definitions do not alter the flow of execution of the program, but remember that\nstatements inside the function don’t run until the function is called.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p043",
+          "max_size": 650,
+          "pdf_page": 43,
+          "char_count": 2486,
+          "chunk_index": 1,
+          "text_sha256": "56cff93e8e5da7baa3859c1cd35cbd1b86836ac171e71aa9502f4b3a98831ab8",
+          "chunk_method": "paragraph",
+          "printed_page": 21,
+          "chunk_char_count": 455,
+          "normalized_char_count": 2506
+        },
+        "score": 0.9760624679979518,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03200204813108039,
+        "ranks": {
+          "dense": 2,
+          "lexical": 3
+        },
+        "component_scores": {
+          "dense": 0.6278138604386064,
+          "lexical": 0.9410880160253929
+        }
+      },
+      {
+        "id": "paragraph-5fc460d0d0390a98221c",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 43,
+        "text": "That sounds simple enough, until you remember that one function can call another. While\nin the middle of one function, the program might have to run the statements in another\nfunction. Then, while running that new function, the program might have to run yet an-\nother function!\nFortunately, Python is good at keeping track of where it is, so each time a function com-\npletes, the program picks up where it left off in the function that called it. When it gets to\nthe end of the program, it terminates.\nIn summary, when you read a program, you don’t always want to read from top to bottom.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p043",
+          "max_size": 650,
+          "pdf_page": 43,
+          "char_count": 2486,
+          "chunk_index": 3,
+          "text_sha256": "56cff93e8e5da7baa3859c1cd35cbd1b86836ac171e71aa9502f4b3a98831ab8",
+          "chunk_method": "paragraph",
+          "printed_page": 21,
+          "chunk_char_count": 588,
+          "normalized_char_count": 2506
+        },
+        "score": 0.9760624679979518,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03200204813108039,
+        "ranks": {
+          "dense": 3,
+          "lexical": 2
+        },
+        "component_scores": {
+          "dense": 0.5747299194335938,
+          "lexical": 0.9483335925654015
+        }
+      }
+    ],
+    "context": "[paragraph-ceef3493bd5a59d82e5a] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=43 chapter=chapter_3\n<retrieved_document>\nA function call is like a detour in the flow of execution. Instead of going to the next state-\nment, the flow jumps to the body of the function, runs the statements there, and then comes\nback to pick up where it left off.\n</retrieved_document>\n\n[paragraph-4a5fa426f2eeaf309230] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=43 chapter=chapter_3\n<retrieved_document>\n3.6 Flow of execution\n\nTo ensure that a function is defined before its first use, you have to know the order state-\nments run in, which is called theflow of execution.\nExecution always begins at the first statement of the program. Statements are run one at a\ntime, in order from top to bottom.\n\nFunction definitions do not alter the flow of execution of the program, but remember that\nstatements inside the function don’t run until the function is called.\n</retrieved_document>\n\n[paragraph-5fc460d0d0390a98221c] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=43 chapter=chapter_3\n<retrieved_document>\nThat sounds simple enough, until you remember that one function can call another. While\nin the middle of one function, the program might have to run the statements in another\nfunction. Then, while running that new function, the program might have to run yet an-\nother function!\nFortunately, Python is good at keeping track of where it is, so each time a function com-\npletes, the program picks up where it left off in the function that called it. When it gets to\nthe end of the program, it terminates.\nIn summary, when you read a program, you don’t always want to read from top to bottom.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-ceef3493bd5a59d82e5a",
+      "paragraph-4a5fa426f2eeaf309230",
+      "paragraph-5fc460d0d0390a98221c"
+    ],
+    "context_chars": 1763,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "gold_comparison": [
+      true,
+      false,
+      false
+    ],
+    "cost_usd": 0,
+    "llm_called": false,
+    "evaluation": "held_out_test_after_CP6_freeze"
+  },
+  {
+    "query_id": "D7-T02",
+    "split": "dev",
+    "answerable": true,
+    "question": "What happens to a local variable created inside a function after that function finishes?",
+    "filters": null,
+    "strategy": "hybrid",
+    "query_type": "original_user_question",
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "elapsed_ms": 41.519,
+    "results": [
+      {
+        "id": "paragraph-c39cc245f179dc1d7d0e",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 48,
+        "text": "26 Chapter 3. Functions\n\nbody:The sequence of statements inside a function definition.\n\nparameter:A name used inside a function to refer to the value passed as an argument.\n\nfunction call:A statement that runs a function. It consists of the function name followed\n       by an argument list in parentheses.\n\nargument:A value provided to a function when the function is called. This value is as-\n       signed to the corresponding parameter in the function.\n\nlocal variable:A variable defined inside a function. A local variable can only be used\n       inside its function.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p048",
+          "max_size": 650,
+          "pdf_page": 48,
+          "char_count": 2164,
+          "chunk_index": 0,
+          "text_sha256": "88571117bcf82abfb9eb6da532dad3a569e285fe5bf2127c2857a2d5f7c35f94",
+          "chunk_method": "paragraph",
+          "printed_page": 26,
+          "chunk_char_count": 572,
+          "normalized_char_count": 2256
+        },
+        "score": 0.9919354838709679,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03252247488101534,
+        "ranks": {
+          "dense": 2,
+          "lexical": 1
+        },
+        "component_scores": {
+          "dense": 0.5060772005365619,
+          "lexical": 0.9416703055136347
+        }
+      },
+      {
+        "id": "paragraph-f8a4a8ab7a5624922901",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 44,
+        "text": "3.8 Variables and parameters are local\n\nWhen you create a variable inside a function, it islocal, which means that it only exists\ninside the function. For example:\ndef cat_twice(part1, part2):\n     cat = part1 + part2\n     print_twice(cat)\nThis function takes two arguments, concatenates them, and prints the result twice. Here is\nan example that uses it:\n>>> line1 ='Bing tiddle'\n>>> line2 ='tiddle bang.'\n>>> cat_twice(line1, line2)\nBing tiddle tiddle bang.\nBing tiddle tiddle bang.\nWhencat_twiceterminates, the variablecatis destroyed. If we try to print it, we get an\nexception:",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p044",
+          "max_size": 650,
+          "pdf_page": 44,
+          "char_count": 1521,
+          "chunk_index": 2,
+          "text_sha256": "b010c08c5c327348238807346f399cad7a523b8cecc313278ce3dba887353521",
+          "chunk_method": "paragraph",
+          "printed_page": 22,
+          "chunk_char_count": 582,
+          "normalized_char_count": 1536
+        },
+        "score": 0.9760624679979518,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03200204813108039,
+        "ranks": {
+          "dense": 3,
+          "lexical": 2
+        },
+        "component_scores": {
+          "dense": 0.4914902145558733,
+          "lexical": 0.9220318667160974
+        }
+      },
+      {
+        "id": "paragraph-57786695d0bba8fcfd71",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 47,
+        "text": "3.13 Glossary\n\nfunction:A named sequence of statements that performs some useful operation. Func-\n      tions may or may not take arguments and may or may not produce a result.\n\nfunction definition:A statement that creates a new function, specifying its name, param-\n      eters, and the statements it contains.\n\nfunction object:A value created by a function definition. The name of the function is a\n      variable that refers to a function object.\n\nheader:The first line of a function definition.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p047",
+          "max_size": 650,
+          "pdf_page": 47,
+          "char_count": 2526,
+          "chunk_index": 4,
+          "text_sha256": "d97ac744292298fc38b4eab19d53b37fe6996f346a07bcb94aa2b8b8eeb9eb67",
+          "chunk_method": "paragraph",
+          "printed_page": 25,
+          "chunk_char_count": 498,
+          "normalized_char_count": 2595
+        },
+        "score": 0.9061399647887325,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.029709507042253523,
+        "ranks": {
+          "dense": 11,
+          "lexical": 4
+        },
+        "component_scores": {
+          "dense": 0.35973238108947236,
+          "lexical": 0.9058879972197644
+        }
+      }
+    ],
+    "context": "[paragraph-c39cc245f179dc1d7d0e] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=48 chapter=chapter_3\n<retrieved_document>\n26 Chapter 3. Functions\n\nbody:The sequence of statements inside a function definition.\n\nparameter:A name used inside a function to refer to the value passed as an argument.\n\nfunction call:A statement that runs a function. It consists of the function name followed\n       by an argument list in parentheses.\n\nargument:A value provided to a function when the function is called. This value is as-\n       signed to the corresponding parameter in the function.\n\nlocal variable:A variable defined inside a function. A local variable can only be used\n       inside its function.\n</retrieved_document>\n\n[paragraph-f8a4a8ab7a5624922901] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=44 chapter=chapter_3\n<retrieved_document>\n3.8 Variables and parameters are local\n\nWhen you create a variable inside a function, it islocal, which means that it only exists\ninside the function. For example:\ndef cat_twice(part1, part2):\n     cat = part1 + part2\n     print_twice(cat)\nThis function takes two arguments, concatenates them, and prints the result twice. Here is\nan example that uses it:\n>>> line1 ='Bing tiddle'\n>>> line2 ='tiddle bang.'\n>>> cat_twice(line1, line2)\nBing tiddle tiddle bang.\nBing tiddle tiddle bang.\nWhencat_twiceterminates, the variablecatis destroyed. If we try to print it, we get an\nexception:\n</retrieved_document>\n\n[paragraph-57786695d0bba8fcfd71] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=47 chapter=chapter_3\n<retrieved_document>\n3.13 Glossary\n\nfunction:A named sequence of statements that performs some useful operation. Func-\n      tions may or may not take arguments and may or may not produce a result.\n\nfunction definition:A statement that creates a new function, specifying its name, param-\n      eters, and the statements it contains.\n\nfunction object:A value created by a function definition. The name of the function is a\n      variable that refers to a function object.\n\nheader:The first line of a function definition.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-c39cc245f179dc1d7d0e",
+      "paragraph-f8a4a8ab7a5624922901",
+      "paragraph-57786695d0bba8fcfd71"
+    ],
+    "context_chars": 2151,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "gold_comparison": [
+      false,
+      true,
+      false
+    ],
+    "cost_usd": 0,
+    "llm_called": false,
+    "evaluation": "held_out_test_after_CP6_freeze"
+  },
+  {
+    "query_id": "D7-T03",
+    "split": "dev",
+    "answerable": true,
+    "question": "In a stack diagram, what does each frame represent?",
+    "filters": null,
+    "strategy": "hybrid",
+    "query_type": "original_user_question",
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "elapsed_ms": 24.834,
+    "results": [
+      {
+        "id": "paragraph-6cef8fdd9c8548f66e18",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 45,
+        "text": "3.9 Stack diagrams\n\nTo keep track of which variables can be used where, it is sometimes useful to draw astack\ndiagram. Like state diagrams, stack diagrams show the value of each variable, but they\nalso show the function each variable belongs to.\n\nEach function is represented by aframe. A frame is a box with the name of a function\nbeside it and the parameters and variables of the function inside it. The stack diagram for\nthe previous example is shown in Figure 3.1.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p045",
+          "max_size": 650,
+          "pdf_page": 45,
+          "char_count": 1817,
+          "chunk_index": 1,
+          "text_sha256": "68201dac1ce6667213a31cf1dc8bd6ba5901661517c8ef70cd22c18577f533cd",
+          "chunk_method": "paragraph",
+          "printed_page": 23,
+          "chunk_char_count": 468,
+          "normalized_char_count": 1682
+        },
+        "score": 1.0,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03278688524590164,
+        "ranks": {
+          "dense": 1,
+          "lexical": 1
+        },
+        "component_scores": {
+          "dense": 0.7366566061973572,
+          "lexical": 0.9466894880348665
+        }
+      },
+      {
+        "id": "paragraph-7ecf1ff1975b8fff9732",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 45,
+        "text": "The frames are arranged in a stack that indicates which function called which, and so\non. In this example,print_twicewas called bycat_twice, andcat_twicewas called\nby__main__, which is a special name for the topmost frame. When you create a variable\noutside of any function, it belongs to__main__.\n\nEach parameter refers to the same value as its corresponding argument. So,part1has the\nsame value asline1,part2has the same value asline2, andbrucehas the same value as\ncat.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p045",
+          "max_size": 650,
+          "pdf_page": 45,
+          "char_count": 1817,
+          "chunk_index": 2,
+          "text_sha256": "68201dac1ce6667213a31cf1dc8bd6ba5901661517c8ef70cd22c18577f533cd",
+          "chunk_method": "paragraph",
+          "printed_page": 23,
+          "chunk_char_count": 472,
+          "normalized_char_count": 1682
+        },
+        "score": 0.9760624679979518,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03200204813108039,
+        "ranks": {
+          "dense": 2,
+          "lexical": 3
+        },
+        "component_scores": {
+          "dense": 0.5450711846351624,
+          "lexical": 0.9139748262324302
+        }
+      },
+      {
+        "id": "paragraph-8e6b1b34e2e24509b772",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 48,
+        "text": "dot notation:The syntax for calling a function in another module by specifying the mod-\n       ule name followed by a dot (period) and the function name.\n\ncomposition:Using an expression as part of a larger expression, or a statement as part of\n       a larger statement.\n\nflow of execution:The order statements run in.\n\nstack diagram:A graphical representation of a stack of functions, their variables, and the\n       values they refer to.\n\nframe:A box in a stack diagram that represents a function call. It contains the local vari-\n       ables and parameters of the function.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p048",
+          "max_size": 650,
+          "pdf_page": 48,
+          "char_count": 2164,
+          "chunk_index": 2,
+          "text_sha256": "88571117bcf82abfb9eb6da532dad3a569e285fe5bf2127c2857a2d5f7c35f94",
+          "chunk_method": "paragraph",
+          "printed_page": 26,
+          "chunk_char_count": 578,
+          "normalized_char_count": 2256
+        },
+        "score": 0.9760624679979518,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03200204813108039,
+        "ranks": {
+          "dense": 3,
+          "lexical": 2
+        },
+        "component_scores": {
+          "dense": 0.5140518529353354,
+          "lexical": 0.9316802799980766
+        }
+      }
+    ],
+    "context": "[paragraph-6cef8fdd9c8548f66e18] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=45 chapter=chapter_3\n<retrieved_document>\n3.9 Stack diagrams\n\nTo keep track of which variables can be used where, it is sometimes useful to draw astack\ndiagram. Like state diagrams, stack diagrams show the value of each variable, but they\nalso show the function each variable belongs to.\n\nEach function is represented by aframe. A frame is a box with the name of a function\nbeside it and the parameters and variables of the function inside it. The stack diagram for\nthe previous example is shown in Figure 3.1.\n</retrieved_document>\n\n[paragraph-7ecf1ff1975b8fff9732] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=45 chapter=chapter_3\n<retrieved_document>\nThe frames are arranged in a stack that indicates which function called which, and so\non. In this example,print_twicewas called bycat_twice, andcat_twicewas called\nby__main__, which is a special name for the topmost frame. When you create a variable\noutside of any function, it belongs to__main__.\n\nEach parameter refers to the same value as its corresponding argument. So,part1has the\nsame value asline1,part2has the same value asline2, andbrucehas the same value as\ncat.\n</retrieved_document>\n\n[paragraph-8e6b1b34e2e24509b772] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=48 chapter=chapter_3\n<retrieved_document>\ndot notation:The syntax for calling a function in another module by specifying the mod-\n       ule name followed by a dot (period) and the function name.\n\ncomposition:Using an expression as part of a larger expression, or a statement as part of\n       a larger statement.\n\nflow of execution:The order statements run in.\n\nstack diagram:A graphical representation of a stack of functions, their variables, and the\n       values they refer to.\n\nframe:A box in a stack diagram that represents a function call. It contains the local vari-\n       ables and parameters of the function.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-6cef8fdd9c8548f66e18",
+      "paragraph-7ecf1ff1975b8fff9732",
+      "paragraph-8e6b1b34e2e24509b772"
+    ],
+    "context_chars": 2017,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "gold_comparison": [
+      true,
+      false,
+      false
+    ],
+    "cost_usd": 0,
+    "llm_called": false,
+    "evaluation": "held_out_test_after_CP6_freeze"
+  },
+  {
+    "query_id": "D7-T04",
+    "split": "dev",
+    "answerable": true,
+    "question": "When designing circle(t, r), why should the radius be part of the interface but not necessarily the segment count n?",
+    "filters": null,
+    "strategy": "hybrid",
+    "query_type": "original_user_question",
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "elapsed_ms": 26.574,
+    "results": [
+      {
+        "id": "paragraph-d57272a3b1a4452f79a0",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 56,
+        "text": "34 Chapter 4. Case study: interface design\n\ndef circle(t, r):\n     circumference = 2 * math.pi * r\n     n = int(circumference / 3) + 3\n     length = circumference / n\n     polygon(t, n, length)\nNow the number of segments is an integer nearcircumference/3, so the length of each\nsegment is approximately 3, which is small enough that the circles look good, but big\nenough to be efficient, and acceptable for any size circle.\n\nAdding 3 tonguarantees that the polygon has at least 3 sides.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p056",
+          "max_size": 650,
+          "pdf_page": 56,
+          "char_count": 1689,
+          "chunk_index": 0,
+          "text_sha256": "79ab231e014c3dff8af91cc64063b399655d7f2a996a4c97394d5f5329c98738",
+          "chunk_method": "paragraph",
+          "printed_page": 34,
+          "chunk_char_count": 486,
+          "normalized_char_count": 1813
+        },
+        "score": 1.0,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03278688524590164,
+        "ranks": {
+          "dense": 1,
+          "lexical": 1
+        },
+        "component_scores": {
+          "dense": 0.7461583765650777,
+          "lexical": 0.9592047247787916
+        }
+      },
+      {
+        "id": "paragraph-9a2b8afdd3cda9b01b94",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 55,
+        "text": "4.6 Interface design\n\nThe next step is to writecircle, which takes a radius,r, as a parameter. Here is a simple\nsolution that usespolygonto draw a 50-sided polygon:\nimport math\n\ndef circle(t, r):\n      circumference = 2 * math.pi * r\n      n = 50\n      length = circumference / n\n      polygon(t, n, length)\nThe first line computes the circumference of a circle with radiusrusing the formula 2πr.\nSince we usemath.pi, we have to importmath. By convention,importstatements are\nusually at the beginning of the script.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p055",
+          "max_size": 650,
+          "pdf_page": 55,
+          "char_count": 2464,
+          "chunk_index": 3,
+          "text_sha256": "d4914e6b6a2fead8bad50714587a1e7090c03ca79bd04d6bb51a92aea718231b",
+          "chunk_method": "paragraph",
+          "printed_page": 33,
+          "chunk_char_count": 515,
+          "normalized_char_count": 2496
+        },
+        "score": 0.961166253101737,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.0315136476426799,
+        "ranks": {
+          "dense": 5,
+          "lexical": 2
+        },
+        "component_scores": {
+          "dense": 0.5091589981818805,
+          "lexical": 0.9544862697771627
+        }
+      },
+      {
+        "id": "paragraph-7138c016653f20355e8e",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 55,
+        "text": "In this example,rbelongs in the interface because it specifies the circle to be drawn.nis\nless appropriate because it pertains to the details ofhowthe circle should be rendered.\nRather than clutter up the interface, it is better to choose an appropriate value ofndepend-\ning oncircumference:",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p055",
+          "max_size": 650,
+          "pdf_page": 55,
+          "char_count": 2464,
+          "chunk_index": 6,
+          "text_sha256": "d4914e6b6a2fead8bad50714587a1e7090c03ca79bd04d6bb51a92aea718231b",
+          "chunk_method": "paragraph",
+          "printed_page": 33,
+          "chunk_char_count": 291,
+          "normalized_char_count": 2496
+        },
+        "score": 0.9471593644679827,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.031054405392392875,
+        "ranks": {
+          "dense": 2,
+          "lexical": 7
+        },
+        "component_scores": {
+          "dense": 0.6163914203643799,
+          "lexical": 0.9291309042348667
+        }
+      }
+    ],
+    "context": "[paragraph-d57272a3b1a4452f79a0] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=56 chapter=chapter_4\n<retrieved_document>\n34 Chapter 4. Case study: interface design\n\ndef circle(t, r):\n     circumference = 2 * math.pi * r\n     n = int(circumference / 3) + 3\n     length = circumference / n\n     polygon(t, n, length)\nNow the number of segments is an integer nearcircumference/3, so the length of each\nsegment is approximately 3, which is small enough that the circles look good, but big\nenough to be efficient, and acceptable for any size circle.\n\nAdding 3 tonguarantees that the polygon has at least 3 sides.\n</retrieved_document>\n\n[paragraph-9a2b8afdd3cda9b01b94] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=55 chapter=chapter_4\n<retrieved_document>\n4.6 Interface design\n\nThe next step is to writecircle, which takes a radius,r, as a parameter. Here is a simple\nsolution that usespolygonto draw a 50-sided polygon:\nimport math\n\ndef circle(t, r):\n      circumference = 2 * math.pi * r\n      n = 50\n      length = circumference / n\n      polygon(t, n, length)\nThe first line computes the circumference of a circle with radiusrusing the formula 2πr.\nSince we usemath.pi, we have to importmath. By convention,importstatements are\nusually at the beginning of the script.\n</retrieved_document>\n\n[paragraph-7138c016653f20355e8e] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=55 chapter=chapter_4\n<retrieved_document>\nIn this example,rbelongs in the interface because it specifies the circle to be drawn.nis\nless appropriate because it pertains to the details ofhowthe circle should be rendered.\nRather than clutter up the interface, it is better to choose an appropriate value ofndepend-\ning oncircumference:\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-d57272a3b1a4452f79a0",
+      "paragraph-9a2b8afdd3cda9b01b94",
+      "paragraph-7138c016653f20355e8e"
+    ],
+    "context_chars": 1791,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "gold_comparison": [
+      false,
+      false,
+      true
+    ],
+    "cost_usd": 0,
+    "llm_called": false,
+    "evaluation": "held_out_test_after_CP6_freeze"
+  },
+  {
+    "query_id": "D7-T05",
+    "split": "dev",
+    "answerable": true,
+    "question": "What are the initial three steps of the encapsulation-and-generalization development plan?",
+    "filters": null,
+    "strategy": "hybrid",
+    "query_type": "original_user_question",
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "elapsed_ms": 24.766,
+    "results": [
+      {
+        "id": "paragraph-10fd1b2737eaf51126cb",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 57,
+        "text": "4.8 A development plan\n\nAdevelopment planis a process for writing programs. The process we used in this case\nstudy is “encapsulation and generalization”. The steps of this process are:\n\n1. Start by writing a small program with no function definitions.\n\n2. Once you get the program working, identify a coherent piece of it, encapsulate the\n       piece in a function and give it a name.\n\n3. Generalize the function by adding appropriate parameters.\n\n4. Repeat steps 1–3 until you have a set of working functions. Copy and paste working\n       code to avoid retyping (and re-debugging).",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p057",
+          "max_size": 650,
+          "pdf_page": 57,
+          "char_count": 2023,
+          "chunk_index": 1,
+          "text_sha256": "4ca853b536c228ffd83956b5964593def8c2dc99a5373c0ed91835435409cfb2",
+          "chunk_method": "paragraph",
+          "printed_page": 35,
+          "chunk_char_count": 584,
+          "normalized_char_count": 2119
+        },
+        "score": 1.0,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03278688524590164,
+        "ranks": {
+          "dense": 1,
+          "lexical": 1
+        },
+        "component_scores": {
+          "dense": 0.6007116078906304,
+          "lexical": 0.9546542126002252
+        }
+      },
+      {
+        "id": "paragraph-45b75a508a6e2d1e3d93",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 58,
+        "text": "refactoring:The process of modifying a working program to improve function interfaces\n       and other qualities of the code.\n\ndevelopment plan:A process for writing programs.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p058",
+          "max_size": 650,
+          "pdf_page": 58,
+          "char_count": 2460,
+          "chunk_index": 5,
+          "text_sha256": "1939121b52f564101ebf18ff23fc4f979690409752469c284f8a9a13c8bca631",
+          "chunk_method": "paragraph",
+          "printed_page": 36,
+          "chunk_char_count": 175,
+          "normalized_char_count": 2512
+        },
+        "score": 0.9760624679979518,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03200204813108039,
+        "ranks": {
+          "dense": 3,
+          "lexical": 2
+        },
+        "component_scores": {
+          "dense": 0.31015968322753906,
+          "lexical": 0.9223578300669415
+        }
+      },
+      {
+        "id": "paragraph-fa463abcb9e00b5eae87",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 58,
+        "text": "4.11 Glossary\n\nmethod:A function that is associated with an object and called using dot notation.\n\nloop:A part of a program that can run repeatedly.\n\nencapsulation:The process of transforming a sequence of statements into a function defi-\n       nition.\n\ngeneralization:The process of replacing something unnecessarily specific (like a number)\n       with something appropriately general (like a variable or parameter).\n\nkeyword argument:An argument that includes the name of the parameter as a “key-\n       word”.\n\ninterface:A description of how to use a function, including the name and descriptions of\n       the arguments and return value.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p058",
+          "max_size": 650,
+          "pdf_page": 58,
+          "char_count": 2460,
+          "chunk_index": 4,
+          "text_sha256": "1939121b52f564101ebf18ff23fc4f979690409752469c284f8a9a13c8bca631",
+          "chunk_method": "paragraph",
+          "printed_page": 36,
+          "chunk_char_count": 643,
+          "normalized_char_count": 2512
+        },
+        "score": 0.9760624679979518,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03200204813108039,
+        "ranks": {
+          "dense": 2,
+          "lexical": 3
+        },
+        "component_scores": {
+          "dense": 0.3500377833843231,
+          "lexical": 0.8883980813460318
+        }
+      }
+    ],
+    "context": "[paragraph-10fd1b2737eaf51126cb] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=57 chapter=chapter_4\n<retrieved_document>\n4.8 A development plan\n\nAdevelopment planis a process for writing programs. The process we used in this case\nstudy is “encapsulation and generalization”. The steps of this process are:\n\n1. Start by writing a small program with no function definitions.\n\n2. Once you get the program working, identify a coherent piece of it, encapsulate the\n       piece in a function and give it a name.\n\n3. Generalize the function by adding appropriate parameters.\n\n4. Repeat steps 1–3 until you have a set of working functions. Copy and paste working\n       code to avoid retyping (and re-debugging).\n</retrieved_document>\n\n[paragraph-45b75a508a6e2d1e3d93] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=58 chapter=chapter_4\n<retrieved_document>\nrefactoring:The process of modifying a working program to improve function interfaces\n       and other qualities of the code.\n\ndevelopment plan:A process for writing programs.\n</retrieved_document>\n\n[paragraph-fa463abcb9e00b5eae87] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=58 chapter=chapter_4\n<retrieved_document>\n4.11 Glossary\n\nmethod:A function that is associated with an object and called using dot notation.\n\nloop:A part of a program that can run repeatedly.\n\nencapsulation:The process of transforming a sequence of statements into a function defi-\n       nition.\n\ngeneralization:The process of replacing something unnecessarily specific (like a number)\n       with something appropriately general (like a variable or parameter).\n\nkeyword argument:An argument that includes the name of the parameter as a “key-\n       word”.\n\ninterface:A description of how to use a function, including the name and descriptions of\n       the arguments and return value.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-10fd1b2737eaf51126cb",
+      "paragraph-45b75a508a6e2d1e3d93",
+      "paragraph-fa463abcb9e00b5eae87"
+    ],
+    "context_chars": 1901,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "gold_comparison": [
+      true,
+      false,
+      false
+    ],
+    "cost_usd": 0,
+    "llm_called": false,
+    "evaluation": "held_out_test_after_CP6_freeze"
+  },
+  {
+    "query_id": "D7-T06",
+    "split": "dev",
+    "answerable": false,
+    "question": "According to the indexed chapters, what is the syntax for declaring an asynchronous coroutine with async def?",
+    "filters": null,
+    "strategy": "hybrid",
+    "query_type": "original_user_question",
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "elapsed_ms": 28.59,
+    "results": [
+      {
+        "id": "paragraph-6574bbbbe588b8f2ae51",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 52,
+        "text": "30 Chapter 4. Case study: interface design\n\nThis means thatbobrefers to an object with typeTurtleas defined in moduleturtle.\n\nmainlooptells the window to wait for the user to do something, although in this case\nthere’s not much for the user to do except close the window.\n\nOnce you create a Turtle, you can call amethodto move it around the window. A method\nis similar to a function, but it uses slightly different syntax. For example, to move the turtle\nforward:\nbob.fd(100)\nThe method,fd, is associated with the turtle object we’re callingbob. Calling a method is\nlike making a request: you are askingbobto move forward.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p052",
+          "max_size": 650,
+          "pdf_page": 52,
+          "char_count": 1676,
+          "chunk_index": 0,
+          "text_sha256": "efeb91bdd34082f7a4e74c94043effb7353dcab0d046938734c44284e4234dbb",
+          "chunk_method": "paragraph",
+          "printed_page": 30,
+          "chunk_char_count": 622,
+          "normalized_char_count": 1695
+        },
+        "score": 0.961166253101737,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.0315136476426799,
+        "ranks": {
+          "dense": 2,
+          "lexical": 5
+        },
+        "component_scores": {
+          "dense": 0.3323133587837219,
+          "lexical": 0.8694423275109151
+        }
+      },
+      {
+        "id": "paragraph-4f0ffbfa7c995972f657",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 32,
+        "text": "The underscore character,_, can appear in a name. It is often used in names with multiple\nwords, such asyour_nameorairspeed_of_unladen_swallow.\nIf you give a variable an illegal name, you get a syntax error:\n>>> 76trombones ='big parade'\nSyntaxError: invalid syntax\n>>> more@ = 1000000\nSyntaxError: invalid syntax\n>>> class ='Advanced Theoretical Zymurgy'\nSyntaxError: invalid syntax\n76trombonesis illegal because it begins with a number.more@is illegal because it contains\nan illegal character,@. But what’s wrong withclass?",
+        "metadata": {
+          "page_id": "thinkpython2_pdf_p032",
+          "pdf_page": 32,
+          "printed_page": 10,
+          "chapter": "chapter_2",
+          "char_count": 1903,
+          "normalized_char_count": 1908,
+          "text_sha256": "2971846c3876d2852d2413a1b7889e021ce0085126e507519ededf135f2014b3",
+          "chunk_method": "paragraph",
+          "chunk_index": 1,
+          "chunk_char_count": 525,
+          "max_size": 650
+        },
+        "score": 0.5,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.01639344262295082,
+        "ranks": {
+          "lexical": 1
+        },
+        "component_scores": {
+          "lexical": 0.9042428500145802
+        }
+      },
+      {
+        "id": "paragraph-9ca22e54f33bf000282f",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 59,
+        "text": "4.12. Exercises 37\n\nFigure 4.1: Turtle flowers.\n\nFigure 4.2: Turtle pies.\n\ndocstring:A string that appears at the top of a function definition to document the func-\n       tion’s interface.\nprecondition:A requirement that should be satisfied by the caller before a function starts.\n\npostcondition:A requirement that should be satisfied by the function before it ends.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p059",
+          "max_size": 650,
+          "pdf_page": 59,
+          "char_count": 1908,
+          "chunk_index": 0,
+          "text_sha256": "a8cbb8c57255e8146ecab4541fea42b16a5a76878f454d2f28c87bb9165780c9",
+          "chunk_method": "paragraph",
+          "printed_page": 37,
+          "chunk_char_count": 367,
+          "normalized_char_count": 1974
+        },
+        "score": 0.5,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.01639344262295082,
+        "ranks": {
+          "dense": 1
+        },
+        "component_scores": {
+          "dense": 0.3579680621623993
+        }
+      }
+    ],
+    "context": "[paragraph-6574bbbbe588b8f2ae51] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=52 chapter=chapter_4\n<retrieved_document>\n30 Chapter 4. Case study: interface design\n\nThis means thatbobrefers to an object with typeTurtleas defined in moduleturtle.\n\nmainlooptells the window to wait for the user to do something, although in this case\nthere’s not much for the user to do except close the window.\n\nOnce you create a Turtle, you can call amethodto move it around the window. A method\nis similar to a function, but it uses slightly different syntax. For example, to move the turtle\nforward:\nbob.fd(100)\nThe method,fd, is associated with the turtle object we’re callingbob. Calling a method is\nlike making a request: you are askingbobto move forward.\n</retrieved_document>\n\n[paragraph-4f0ffbfa7c995972f657] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=32 chapter=chapter_2\n<retrieved_document>\nThe underscore character,_, can appear in a name. It is often used in names with multiple\nwords, such asyour_nameorairspeed_of_unladen_swallow.\nIf you give a variable an illegal name, you get a syntax error:\n>>> 76trombones ='big parade'\nSyntaxError: invalid syntax\n>>> more@ = 1000000\nSyntaxError: invalid syntax\n>>> class ='Advanced Theoretical Zymurgy'\nSyntaxError: invalid syntax\n76trombonesis illegal because it begins with a number.more@is illegal because it contains\nan illegal character,@. But what’s wrong withclass?\n</retrieved_document>\n\n[paragraph-9ca22e54f33bf000282f] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=59 chapter=chapter_4\n<retrieved_document>\n4.12. Exercises 37\n\nFigure 4.1: Turtle flowers.\n\nFigure 4.2: Turtle pies.\n\ndocstring:A string that appears at the top of a function definition to document the func-\n       tion’s interface.\nprecondition:A requirement that should be satisfied by the caller before a function starts.\n\npostcondition:A requirement that should be satisfied by the function before it ends.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-6574bbbbe588b8f2ae51",
+      "paragraph-4f0ffbfa7c995972f657",
+      "paragraph-9ca22e54f33bf000282f"
+    ],
+    "context_chars": 2013,
+    "hit1": null,
+    "hit3": null,
+    "context_hit": null,
+    "gold_comparison": null,
+    "cost_usd": 0,
+    "llm_called": false,
+    "evaluation": "held_out_test_after_CP6_freeze"
+  },
+  {
+    "query_id": "D7-T07",
+    "split": "dev",
+    "answerable": false,
+    "question": "How does the yield from statement delegate iteration to a subgenerator according to the indexed book chapters?",
+    "filters": null,
+    "strategy": "hybrid",
+    "query_type": "original_user_question",
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "elapsed_ms": 47.66,
+    "results": [
+      {
+        "id": "paragraph-f3a869194d5511d28659",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 36,
+        "text": "evaluate:To simplify an expression by performing the operations in order to yield a single\n       value.\n\nstatement:A section of code that represents a command or action. So far, the statements\n       we have seen are assignments and print statements.\n\nexecute:To run a statement and do what it says.\n\ninteractive mode:A way of using the Python interpreter by typing code at the prompt.\n\nscript mode:A way of using the Python interpreter to read code from a script and run it.\n\nscript:A program stored in a file.\n\norder of operations:Rules governing the order in which expressions involving multiple\n       operators and operands are evaluated.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p036",
+          "max_size": 650,
+          "pdf_page": 36,
+          "char_count": 1922,
+          "chunk_index": 1,
+          "text_sha256": "c91a4447015ebe8d9b76791513ee0045f69cf13e1c6e8a4ca9ce89834ceba765",
+          "chunk_method": "paragraph",
+          "printed_page": 14,
+          "chunk_char_count": 644,
+          "normalized_char_count": 2003
+        },
+        "score": 0.9236111111111112,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.03028233151183971,
+        "ranks": {
+          "dense": 12,
+          "lexical": 1
+        },
+        "component_scores": {
+          "dense": 0.20606965612119665,
+          "lexical": 0.8991937778603208
+        }
+      },
+      {
+        "id": "paragraph-6b1531d3a997abb55ac6",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 52,
+        "text": "4.2 Simple repetition\n\nChances are you wrote something like this:\nbob.fd(100)\nbob.lt(90)\n\nbob.fd(100)\nbob.lt(90)\n\nbob.fd(100)\nbob.lt(90)\n\nbob.fd(100)\nWe can do the same thing more concisely with aforstatement. Add this example to\nmypolygon.pyand run it again:\nfor i in range(4):\n      print('Hello!')\nYou should see something like this:",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p052",
+          "max_size": 650,
+          "pdf_page": 52,
+          "char_count": 1676,
+          "chunk_index": 3,
+          "text_sha256": "efeb91bdd34082f7a4e74c94043effb7353dcab0d046938734c44284e4234dbb",
+          "chunk_method": "paragraph",
+          "printed_page": 30,
+          "chunk_char_count": 336,
+          "normalized_char_count": 1695
+        },
+        "score": 0.5,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.01639344262295082,
+        "ranks": {
+          "dense": 1
+        },
+        "component_scores": {
+          "dense": 0.28506567656210935
+        }
+      },
+      {
+        "id": "paragraph-b775da5494ec6d054b18",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 33,
+        "text": "2.4. Script mode 11\n\nThe first line is an assignment statement that gives a value ton. The second line is a print\nstatement that displays the value ofn.\nWhen you type a statement, the interpreterexecutesit, which means that it does whatever\nthe statement says. In general, statements don’t have values.",
+        "metadata": {
+          "page_id": "thinkpython2_pdf_p033",
+          "pdf_page": 33,
+          "printed_page": 11,
+          "chapter": "chapter_2",
+          "char_count": 2382,
+          "normalized_char_count": 2387,
+          "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+          "chunk_method": "paragraph",
+          "chunk_index": 0,
+          "chunk_char_count": 302,
+          "max_size": 650
+        },
+        "score": 0.49193548387096775,
+        "score_type": "rrf_normalized",
+        "strategy": "hybrid",
+        "rrf_score": 0.016129032258064516,
+        "ranks": {
+          "lexical": 2
+        },
+        "component_scores": {
+          "lexical": 0.8875672408698523
+        }
+      }
+    ],
+    "context": "[paragraph-f3a869194d5511d28659] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=36 chapter=chapter_2\n<retrieved_document>\nevaluate:To simplify an expression by performing the operations in order to yield a single\n       value.\n\nstatement:A section of code that represents a command or action. So far, the statements\n       we have seen are assignments and print statements.\n\nexecute:To run a statement and do what it says.\n\ninteractive mode:A way of using the Python interpreter by typing code at the prompt.\n\nscript mode:A way of using the Python interpreter to read code from a script and run it.\n\nscript:A program stored in a file.\n\norder of operations:Rules governing the order in which expressions involving multiple\n       operators and operands are evaluated.\n</retrieved_document>\n\n[paragraph-6b1531d3a997abb55ac6] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=52 chapter=chapter_4\n<retrieved_document>\n4.2 Simple repetition\n\nChances are you wrote something like this:\nbob.fd(100)\nbob.lt(90)\n\nbob.fd(100)\nbob.lt(90)\n\nbob.fd(100)\nbob.lt(90)\n\nbob.fd(100)\nWe can do the same thing more concisely with aforstatement. Add this example to\nmypolygon.pyand run it again:\nfor i in range(4):\n      print('Hello!')\nYou should see something like this:\n</retrieved_document>\n\n[paragraph-b775da5494ec6d054b18] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\n2.4. Script mode 11\n\nThe first line is an assignment statement that gives a value ton. The second line is a print\nstatement that displays the value ofn.\nWhen you type a statement, the interpreterexecutesit, which means that it does whatever\nthe statement says. In general, statements don’t have values.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-f3a869194d5511d28659",
+      "paragraph-6b1531d3a997abb55ac6",
+      "paragraph-b775da5494ec6d054b18"
+    ],
+    "context_chars": 1781,
+    "hit1": null,
+    "hit3": null,
+    "context_hit": null,
+    "gold_comparison": null,
+    "cost_usd": 0,
+    "llm_called": false,
+    "evaluation": "held_out_test_after_CP6_freeze"
+  }
+]

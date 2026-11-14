@@ -1,94 +1,97 @@
-# Báo cáo cá nhân Day 7 — Nguyễn Văn Minh (2A202603551)
+# Báo cáo cá nhân Lab 7 — Retrieval & Context
 
-**Trạng thái:** CP1–CP6 đã triển khai. CP5 có 51 retrieval + 51 Gemini Agent trên 17 dev x 3 phương pháp. CP6 đã thử E1 Weighted RRF (giảm hiệu quả), E2 Gemini completeness prompt (bị lỗi HTTP 503/timeout, không thể chấm), và E2b mở rộng Dense context (cải thiện một phần). **Cấu hình Hybrid RRF 1:1 đã được khóa trước CP7; chưa chạy test.** Nhãn grounding/citation CP5 vẫn là bản rà soát hỗ trợ AI, chưa có xác nhận độc lập từ người học.
+**MSSV:** 2A202603551
+**Họ và tên:** Nguyễn Văn Minh
+**Trạng thái:** Đã hoàn thành **CP1–CP7, phần cơ bản**; có benchmark dev/test, 3 retrieval methods, Gemini Agent thực tế, hai thí nghiệm cải tiến có số đo, lưu trace và kiểm thử. **Tập test cuối 7/7 thành công cho cả Dense và Hybrid** sau khi thay API key mới. Không thực hiện bonus nâng cao.
 
-## Dữ liệu và benchmark
+## 1. Dữ liệu, nguồn và benchmark (CP1–CP2)
 
-- Nguồn, quyền sử dụng, số trang và số chunk: Allen B. Downey, *Think Python 2e*, https://greenteapress.com/thinkpython2/thinkpython2.pdf, CC BY-NC 3.0; 35 trang nội dung (chương 1–4), 160 chunk kiểu paragraph B (tối đa 650 ký tự), đối chiếu nguồn/metadata với DB 160/160 trong CP1.
-- Vector store, embedding model, phiên bản và số chiều: PostgreSQL 16 + pgvector 0.8.7 (chiến lược B của Lab 6); sentence-transformers/all-MiniLM-L6-v2 (revision 1110a243fdf4706b3f48f1d95db1a4f5529b4d41), 384 chiều, normalize, cosine similarity.
-- Agent model, cách chạy và phân chia dev/test: CP3 đã kết nối Gemini `gemini-3.5-flash-lite` qua Gemini REST function calling + pgvector read-only, tham số mặc định top-k=3, tối đa 3 lượt search, context budget=3800 ký tự. CP2 khóa 17 dev (15 có đáp án, 2 thiếu evidence) và 7 test mới (5 có đáp án, 2 thiếu evidence); không dùng lại 5 câu test Lab 6 đã xem kết quả.
-- Cách xác định câu có/thiếu evidence và tiêu chí chấm: 20 câu có evidence trích nguyên văn chunk nguồn/trang; 4 câu thiếu evidence được kiểm tra tự động theo phạm vi 4 chương đã index; kết luận vắng mặt theo ngữ nghĩa vẫn cần người học rà soát theo tài liệu CP2. Hit@1/Evidence Hit@3 chỉ tính 20 câu có đáp án theo split; Context Evidence Rate đo bằng chứng trong context; Agent đánh giá grounded 0/1/2, citation có hỗ trợ và abstention. CP2 audit xác minh gold theo source/page/chunk, nhưng độ đầy đủ ngữ nghĩa và các nhãn Agent CP5 vẫn cần người học xác nhận. Không đánh giá test để chọn cấu hình.
+- **Tài liệu:** Allen B. Downey, *Think Python: How to Think Like a Computer Scientist*, ấn bản 2. PDF: https://greenteapress.com/thinkpython2/thinkpython2.pdf. Giấy phép **CC BY-NC 3.0** (https://creativecommons.org/licenses/by-nc/3.0/), sử dụng cho mục đích học tập phi thương mại và ghi nguồn.
+- **Phạm vi index:** Chương 1–4, **35 trang nội dung** trích từ tài liệu gốc, không nhận là đã index toàn bộ PDF. Chiến lược chunk B paragraph-aware của Lab 6 có **160 chunks**. Kiểm tra nguồn PDF theo SHA256 manifest và kiểm chứng **160/160 bản ghi** trùng nội dung/metadata trong PostgreSQL/pgvector. Metadata giữ `source_id`, `source`, `page`, `chapter`, `chunk_id`.
+- **Vector store:** PostgreSQL 16 + pgvector 0.8.7, bảng `day6_embeddings`, strategy B, truy xuất bằng cosine; chỉ đọc, không ghi đè dữ liệu Lab 6.
+- **Embedding:** `sentence-transformers/all-MiniLM-L6-v2`, revision `1110a243fdf4706b3f48f1d95db1a4f5529b4d41`, 384 chiều, vector chuẩn hóa, chạy CPU.
+- **Benchmark:** 24 câu hỏi: **dev 17** (15 có evidence, 2 thiếu) và **test 7** (5 có evidence, 2 thiếu). Reuse đúng 15 dev Lab6; tạo 7 test mới, không tái dùng 5 test Lab6 đã biết kết quả. Câu có evidence có đáp án mong đợi, `source_id`, trang PDF vật lý, `chunk_id`, quote đúng trong chunk. Câu thiếu evidence được xác định theo phạm vi bốn chương đã index. Phân chia dev/test có SHA256 khóa tại `benchmark/split_lock.json`, `artifacts/cp2_audit.json`.
+- **Bảo vệ nhãn:** Agent chỉ nhận `id`, câu hỏi và filter hợp lệ; không đưa `gold`, `expected_answer` hoặc lý do absence vào prompt/tool. Benchmark chỉ dùng bởi evaluator sau retrieval/inference.
 
-## Retrieval và thử nghiệm
+## 2. Thiết kế Agentic RAG (CP3–CP4)
 
-| Cấu hình | Phương pháp, top-k, filter, rerank, context budget | Giả thuyết / thay đổi | Split | Hit@1 | Evidence Hit@3 | Context Evidence Rate | Thời gian / chi phí |
-|---|---|---|---|---|---|---|---|
-| Baseline Dense | MiniLM 384-D + pgvector cosine, top-3, budget=3.800 chars | Mốc so sánh CP5 | dev | 10/15 (66,7%) | 13/15 (86,7%) | 13/15 (86,7%) | Mean 473,381 ms; không dùng API embedding; chưa tính chi phí CPU |
-| Phương pháp 2 — BM25 | BM25 k1=1.5, b=0.75, top-3, budget=3.800 chars | Tìm từ khóa chính xác tốt hơn semantic với tên hàm/keyword | dev | 12/15 (80,0%) | 14/15 (93,3%) | 14/15 (93,3%) | Mean 0,420 ms; không dùng API embedding; chưa tính chi phí CPU |
-| Phương pháp 3 — Hybrid RRF | Dense+BM25; 12 candidates/nhánh, RRF k=60, top-3, budget=3.800 chars | Bù trừ lỗi Dense/lexical | dev | 12/15 (80,0%) | **15/15 (100%)** | **15/15 (100%)** | Mean 33,326 ms; không dùng API embedding; chưa tính chi phí CPU |
-| CP6 E1 — Weighted RRF | Dense 0.7 / BM25 1.3, RRF k60, top-3, context3800 | Giả thuyết trọng số lexical lớn sẽ tốt hơn; **bị bác bỏ** trên dev | dev | 11/15 (73,3%) | 14/15 (93,3%) | 14/15 (93,3%) | Kém Hybrid 1:1 |
-| CP6 E2b — Dense context expansion | Dense top-5, context5000 | Thêm gold vào context; Hit@5=14/15, nhưng Hit@3 không đổi | dev | 10/15 (66,7%) | 13/15 (86,7%) | 14/15 (93,3%) | Nhiều context hơn, chưa vượt Hybrid |
-| **Đã khóa cho CP7** | Hybrid RRF 1:1, top-3, context3800, CP3 prompt | Quyết định theo dev, checksum cấu hình đã khóa | test | **Chưa chạy** | **Chưa chạy** | **Chưa chạy** | — |
-| Baseline Dense | Chưa mở test | Chỉ chạy khi đã freeze lựa chọn | test | **Chưa chạy** | **Chưa chạy** | **Chưa chạy** | — |
+Gemini **`gemini-3.5-flash-lite`** được chạy thật qua Gemini GenerateContent REST API, sử dụng native function calling `search_documents(query)`. Đây là **model thực tế trong cấu hình cuối, file `.env` hiện tại và toàn bộ trace benchmark CP5/CP7**. Trước đó từng thử Gemini 3.8 Flash như chẩn đoán nhưng không dùng vào điểm benchmark chính. Không lưu API key trong repo.
 
-Định nghĩa chỉ số: 15 câu có evidence ở dev làm mẫu số, không tính 2 câu unanswerable. `Evidence Hit@3` yêu cầu đúng source, trang PDF và đoạn nguyên văn trong một chunk thuộc top-3; `Context Evidence Rate` tính evidence nguyên vẹn trong context giới hạn 3.800 ký tự từ câu hỏi gốc. Thời gian mean retrieval có cold-load nên không phải phép đo cân bằng cold/warm. Đơn giá Gemini chưa đối chiếu, chi phí Agent báo `null`. Tham khảo [CP5 chi tiết](../../docs/CP5_EVALUATION.md).
+Agent bắt buộc tìm trước khi trả lời, có thể viết lại query và tìm tối đa ba lượt. Tool sử dụng một trong ba retriever trên cùng 160 chunks; các kết quả gồm id, score, text, nguồn, trang và metadata. Context loại trùng và ưu tiên score, đóng gói **nguyên chunk** đến giới hạn **3.800 ký tự**. Agent được yêu cầu trả lời dựa trên bằng chứng, trích dẫn dạng `[chunk-id]`, không tuân theo lệnh nhúng trong tài liệu; kiểm tra citation ID thuộc context trước khi chấp nhận. Khi evidence không đủ, Agent abstain; API/DB lỗi có `status=error`, không gán thành câu trả lời sai. Trace có query gốc, tool query, chunks, context, draft/final answer, citation, lượt gọi, latency, token, error class.
 
-**Lỗi dev quan sát thực:** D7-D07 và D7-D12 có gold nằm ngoài top-3 Dense nhưng có trong BM25/Hybrid; D7-D01 BM25 không tìm được gold top-3 còn Dense/Hybrid tìm được. Giả thuyết: BM25 có lợi cho keyword cụ thể và Dense có lợi cho diễn đạt khái niệm, Hybrid RRF kết hợp hai thế mạnh. Kết quả Hybrid 15/15 chỉ phản ánh **dev**, không khẳng định chất lượng test. Sau các thí nghiệm CP6 đã quyết định và **khóa Hybrid RRF 1:1** tại `artifacts/cp6/final_config_lock.json` trước CP7.
+**Ba phương pháp retrieval:**
 
-## Agent và đánh giá
+1. **Dense:** embedding MiniLM 384 chiều, pgvector cosine trên index B Lab6.
+2. **Lexical:** BM25 in-memory, tokenizer Unicode NFC/casefold, k1=1.5, b=0.75, ranking theo BM25; score chuẩn hóa chỉ để thống nhất interface Agent.
+3. **Hybrid:** lấy top-12 candidate từ mỗi nguồn, kết hợp thứ hạng RRF k=60 với trọng số Dense/BM25 1.0/1.0, trả top-3. Không cộng raw cosine và BM25 trên hai thang đo khác nhau.
 
-- Tool, số lượt gọi, điều kiện dừng, cách chọn context và xử lý lỗi: CP3 dùng `search_documents(query)`, bắt buộc search đầu tiên, tối đa 3 lượt; sắp xếp score/loại trùng để ghép context không cắt chunk, kiểm tra citation IDs với context; lỗi API/DB ghi `error`, không chấm thành abstention. Smoke dev D7-D06: `answered`, 1 search, 2 LLM calls, 15.88 giây, citation trang PDF 31 và 36. Dev D7-D16: `abstain`, 2 searches, 3 LLM calls, 17.08 giây. Đây là 2 case riêng lẻ, chưa phải benchmark hay đánh giá grounding đầy đủ.
+## 3. Kết quả retrieval trên DEV (CP5)
 
-| Cấu hình / split | Tool use | Số lượt gọi | Grounded answer 0/1/2 và trung bình | Citation hợp lệ | Câu có citation | Abstention đúng | Từ chối nhầm |
-|---|---|---|---|---|---|---|---|
-| Dense / dev | 17/17 | 22 searches, 39 LLM calls | 0:0, 1:2, 2:13; **1,867/2 nháp AI** | 20/21 | 15/15 | 2/2 | 0/15 |
-| BM25 / dev | 17/17 | 22 searches, 39 LLM calls | 0:0, 1:2, 2:13; **1,867/2 nháp AI** | 21/21 | 15/15 | 2/2 | 0/15 |
-| Hybrid / dev | 17/17 | 19 searches, 36 LLM calls | 0:0, 1:2, 2:13; **1,867/2 nháp AI** | 20/20 | 15/15 | 2/2 | 0/15 |
+| Phương pháp, tham số | Split | Hit@1 | Evidence Hit@3 | Context Evidence Rate | Mean retrieval |
+|---|---|---:|---:|---:|---:|
+| Dense, top-3, budget 3.800 | Dev | 10/15 = 66,7% | 13/15 = 86,7% | 13/15 = 86,7% | 473,381 ms |
+| BM25, top-3, budget 3.800 | Dev | 12/15 = 80,0% | 14/15 = 93,3% | 14/15 = 93,3% | 0,420 ms |
+| Hybrid RRF 1:1, top-3, budget 3.800 | Dev | 12/15 = 80,0% | **15/15 = 100%** | **15/15 = 100%** | 33,326 ms |
 
-Những nhãn `grounded answer`, `citation support` và abstention trên do AI hỗ trợ rà từng câu và nguồn, có giải thích trong `artifacts/cp5/agent_*_reviews_assisted.json`. Các file ghi **`human_confirmed=false`**. D7-D03 thiếu nhắc phép XOR `^` và D7-D14 thiếu đơn vị góc quay (độ), chấm bảo thủ 1/2. Dense D7-D04 có một citation chỉ hỗ trợ loại dữ liệu chung, không trực tiếp chứng minh hai giá trị cụ thể nên tính 20/21. Các chỉ số này phải được người học xác nhận nếu yêu cầu chấm độc lập.
+Hit@1 và Evidence Hit@3 kiểm tra đúng `source_id`, `page` và chuỗi evidence trong chunk trả về; Context Evidence Rate kiểm tra gold evidence nằm trọn trong packed context. Mẫu số **15 answerable**; 2 câu không có evidence không được tính vào các metric này. Latency chỉ là thời gian quan sát, Dense bị ảnh hưởng cold-start tải embedding model, không phải benchmark cold/warm công bằng.
 
-| Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
-|---|---|---|---|---|
-| D7-D01 | Answerable, dev | BM25 query gốc không có gold top-3; Dense/Hybrid có | BM25 Agent viết lại query, trả định nghĩa program có nguồn | Phân biệt lỗi 1-turn retrieval với multi-turn Agent; xem trace |
-| D7-D07 | Answerable, dev | Dense top-3 không có gold, BM25/Hybrid có | Agent Dense truy vấn lại, trả lời class là reserved keyword | Từ khóa `class` phù hợp lexical; Hybrid bù lỗi Dense |
-| D7-D12 | Answerable, dev | Dense query gốc không có gold | Agent trả lời dot notation nhờ đoạn glossary/ví dụ khác | Exact quote thiếu chưa khẳng định answer sai; cần đọc nguồn |
-| D7-D03 | Answerable, dev | Cả ba có gold | Agent nhắc `**` nhưng không giải thích `^` XOR | Nhãn nháp 1/2, thiếu chi tiết expected |
-| D7-D14 | Answerable, dev | Cả ba có gold | Agent nêu bk/lt/rt, thiếu góc quay tính bằng độ | Nhãn nháp 1/2, thiếu chi tiết expected |
-| D7-D16 và D7-D17 | Unanswerable, dev | Agent tìm 1–3 lượt rồi từ chối | Không tạo citation giả | Nhãn nháp abstention 2/2 mỗi phương pháp |
+**Agent trên Dev:** đã chạy đầy đủ 17 câu × 3 cấu hình = **51 lượt thực tế**. Cả ba đều trả lời 15/15 câu answerable, abstain đúng 2/2 câu unanswerable. Search calls lần lượt Dense/BM25/Hybrid: **22/22/19**; Gemini calls **39/39/36**. Review hỗ trợ AI chấm grounded trung bình **1,867/2** (13 câu grade 2 và 2 câu grade 1 trên mỗi phương pháp); citation hỗ trợ nháp tương ứng **20/21, 21/21, 20/20**. Những nhãn này có lý do chi tiết nhưng `human_confirmed=false`, chưa coi là đánh giá độc lập của người học.
 
-- Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí: `artifacts/cp5/agent_{dense,lexical,hybrid}_traces.json`, `agent_*_reviews_assisted.json`, `agent_*_summary.json`, `retrieval_*_traces.json`, `provider_error_audit.json`; lệnh tái lập tại `docs/CP5_EVALUATION.md`. Gemini tổng 97.972 tokens do provider báo cáo từ 51 lượt cuối (không gồm lượt lỗi 429), API billing USD chưa xác minh nên `api_cost_usd=null`.
-- Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn: Dense baseline Hit@3 13/15; BM25 14/15 và Hybrid 15/15 trên dev. 6 lượt BM25 ban đầu lỗi HTTP 429, đã retry và lưu trace lỗi riêng, không tính thành hallucination/abstention. Hai lỗi Dense D7-D07/D7-D12 và một lỗi BM25 D7-D01 được phân tích ở CP5. Model có query rewrite nên Agent context exact-gold có thể khác original-query retrieval. Grounding nháp AI cần xác nhận độc lập; test chưa chạy; CP6 đã thử E1/E2b, ghi nhận E2 Gemini prompt bị HTTP 503/timeout và khóa cấu hình Hybrid cân bằng trước CP7.
+**Phân tích lỗi Dev:** D7-D07 (keyword `class`) và D7-D12 (`dot notation`) Dense không tìm đủ gold trong top-3 query gốc; BM25 và Hybrid tìm được. Ngược lại D7-D01 (*what is a program*) BM25 bỏ sót gold trong top-3, Dense/Hybrid tìm được. D7-D03 Agent thiếu nêu `^` là XOR, D7-D14 thiếu nêu góc quay tính bằng độ; chấm nháp 1/2. Truy vấn Agent có thể được viết lại nên cần phân biệt kết quả query gốc với context Agent.
 
-## Thử thách nâng cao (nếu thực hiện)
+## 4. Hai thí nghiệm cải tiến trên DEV và khóa cấu hình (CP6)
 
-- Tài liệu, nguồn, quyền sử dụng, số trang và phiên bản:
-- Cách xử lý text, bảng, ảnh, biểu đồ; phạm vi index và phần chưa xử lý:
-- Cách chia benchmark, schema evidence, model và cấu hình đã chốt trên dev:
+Hai giả thuyết được ghi trước khi chạy tại `artifacts/cp6/experiment_plan.json`:
 
-| Nhóm test | Đạt / tổng | Tỷ lệ | Lỗi / nhận xét |
-|---|---|---|---|
-| Bảng | | | |
-| Ảnh, sơ đồ | | | |
-| Biểu đồ | | | |
-| Multi-hop | | | |
-| Text | | | |
-| Thiếu bằng chứng | | | |
-| **Toàn bộ** | | | |
+- **E1 Weighted RRF:** tăng trọng số BM25 lên 1.3 và giảm Dense về 0.7, giữ RRF k60, candidate12 và top-3. *Giả thuyết*: ưu tiên từ khóa đặc thù Python sẽ tăng Hit@1 và giữ Hit@3. **Kết quả âm tính:** Hit@1 **12/15 → 11/15**, Hit@3 và Context Evidence Rate **15/15 → 14/15**, D7-D01 trượt top-3. Bác bỏ E1.
+- **E2 completeness prompt:** bổ sung yêu cầu chung để Gemini trả lời đủ từng ý/đơn vị được hỏi mà không phỏng đoán ngoài nguồn. Đã triển khai nhưng lúc đó API trả 503/timeout; **không bịa điểm hoặc tuyên bố thử nghiệm này cải thiện**.
+- **E2b thay thế bổ sung (được công bố rõ, không phải kết quả E2):** Dense top-3/context3.800 thành **top-5/context5.000**. Hit@1 và Hit@3 không đổi (**10/15**, **13/15**), Hit@5 **14/15**, Context Evidence Rate **13/15 → 14/15**. Có thêm gold D7-D07 nhưng không vượt Hybrid, đồng thời tăng context/token.
 
-- Trace, nhãn và evidence từng câu; thời gian, chi phí, lỗi hệ thống:
-- Giới hạn, cách tái lập và đường dẫn benchmark:
+**Quyết định chỉ dựa DEV:** giữ **Hybrid RRF cân bằng 1:1**: top-3, RRF k=60, 12 candidates/nhánh, budget=3.800; Gemini `gemini-3.5-flash-lite`, prompt CP3 gốc, temperature 0.1, tối đa ba searches. Toàn bộ lựa chọn được SHA256 khóa tại `artifacts/cp6/final_config_lock.json` **trước khi mở TEST**, script `scripts/cp6_freeze.py` đã xác minh không thay đổi.
 
-### CP3 — Minh chứng live dev (chưa phải full benchmark)
+## 5. Đánh giá TEST sau khi khóa (CP7)
 
-- `artifacts/cp3_smoke/D7-D06.json`: câu có evidence, 1 lần tìm, 2 lần gọi model, trạng thái `answered`, citation đến trang PDF 31 và 36.
-- `artifacts/cp3_smoke/D7-D16.json`: câu ngoài corpus, 2 lần tìm, 3 lần gọi model, trạng thái `abstain`, không có citation giả.
-- Các trace đầy đủ gồm query, tool calls, passages, context và mô hình; không chứa gold. Các thử nghiệm lỗi trước khi sửa parser/schema giữ trong thư mục local `starter/results/cp3/` (không đưa vào điểm thành công).
-- Chưa kết luận tỷ lệ chất lượng retrieval/grounding trên toàn bộ dev/test; không tính unit test mock là số đo agent thực tế.
+**Đã chạy đủ 7 câu test cho cả Dense baseline và Hybrid đã chọn.** Các yêu cầu Gemini lỗi tạm thời trong quá trình chạy đã được retry sau khi thay key mới, **cùng model 3.5 và cấu hình**; trace lỗi cũ được lưu riêng, trace cuối đều hợp lệ. Không điều chỉnh model/prompt/retrieval dựa vào test.
 
-### CP4 — Triển khai ba phương pháp retrieval (chưa benchmark)
+| Cấu hình | Split | Hit@1 | Evidence Hit@3 | Context Evidence Rate |
+|---|---|---:|---:|---:|
+| Dense baseline | Test | 3/5 = 60% | **5/5 = 100%** | **5/5 = 100%** |
+| Hybrid RRF đã chọn | Test | 3/5 = 60% | **5/5 = 100%** | **5/5 = 100%** |
 
-- `dense`: embedding MiniLM-L6-v2 384 chiều từ Lab 6, vector store PostgreSQL/pgvector (cosine, read-only).
-- `lexical`: BM25 trên 160 chunks B, `k1=1.5`, `b=0.75`, tokenizer Unicode NFC/casefold. Trả ranking, normalized score, raw BM25 score.
-- `hybrid`: RRF (`rrf_k=60`, candidate=12 mỗi nguồn), giữ ranks/components, không cộng trực tiếp raw score không cùng thang đo.
-- Smoke retrieval thực tế `artifacts/cp4_smoke.json`: 2 câu hỏi không thuộc benchmark x 3 phương pháp, đủ top-3 với source, page, score và chapter filter chính xác.
-- Smoke tích hợp Gemini thật trên dev D7-D06: lexical `answered`, 1 search/2 model calls, 2,77 giây, citation trang 36; hybrid `answered`, 1 search/2 model calls, 15,77 giây, citation trang 31/36. Trace nộp tại `artifacts/cp4_agent_smoke/`.
-- Kết quả trên mới là kiểm tra triển khai, **không phải bảng điểm Hit@1/Hit@3 hoặc grounded answer trên toàn bộ dev/test**. Sẽ đo và phân tích ở CP5.
+**Context grade 0/1/2 nháp theo gold source:** cả hai có **5/5 mức 2**, không có mức 0/1 trong năm câu answerable. Kết quả này dựa trên source/page/quote trùng đầy đủ và chưa thay thế independent human judgment.
 
+| Agent metric cuối — 7 câu TEST | Dense | Hybrid |
+|---|---:|---:|
+| Lượt test hợp lệ | **7/7** | **7/7** |
+| Có trả lời khi có evidence | **5/5** | **5/5** |
+| Abstain đúng khi thiếu evidence | **2/2** | **2/2** |
+| Từ chối nhầm | 0/5 | 0/5 |
+| Có gọi tool retrieval | 7/7 | 7/7 |
+| Số lượt search / gọi model | 10 / 17 | 10 / 17 |
+| Grounded-answer grade nháp hỗ trợ AI | 5 câu mức 2/2 | 5 câu mức 2/2 |
+| Có citation ở câu answerable | 5/5 | 5/5 |
+| API error còn tồn tại trong trace cuối | **0** | **0** |
+| Latency Agent trung bình (7 trace cuối) | 53,14 giây | 20,27 giây |
+| Token Gemini báo cáo (7 trace cuối) | 15.528 | 15.705 |
 
-## CP6 — Hai giả thuyết cải thiện, phân tích lỗi và khóa cấu hình
+**Đánh giá câu trả lời:** Năm câu answerable kiểm tra flow of execution, biến cục bộ, stack frame, interface của `circle(t,r)`, và quy trình encapsulation/generalization. Các câu trả lời có citation chunk/trang, đối chiếu nguồn phù hợp; hai câu ngoài corpus (`async def` và `yield from`) được abstain đúng. Review 0/1/2 và citation là **bản dự thảo do AI hỗ trợ**, có lý do và nguồn theo từng câu nhưng `human_confirmed=false`, chưa phải kết quả người chấm độc lập. Trên test nhỏ n=5, Hybrid không thắng Dense dù tốt hơn trên dev.
 
-1. **E1 Weighted RRF**: đặt trọng số Dense=0.7, BM25=1.3, giữ RRF k=60, candidate_k=12, top_k=3, context 3.800 ký tự. Trên 15 câu answerable dev, Hit@1 giảm **12/15 → 11/15**, Evidence Hit@3 giảm **15/15 → 14/15**, Context Evidence Rate giảm **15/15 → 14/15** so với Hybrid 1:1. Trường hợp D7-D01 (định nghĩa *program*) trượt gold top-3. Kết luận: bác bỏ giả thuyết lexical trọng số lớn cải thiện Hybrid trong tập dev này.
-2. **E2 Gemini completeness prompt**: thiết kế và chạy prompt chung yêu cầu trả lời đầy đủ các vế/điều kiện và đơn vị trong câu hỏi, vẫn chỉ dựa trên evidence và abstain khi thiếu nguồn. Tuy nhiên bốn lượt dev được thử đều lỗi HTTP 503 hoặc timeout, không có answer hợp lệ. **Không có điểm grounded/citation cho E2**; lỗi provider được lưu minh bạch tại `artifacts/cp6/e2_prompt_provider_audit.json`.
-3. **E2b bổ sung sau sự cố provider**: thay Dense top-3/context 3.800 bằng top-5/context 5.000. Hit@1 **10/15** không đổi; Hit@3 **13/15** không đổi; Hit@5 **14/15**; Context Evidence Rate tăng **13/15 → 14/15**, do D7-D07 có thêm bằng chứng trong context; D7-D12 vẫn thiếu. E2b là thử nghiệm retrieval bổ sung, **không phải kết quả của E2 prompt** và không có điểm Gemini Agent.
-4. **Quyết định trước test:** chọn **Hybrid RRF cân bằng 1:1**, RRF k60, candidate_k12, top_k3, context budget3.800, Gemini `gemini-3.5-flash-lite` với prompt CP3 gốc, max_searches3. Cấu hình, mã nguồn và benchmark SHA256 đã khóa tại `artifacts/cp6/final_config_lock.json`. `py scripts/cp6_freeze.py` đã kiểm chứng lại mà không ghi đè. Không sử dụng test để quyết định.
-5. **Đánh đổi và giới hạn:** tăng trọng số lexical có thể làm mất trường hợp biểu đạt khái niệm; tăng số chunk context giúp tìm thêm bằng chứng nhưng có thể tăng token và nhiễu. Kết quả trên dev n=15 nhỏ, chưa chứng minh tổng quát hóa. Nhãn grounded/citation CP5 là AI-assisted draft, chưa được xác nhận độc lập. Tài liệu và trace: `docs/CP6_IMPROVEMENTS.md`, `artifacts/cp6/`. **CP7 test vẫn chưa chạy**.
+**Minh chứng:** `artifacts/cp7/retrieval_{dense,hybrid}_{summary,traces}.json`, `agent_{dense,hybrid}_{summary,traces,reviews_assisted}.json`, `context_{dense,hybrid}_review_assisted.json`, `docs/CP7_FINAL_EVALUATION.md`.
+
+## 6. Thời gian, chi phí, độ tin cậy và tái lập
+
+Trace lưu đầy đủ tool, model, câu hỏi, context, nguồn/trang, citation, latency và token. Sau khi thay key mới, ba lượt test từng gặp lỗi provider đã được gọi lại thành công **bằng cùng model 3.5 và cấu hình CP6 đã khóa**, có pacing tối đa 2 RPM theo từng request. Các lỗi cũ chỉ nằm trong lịch sử kiểm toán local, không tính thành hallucination hoặc abstention; trace cuối 7/7 hợp lệ.
+
+Ước tính **giả định theo đơn giá trả phí** cho token ghi nhận ở CP5/CP7 khoảng **0,0531 USD**. Đây **không phải hóa đơn thực tế**, chưa cộng request lỗi không có usage, chi phí CPU/cache, ưu đãi hay free-tier. Đơn giá giả định, script tính và các giới hạn ở `artifacts/cp7/estimated_api_costs.json`; chi phí thực tế chưa xác minh.
+
+Tái lập kết quả offline: `py scripts/cp2_validate.py`, `py scripts/cp6_freeze.py`, `py scripts/cp7_offline_summary.py`, `py scripts/cp7_context_review.py`, `PYTHONUTF8=1 py -m unittest discover -s tests -v`. Để chạy retrieval thực cần dựng PostgreSQL Lab6 theo `docs/CP1_SETUP.md`, không chia sẻ `.env`, mật khẩu hay API key.
+
+**Giới hạn:** Chỉ index 35 trang và các câu hỏi Python cơ bản; chỉ 5 câu answerable test nên kết quả mẫu nhỏ, không suy ra production SLA. Nhãn grounded/citation/context cần người học kiểm tra độc lập nếu lớp yêu cầu. Không tune trên test. Nguồn CC BY-NC chỉ dùng cho mục đích phù hợp giấy phép và ghi đầy đủ tác giả/nguồn.
+
+## 7. Thử thách nâng cao (tùy chọn)
+
+Không tham gia bonus index tài liệu trên 100 trang với bảng, ảnh, biểu đồ. Bài làm này chỉ nộp **phần cơ bản**, không tự nhận điểm cộng 15 hoặc tạo kết quả giả cho bảng/ảnh/chart/multi-hop.
+
+## 8. Kết luận
+
+Đã hoàn thành pipeline Agentic RAG với Dense/BM25/Hybrid, Gemini tool calling, lựa chọn context, citation và abstention; chạy đủ benchmark dev, thử cải tiến có kết quả âm tính/dương tính cục bộ, khóa cấu hình trước test và hoàn tất **7/7 phản hồi test thực tế cho cả Dense và Hybrid**. Hybrid tăng độ phủ evidence trên dev, nhưng không vượt Dense ở test. Mã nguồn, benchmark, trace, phân tích lỗi, thời gian và token đều có thể đối chiếu; nhãn đánh giá hỗ trợ AI được công bố minh bạch để người học xác nhận cuối.

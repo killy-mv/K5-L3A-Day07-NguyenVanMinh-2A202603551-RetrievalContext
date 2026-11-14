@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-14T10:25:04.298618+00:00",
+  "model": "gemini-3.8-flash",
+  "diagnostic_type": "nonagent_plain_text_single_request",
+  "status": "unavailable",
+  "safe_error": "Gemini HTTP 503 (request/schema/quota)",
+  "usage": null,
+  "requests": 1,
+  "rpm_limit": 2,
+  "note": "Not a benchmark question or evaluated Agent answer."
+}

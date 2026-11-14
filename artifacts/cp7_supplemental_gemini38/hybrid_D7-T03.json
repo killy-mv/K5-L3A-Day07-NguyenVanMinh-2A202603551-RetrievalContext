@@ -1,0 +1,42 @@
+{
+  "status": "error",
+  "question": "In a stack diagram, what does each frame represent?",
+  "filters": null,
+  "answer": "",
+  "citations": [],
+  "citation_details": [],
+  "events": [
+    {
+      "event": "error",
+      "type": "ProviderError",
+      "safe_detail": "Gemini HTTP 503 (request/schema/quota)"
+    }
+  ],
+  "context": "",
+  "context_ids": [],
+  "model": "gemini-3.8-flash",
+  "config": {
+    "top_k": 3,
+    "max_searches": 3,
+    "context_budget_chars": 3800
+  },
+  "model_calls": 0,
+  "search_calls": 0,
+  "token_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0
+  },
+  "api_cost_usd": null,
+  "elapsed_ms": 6477.88,
+  "error": "provider_or_retriever_ProviderError",
+  "query_id": "D7-T03",
+  "split": "test",
+  "retrieval_strategy": "hybrid",
+  "model_comparability": "SUPPLEMENTAL_UNFROZEN_MODEL_3_8_DO_NOT_MERGE_WITH_PRIMARY_CP7",
+  "primary_cp6_frozen_model": "gemini-3.5-flash-lite",
+  "source_error_trace": "starter\\results\\cp7\\agent\\hybrid\\D7-T03.json",
+  "request_rpm_limit": 2.0,
+  "request_count_this_case": 1,
+  "evaluation_utc": "2026-11-14T10:13:43.893507+00:00"
+}

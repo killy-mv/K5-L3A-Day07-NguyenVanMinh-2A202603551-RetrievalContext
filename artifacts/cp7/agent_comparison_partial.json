@@ -1,0 +1,117 @@
+{
+  "split": "test",
+  "cp6_selection_unchanged": true,
+  "api_requests_made_by_this_script": 0,
+  "status": "incomplete_due_provider_quota",
+  "cannot_claim_full_agent_test": true,
+  "methods": [
+    {
+      "split": "test",
+      "strategy": "dense",
+      "cp6_frozen_at": "2026-11-14T09:34:42.644921+00:00",
+      "frozen_config_sha256": "802b87d95f2646ce8ba4ab7114db5cb3fd945ff655080e3bf7128abbca47aa89",
+      "model": "gemini-3.5-flash-lite",
+      "status_counts": {
+        "answered": 5,
+        "abstain": 2
+      },
+      "total_test_cases": 7,
+      "valid_cases": 7,
+      "provider_or_retriever_errors": 0,
+      "historical_retry_errors": 2,
+      "search_calls_final_traces": 10,
+      "model_calls_final_traces": 17,
+      "tokens_final_traces": 15528,
+      "mean_valid_elapsed_ms": 53136.18,
+      "api_cost_usd": null,
+      "review_type": "AI-assisted provisional; NOT human confirmed",
+      "human_confirmed": false,
+      "metrics_valid_only": {
+        "cases": 7,
+        "provider_errors": 0,
+        "tool_use": {
+          "n": 7,
+          "N": 7
+        },
+        "grounded_answer": {
+          "0": 0,
+          "1": 0,
+          "2": 5,
+          "N": 5,
+          "mean": 2.0
+        },
+        "citation_validity": {
+          "n": 7,
+          "N": 7
+        },
+        "answer_citation_coverage": {
+          "n": 5,
+          "N": 5
+        },
+        "abstention": {
+          "n": 2,
+          "N": 2
+        },
+        "false_abstention": {
+          "n": 0,
+          "N": 5
+        }
+      },
+      "limitations": "Only answered/abstained valid cases scored; 429/503/timeout are not wrong answers. Incomplete seven-case agent coverage. No retuning after test."
+    },
+    {
+      "split": "test",
+      "strategy": "hybrid",
+      "cp6_frozen_at": "2026-11-14T09:34:42.644921+00:00",
+      "frozen_config_sha256": "802b87d95f2646ce8ba4ab7114db5cb3fd945ff655080e3bf7128abbca47aa89",
+      "model": "gemini-3.5-flash-lite",
+      "status_counts": {
+        "answered": 5,
+        "abstain": 2
+      },
+      "total_test_cases": 7,
+      "valid_cases": 7,
+      "provider_or_retriever_errors": 0,
+      "historical_retry_errors": 4,
+      "search_calls_final_traces": 10,
+      "model_calls_final_traces": 17,
+      "tokens_final_traces": 15705,
+      "mean_valid_elapsed_ms": 20273.67,
+      "api_cost_usd": null,
+      "review_type": "AI-assisted provisional; NOT human confirmed",
+      "human_confirmed": false,
+      "metrics_valid_only": {
+        "cases": 7,
+        "provider_errors": 0,
+        "tool_use": {
+          "n": 7,
+          "N": 7
+        },
+        "grounded_answer": {
+          "0": 0,
+          "1": 0,
+          "2": 5,
+          "N": 5,
+          "mean": 2.0
+        },
+        "citation_validity": {
+          "n": 7,
+          "N": 7
+        },
+        "answer_citation_coverage": {
+          "n": 5,
+          "N": 5
+        },
+        "abstention": {
+          "n": 2,
+          "N": 2
+        },
+        "false_abstention": {
+          "n": 0,
+          "N": 5
+        }
+      },
+      "limitations": "Only answered/abstained valid cases scored; 429/503/timeout are not wrong answers. Incomplete seven-case agent coverage. No retuning after test."
+    }
+  ]
+}

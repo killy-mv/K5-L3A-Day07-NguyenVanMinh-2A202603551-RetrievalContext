@@ -38,7 +38,7 @@ Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/i
 
 ## Bài làm cá nhân — CP2
 
-Đã tạo và khóa [benchmark CP2](docs/CP2_BENCHMARK.md): 17 câu dev (15 có evidence, 2 thiếu evidence) và 7 câu test mới (5 có evidence, 2 thiếu evidence), tổng 24 câu. Các gold câu có evidence đều đối chiếu được với chunk nguồn/trang. Chưa chạy test benchmark. Kiểm chứng: `py scripts/cp2_validate.py`.
+Đã tạo và khóa [benchmark CP2](docs/CP2_BENCHMARK.md): 17 câu dev (15 có evidence, 2 thiếu evidence) và 7 câu test mới (5 có evidence, 2 thiếu evidence), tổng 24 câu. Các gold câu có evidence đều đối chiếu được với chunk nguồn/trang. Benchmark đã được đánh giá ở CP7. Kiểm chứng: `py scripts/cp2_validate.py`.
 
 ## Bài làm cá nhân — CP3
 
@@ -52,8 +52,14 @@ CP3 có hai trace thực tế dùng để nộp tại `artifacts/cp3_smoke/` (`D
 
 ## Bài làm cá nhân — CP5 và bổ sung CP2
 
-Đã hoàn thiện [CP2 audit](docs/CP2_BENCHMARK.md) và [CP5 toàn bộ Dev](docs/CP5_EVALUATION.md). Thực nghiệm CP5 gồm 51 retrieval và 51 Gemini Agent trên cùng 17 dev, ba phương pháp Dense/BM25/Hybrid, có đầy đủ trace trong `artifacts/cp5/`. Hit@1: 10/15, 12/15, 12/15; Evidence Hit@3: 13/15, 14/15, 15/15; Context Evidence Rate cùng mức với Hit@3 cho query gốc. Grounded/citation nháp hỗ trợ AI được phân biệt rõ với đánh giá thủ công độc lập. Đã ghi nhận và phục hồi 6 lỗi quota HTTP 429; chưa chạy test hay CP6/CP7.
+Đã hoàn thiện [CP2 audit](docs/CP2_BENCHMARK.md) và [CP5 toàn bộ Dev](docs/CP5_EVALUATION.md). Thực nghiệm CP5 gồm 51 retrieval và 51 Gemini Agent trên cùng 17 dev, ba phương pháp Dense/BM25/Hybrid, có đầy đủ trace trong `artifacts/cp5/`. Hit@1: 10/15, 12/15, 12/15; Evidence Hit@3: 13/15, 14/15, 15/15; Context Evidence Rate cùng mức với Hit@3 cho query gốc. Grounded/citation nháp hỗ trợ AI được phân biệt rõ với đánh giá thủ công độc lập. Đã ghi nhận và phục hồi 6 lỗi quota HTTP 429; sau đó đã hoàn tất CP6–CP7.
 
 ## Bài làm cá nhân — CP6
 
 Đã thực hiện [CP6: thí nghiệm và khóa cấu hình](docs/CP6_IMPROVEMENTS.md). E1 Weighted RRF 0.7/1.3 giảm Evidence Hit@3 Hybrid từ 15/15 xuống 14/15; E2 completeness prompt đã gọi Gemini thật nhưng không chấm được do HTTP 503/timeout; E2b Dense top5/context5000 tăng context evidence từ 13/15 lên 14/15 nhưng vẫn thấp hơn Hybrid. **Đã khóa Hybrid RRF cân bằng 1:1, top3, context3800, Gemini prompt CP3** tại `artifacts/cp6/final_config_lock.json` trước khi chạy test. Không có kết quả test trong CP6.
+
+## CP7 — Test cuối đã hoàn thành
+
+Sau khi thay Gemini API key mới, **đã chạy đủ 7/7 câu test cho Dense và Hybrid** bằng model đã khóa `gemini-3.5-flash-lite`. Hit@1=3/5, Evidence Hit@3=5/5, Context Evidence Rate=5/5 ở cả hai; Agent trả lời đủ 5/5 câu answerable và từ chối đúng 2/2 câu thiếu evidence, không có lỗi API trong trace cuối. Nhãn grounded/citation là **AI-assisted draft**, cần xác nhận độc lập theo quy định lớp.
+
+Kết quả và mã nguồn đầy đủ: `docs/CP7_FINAL_EVALUATION.md`, `artifacts/cp7/`, `report/individual/2A202603551_NguyenVanMinh.md`, `SUBMISSION.md`. Các lần thử Gemini 3.8 trước đó là chẩn đoán riêng, **không trộn vào benchmark chính**. Trace lỗi cũ đã được giữ local để kiểm toán.

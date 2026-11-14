@@ -1,0 +1,105 @@
+{
+  "strategy": "dense",
+  "split": "test",
+  "graded_answerable": 5,
+  "grade_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 5
+  },
+  "mean_context_grade": 2.0,
+  "human_confirmed": false,
+  "test_sha256": "598a74450f9fd24cfa68642c58837fce12e4b09ced6c33b1bbe1904bbd02c964",
+  "rows": [
+    {
+      "query_id": "D7-T01",
+      "strategy": "dense",
+      "context_grade": 2,
+      "human_confirmed": false,
+      "source_alignment": [
+        {
+          "chunk_id": "paragraph-ceef3493bd5a59d82e5a",
+          "source_id": "thinkpython2_pdf",
+          "page": 43,
+          "top3_match": true,
+          "in_context": true
+        }
+      ],
+      "context_chars": 1763,
+      "review_reason": "Source p43 directly explains the detour into the function body and return to the caller.",
+      "review_type": "AI-assisted reference evidence alignment; not independent semantic confirmation"
+    },
+    {
+      "query_id": "D7-T02",
+      "strategy": "dense",
+      "context_grade": 2,
+      "human_confirmed": false,
+      "source_alignment": [
+        {
+          "chunk_id": "paragraph-f8a4a8ab7a5624922901",
+          "source_id": "thinkpython2_pdf",
+          "page": 44,
+          "top3_match": true,
+          "in_context": true
+        }
+      ],
+      "context_chars": 1874,
+      "review_reason": "Source p44 directly states a local variable is destroyed when its function terminates.",
+      "review_type": "AI-assisted reference evidence alignment; not independent semantic confirmation"
+    },
+    {
+      "query_id": "D7-T03",
+      "strategy": "dense",
+      "context_grade": 2,
+      "human_confirmed": false,
+      "source_alignment": [
+        {
+          "chunk_id": "paragraph-6cef8fdd9c8548f66e18",
+          "source_id": "thinkpython2_pdf",
+          "page": 45,
+          "top3_match": true,
+          "in_context": true
+        }
+      ],
+      "context_chars": 2017,
+      "review_reason": "Source p45 explains that a stack frame represents a function and holds its parameters and local variables.",
+      "review_type": "AI-assisted reference evidence alignment; not independent semantic confirmation"
+    },
+    {
+      "query_id": "D7-T04",
+      "strategy": "dense",
+      "context_grade": 2,
+      "human_confirmed": false,
+      "source_alignment": [
+        {
+          "chunk_id": "paragraph-7138c016653f20355e8e",
+          "source_id": "thinkpython2_pdf",
+          "page": 55,
+          "top3_match": true,
+          "in_context": true
+        }
+      ],
+      "context_chars": 1893,
+      "review_reason": "Source p55 directly contrasts radius as an interface parameter with n as a rendering detail.",
+      "review_type": "AI-assisted reference evidence alignment; not independent semantic confirmation"
+    },
+    {
+      "query_id": "D7-T05",
+      "strategy": "dense",
+      "context_grade": 2,
+      "human_confirmed": false,
+      "source_alignment": [
+        {
+          "chunk_id": "paragraph-10fd1b2737eaf51126cb",
+          "source_id": "thinkpython2_pdf",
+          "page": 57,
+          "top3_match": true,
+          "in_context": true
+        }
+      ],
+      "context_chars": 1901,
+      "review_reason": "Source p57 enumerates the first three encapsulation/generalization development steps.",
+      "review_type": "AI-assisted reference evidence alignment; not independent semantic confirmation"
+    }
+  ]
+}

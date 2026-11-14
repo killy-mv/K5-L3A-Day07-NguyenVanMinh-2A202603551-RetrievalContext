@@ -1,0 +1,139 @@
+{
+  "split": "test",
+  "strategy": "hybrid",
+  "evaluation_type": "MIXED_MODELS_NOT_SINGLE_FROZEN_MODEL",
+  "primary_frozen_model": "gemini-3.5-flash-lite",
+  "supplement_model": "gemini-3.8-flash",
+  "valid_from_supplemental_model": 0,
+  "valid_responses": 7,
+  "test_cases": 7,
+  "errors": 0,
+  "grades_ai_assisted": {
+    "cases": 7,
+    "provider_errors": 0,
+    "tool_use": {
+      "n": 7,
+      "N": 7
+    },
+    "grounded_answer": {
+      "0": 0,
+      "1": 0,
+      "2": 5,
+      "N": 5,
+      "mean": 2.0
+    },
+    "citation_validity": {
+      "n": 7,
+      "N": 7
+    },
+    "answer_citation_coverage": {
+      "n": 5,
+      "N": 5
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 5
+    }
+  },
+  "human_confirmed": false,
+  "model_by_case": [
+    {
+      "id": "D7-T01",
+      "status": "answered",
+      "model": "gemini-3.5-flash-lite",
+      "source": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T02",
+      "status": "answered",
+      "model": "gemini-3.5-flash-lite",
+      "source": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T03",
+      "status": "answered",
+      "model": "gemini-3.5-flash-lite",
+      "source": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T04",
+      "status": "answered",
+      "model": "gemini-3.5-flash-lite",
+      "source": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T05",
+      "status": "answered",
+      "model": "gemini-3.5-flash-lite",
+      "source": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T06",
+      "status": "abstain",
+      "model": "gemini-3.5-flash-lite",
+      "source": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T07",
+      "status": "abstain",
+      "model": "gemini-3.5-flash-lite",
+      "source": "frozen_gemini_3_5_primary"
+    }
+  ],
+  "provenance": [
+    {
+      "id": "D7-T01",
+      "original_status": "answered",
+      "supplement_attempted": false,
+      "supplement_status": null,
+      "chosen": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T02",
+      "original_status": "answered",
+      "supplement_attempted": false,
+      "supplement_status": null,
+      "chosen": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T03",
+      "original_status": "answered",
+      "supplement_attempted": true,
+      "supplement_status": "error",
+      "chosen": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T04",
+      "original_status": "answered",
+      "supplement_attempted": false,
+      "supplement_status": null,
+      "chosen": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T05",
+      "original_status": "answered",
+      "supplement_attempted": false,
+      "supplement_status": null,
+      "chosen": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T06",
+      "original_status": "abstain",
+      "supplement_attempted": false,
+      "supplement_status": null,
+      "chosen": "frozen_gemini_3_5_primary"
+    },
+    {
+      "id": "D7-T07",
+      "original_status": "abstain",
+      "supplement_attempted": false,
+      "supplement_status": null,
+      "chosen": "frozen_gemini_3_5_primary"
+    }
+  ],
+  "warning": "Not comparable to official frozen single-model CP7; never overwrite source traces."
+}
