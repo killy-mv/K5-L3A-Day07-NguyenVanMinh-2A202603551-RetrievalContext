@@ -1,0 +1,67 @@
+{
+  "stage": "CP5",
+  "split": "dev",
+  "historical_error_count": 6,
+  "historical_errors_by_method": {
+    "lexical": 6
+  },
+  "all_recovered": true,
+  "historical_errors": [
+    {
+      "strategy": "lexical",
+      "query_id": "D7-D08",
+      "historical_status": "error",
+      "historical_error_kind": "provider_or_retriever_ProviderError",
+      "historical_provider_http_429": true,
+      "final_status": "answered",
+      "note": "Original error preserved locally; final run reran the question independently."
+    },
+    {
+      "strategy": "lexical",
+      "query_id": "D7-D09",
+      "historical_status": "error",
+      "historical_error_kind": "provider_or_retriever_ProviderError",
+      "historical_provider_http_429": true,
+      "final_status": "answered",
+      "note": "Original error preserved locally; final run reran the question independently."
+    },
+    {
+      "strategy": "lexical",
+      "query_id": "D7-D10",
+      "historical_status": "error",
+      "historical_error_kind": "provider_or_retriever_ProviderError",
+      "historical_provider_http_429": true,
+      "final_status": "answered",
+      "note": "Original error preserved locally; final run reran the question independently."
+    },
+    {
+      "strategy": "lexical",
+      "query_id": "D7-D11",
+      "historical_status": "error",
+      "historical_error_kind": "provider_or_retriever_ProviderError",
+      "historical_provider_http_429": true,
+      "final_status": "answered",
+      "note": "Original error preserved locally; final run reran the question independently."
+    },
+    {
+      "strategy": "lexical",
+      "query_id": "D7-D12",
+      "historical_status": "error",
+      "historical_error_kind": "provider_or_retriever_ProviderError",
+      "historical_provider_http_429": true,
+      "final_status": "answered",
+      "note": "Original error preserved locally; final run reran the question independently."
+    },
+    {
+      "strategy": "lexical",
+      "query_id": "D7-D13",
+      "historical_status": "error",
+      "historical_error_kind": "provider_or_retriever_ProviderError",
+      "historical_provider_http_429": true,
+      "final_status": "answered",
+      "note": "Original error preserved locally; final run reran the question independently."
+    }
+  ],
+  "test_queries_evaluated": 0,
+  "notes": "Not counted as correct, wrong, or abstain; provider failures are separate. No dollar cost is inferred."
+}

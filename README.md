@@ -49,3 +49,11 @@ CP3 có hai trace thực tế dùng để nộp tại `artifacts/cp3_smoke/` (`D
 ## Bài làm cá nhân — CP4
 
 Đã hoàn thiện [CP4: ba retrieval methods](docs/CP4_RETRIEVAL.md): Dense pgvector, Lexical BM25, Hybrid RRF; hỗ trợ chọn bằng `scripts/cp3_run.py --strategy dense|lexical|hybrid`. Các smoke thực tế dùng dữ liệu gốc và không chạm tập test: `artifacts/cp4_smoke.json` (6 truy vấn retrieval với top-3), `artifacts/cp4_agent_smoke/` (2 trace Gemini dev có citation). Chưa thực hiện benchmark CP5.
+
+## Bài làm cá nhân — CP5 và bổ sung CP2
+
+Đã hoàn thiện [CP2 audit](docs/CP2_BENCHMARK.md) và [CP5 toàn bộ Dev](docs/CP5_EVALUATION.md). Thực nghiệm CP5 gồm 51 retrieval và 51 Gemini Agent trên cùng 17 dev, ba phương pháp Dense/BM25/Hybrid, có đầy đủ trace trong `artifacts/cp5/`. Hit@1: 10/15, 12/15, 12/15; Evidence Hit@3: 13/15, 14/15, 15/15; Context Evidence Rate cùng mức với Hit@3 cho query gốc. Grounded/citation nháp hỗ trợ AI được phân biệt rõ với đánh giá thủ công độc lập. Đã ghi nhận và phục hồi 6 lỗi quota HTTP 429; chưa chạy test hay CP6/CP7.
+
+## Bài làm cá nhân — CP6
+
+Đã thực hiện [CP6: thí nghiệm và khóa cấu hình](docs/CP6_IMPROVEMENTS.md). E1 Weighted RRF 0.7/1.3 giảm Evidence Hit@3 Hybrid từ 15/15 xuống 14/15; E2 completeness prompt đã gọi Gemini thật nhưng không chấm được do HTTP 503/timeout; E2b Dense top5/context5000 tăng context evidence từ 13/15 lên 14/15 nhưng vẫn thấp hơn Hybrid. **Đã khóa Hybrid RRF cân bằng 1:1, top3, context3800, Gemini prompt CP3** tại `artifacts/cp6/final_config_lock.json` trước khi chạy test. Không có kết quả test trong CP6.

@@ -1,0 +1,38 @@
+{
+  "stage": "CP6",
+  "registered_before_experiments": true,
+  "split": "dev_only",
+  "corpus_sha256": "4760a9463bd0a99d461d07e4cb946921454e8f4fc6d88d0ba3422e00bf7b3306",
+  "dev_sha256": "f8b4944b60b36704edf0e143d3409761d9ef49ff385ca7bc19caead4ba848967",
+  "test_sha256_locked_unopened": "598a74450f9fd24cfa68642c58837fce12e4b09ced6c33b1bbe1904bbd02c964",
+  "baseline": {
+    "retrieval_strategy": "hybrid",
+    "dense_weight": 1.0,
+    "lexical_weight": 1.0,
+    "rrf_k": 60,
+    "candidates_per_method": 12,
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "agent_prompt": "CP3 SYSTEM v1",
+    "max_searches": 3,
+    "model": "gemini-3.5-flash-lite"
+  },
+  "experiments": [
+    {
+      "id": "E1_weighted_rrf",
+      "layer": "retrieval_rank_fusion",
+      "hypothesis": "On questions using exact Python terms/operators, upweighting BM25 in RRF improves Hit@1 beyond the balanced hybrid 12/15 while preserving Evidence Hit@3 and contextual evidence coverage.",
+      "independent_change": "RRF dense_weight=0.7, lexical_weight=1.3; all other retrieval settings identical to baseline",
+      "evaluation": "original-question dev Hit@1, Evidence Hit@3, Context Evidence Rate, per-case wins/losses and query latency"
+    },
+    {
+      "id": "E2_complete_answer_prompt",
+      "layer": "agent_synthesis",
+      "hypothesis": "An evidence-only completeness instruction covering every explicit clause/contrast of the user's question improves grounded answer completeness, especially two-part/operator/unit questions, without reducing correct abstention or citation support.",
+      "independent_change": "Keep balanced hybrid RRF unchanged and add a general question-coverage instruction to the model's system prompt; no answer gold, case IDs or examples from benchmark are supplied.",
+      "evaluation": "real Gemini dev 17-case tool calls, answer grades 0/1/2, citation support and abstention compared with CP5 hybrid Agent"
+    }
+  ],
+  "decision_rule": "Prioritize factual completeness/grounding and citation support, then Evidence Hit@3 and Hit@1; do not accept a change that materially harms retrieval evidence/abstention. Keep original balanced hybrid if experiments do not improve. Freeze one reproducible configuration before any CP7 test calls.",
+  "test_evaluated": false
+}

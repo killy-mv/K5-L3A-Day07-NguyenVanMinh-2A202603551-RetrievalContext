@@ -1,0 +1,72 @@
+{
+  "stage": "CP6",
+  "experiment": "E2_complete_answer_prompt",
+  "evaluation_status": "blocked_by_provider",
+  "dev_cases_attempted": 4,
+  "saved_attempts": 5,
+  "eligible_answer_reviews": 0,
+  "test_evaluated": false,
+  "note": "HTTP 503 and timeout on Gemini. No valid model response for attempted cases; do not invent grounded-answer improvements. Historical error attempts kept in ignored local trace folder.",
+  "attempts": [
+    {
+      "query_id": "D7-D01",
+      "attempt_file": "D7-D01.json",
+      "status": "error",
+      "model_calls_completed": 0,
+      "retrieval_calls_completed": 0,
+      "elapsed_ms": 4476.35,
+      "error": "provider_or_retriever_ProviderError",
+      "safe_diagnostic": [
+        "Gemini HTTP 503 (request/schema/quota)"
+      ]
+    },
+    {
+      "query_id": "D7-D02",
+      "attempt_file": "D7-D02.json",
+      "status": "error",
+      "model_calls_completed": 0,
+      "retrieval_calls_completed": 0,
+      "elapsed_ms": 75182.91,
+      "error": "provider_or_retriever_ProviderError",
+      "safe_diagnostic": [
+        "Gemini network error (TimeoutError)"
+      ]
+    },
+    {
+      "query_id": "D7-D03",
+      "attempt_file": "D7-D03.json",
+      "status": "error",
+      "model_calls_completed": 0,
+      "retrieval_calls_completed": 0,
+      "elapsed_ms": 14591.15,
+      "error": "provider_or_retriever_ProviderError",
+      "safe_diagnostic": [
+        "Gemini HTTP 503 (request/schema/quota)"
+      ]
+    },
+    {
+      "query_id": "D7-D03",
+      "attempt_file": "D7-D03_previous_error_20261114093237.json",
+      "status": "error",
+      "model_calls_completed": 0,
+      "retrieval_calls_completed": 0,
+      "elapsed_ms": 3773.78,
+      "error": "provider_or_retriever_ProviderError",
+      "safe_diagnostic": [
+        "Gemini HTTP 503 (request/schema/quota)"
+      ]
+    },
+    {
+      "query_id": "D7-D04",
+      "attempt_file": "D7-D04.json",
+      "status": "error",
+      "model_calls_completed": 0,
+      "retrieval_calls_completed": 0,
+      "elapsed_ms": 75070.29,
+      "error": "provider_or_retriever_ProviderError",
+      "safe_diagnostic": [
+        "Gemini network error (TimeoutError)"
+      ]
+    }
+  ]
+}

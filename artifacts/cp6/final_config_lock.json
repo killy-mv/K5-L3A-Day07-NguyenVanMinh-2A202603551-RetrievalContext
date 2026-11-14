@@ -1,0 +1,71 @@
+{
+  "stage": "CP6",
+  "status": "frozen_before_cp7",
+  "selected_dev_only": true,
+  "selection": "Keep balanced Hybrid RRF from CP5: full 15/15 dev Evidence Hit@3 and context coverage with valid 17/17 dev agent runs. E1 harmed hit quality, E2 prompt was provider-blocked, E2b context expansion improved Dense but remained below hybrid.",
+  "selected": {
+    "strategy": "hybrid",
+    "dense_weight": 1.0,
+    "lexical_weight": 1.0,
+    "rrf_k": 60,
+    "candidate_k": 12,
+    "top_k": 3,
+    "context_budget_chars": 3800,
+    "max_searches": 3,
+    "gemini_model": "gemini-3.5-flash-lite",
+    "system_prompt": "CP3 SYSTEM v1",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "embedding_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "embedding_dimensions": 384,
+    "vector_strategy": "B",
+    "metric": "cosine",
+    "lexical_model": "BM25",
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75,
+    "agent_temperature": 0.1,
+    "agent_max_output_tokens": 1200
+  },
+  "selection_evidence": {
+    "cp5_hybrid_hit1": {
+      "n": 12,
+      "N": 15,
+      "rate": 0.8
+    },
+    "cp5_hybrid_evidence_hit3": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "cp5_hybrid_context_evidence_rate": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "e1_weighted_evidence_hit3": {
+      "n": 14,
+      "N": 15,
+      "rate": 0.9333333333333333
+    },
+    "e2b_dense_context_evidence_rate": {
+      "n": 14,
+      "N": 15,
+      "rate": 0.9333333333333333
+    }
+  },
+  "source_code_sha256": {
+    "src\\agent.py": "8f32be80c97430f7f5e0b351db69183a35e3812640abfc49ae95028d9ff7184d",
+    "src\\retrieval.py": "f5a3c05a57e4eda6dd6745271f5d473ceb7a381453251d868c3fb10fbdcdc0e1",
+    "src\\day6_adapter.py": "573dabf9f31c35cfa276d002076662f7e6bda2529e0abe21d0417f5303b01b99",
+    "src\\gemini_client.py": "c4871a24148a69847999c0b5eccc4dcb4c0396d28bbe46c5caafad73fcccc014"
+  },
+  "cp2_lock_sha256": "802b87d95f2646ce8ba4ab7114db5cb3fd945ff655080e3bf7128abbca47aa89",
+  "benchmark_hashes": {
+    "corpus": "4760a9463bd0a99d461d07e4cb946921454e8f4fc6d88d0ba3422e00bf7b3306",
+    "dev": "f8b4944b60b36704edf0e143d3409761d9ef49ff385ca7bc19caead4ba848967",
+    "test": "598a74450f9fd24cfa68642c58837fce12e4b09ced6c33b1bbe1904bbd02c964"
+  },
+  "test_evaluated": false,
+  "test_cases_used_to_select": 0,
+  "manual_label_status": "AI-assisted CP5 provisional, human_confirmed=false",
+  "frozen_at_utc": "2026-11-14T09:34:42.644921+00:00"
+}

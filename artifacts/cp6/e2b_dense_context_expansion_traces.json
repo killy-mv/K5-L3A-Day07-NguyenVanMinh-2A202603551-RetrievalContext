@@ -1,0 +1,2237 @@
+[
+  {
+    "query_id": "D7-D01",
+    "split": "dev",
+    "answerable": true,
+    "query": "According to Chapter 1, what is a program?",
+    "filters": {
+      "chapter": "chapter_1"
+    },
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-ffbc2eae5676dc4386dc",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 23,
+        "text": "1.1 What is a program?\n\nAprogramis a sequence of instructions that specifies how to perform a computation. The\ncomputation might be something mathematical, such as solving a system of equations or\nfinding the roots of a polynomial, but it can also be a symbolic computation, such as search-\ning and replacing text in a document or something graphical, like processing an image or\nplaying a video.\n\nThe details look different in different languages, but a few basic instructions appear in just\nabout every language:\n\ninput:Get data from the keyboard, a file, the network, or some other device.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p023",
+          "max_size": 650,
+          "pdf_page": 23,
+          "char_count": 1955,
+          "chunk_index": 2,
+          "text_sha256": "5c5b7ed86c0aa32ffe80ba1cdf3a89991a76815a6baf678ec2d1cb3c1c78a171",
+          "chunk_method": "paragraph",
+          "printed_page": 1,
+          "chunk_char_count": 592,
+          "normalized_char_count": 1966
+        },
+        "score": 0.7226640582084656
+      },
+      {
+        "id": "paragraph-6f1ada177c08df7f1f93",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 28,
+        "text": "interpreter:A program that reads another program and executes it\nprompt:Characters displayed by the interpreter to indicate that it is ready to take input\n       from the user.\n\nprogram:A set of instructions that specifies a computation.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p028",
+          "max_size": 650,
+          "pdf_page": 28,
+          "char_count": 2622,
+          "chunk_index": 5,
+          "text_sha256": "f026e08d081337b1b2d205520cf6598936957942c7fbc65b5d056ab80e30874a",
+          "chunk_method": "paragraph",
+          "printed_page": 6,
+          "chunk_char_count": 237,
+          "normalized_char_count": 2663
+        },
+        "score": 0.5151709011095235
+      },
+      {
+        "id": "paragraph-503544b0af1180fd7659",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 24,
+        "text": "2 Chapter 1. The way of the program\n\nrepetition:Perform some action repeatedly, usually with some variation.\n\nBelieve it or not, that’s pretty much all there is to it. Every program you’ve ever used,\nno matter how complicated, is made up of instructions that look pretty much like these.\nSo you can think of programming as the process of breaking a large, complex task into\nsmaller and smaller subtasks until the subtasks are simple enough to be performed with\none of these basic instructions.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p024",
+          "max_size": 650,
+          "pdf_page": 24,
+          "char_count": 2673,
+          "chunk_index": 0,
+          "text_sha256": "1ff5425c45a33f648924b0c68d738e380620c0ab0670337a7594546f13f9cdcf",
+          "chunk_method": "paragraph",
+          "printed_page": 2,
+          "chunk_char_count": 493,
+          "normalized_char_count": 2682
+        },
+        "score": 0.4951096177101135
+      },
+      {
+        "id": "paragraph-d1f567cfe6ebe2209b13",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 23,
+        "text": "Chapter 1\n\nThe way of the program\n\nThe goal of this book is to teach you to think like a computer scientist. This way of think-\ning combines some of the best features of mathematics, engineering, and natural science.\nLike mathematicians, computer scientists use formal languages to denote ideas (specifi-\ncally computations). Like engineers, they design things, assembling components into sys-\ntems and evaluating tradeoffs among alternatives. Like scientists, they observe the behav-\nior of complex systems, form hypotheses, and test predictions.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p023",
+          "max_size": 650,
+          "pdf_page": 23,
+          "char_count": 1955,
+          "chunk_index": 0,
+          "text_sha256": "5c5b7ed86c0aa32ffe80ba1cdf3a89991a76815a6baf678ec2d1cb3c1c78a171",
+          "chunk_method": "paragraph",
+          "printed_page": 1,
+          "chunk_char_count": 547,
+          "normalized_char_count": 1966
+        },
+        "score": 0.4541642720503515
+      },
+      {
+        "id": "paragraph-17e403dab039e9680398",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 23,
+        "text": "The single most important skill for a computer scientist isproblem solving. Problem solv-\ning means the ability to formulate problems, think creatively about solutions, and express\na solution clearly and accurately. As it turns out, the process of learning to program is an\nexcellent opportunity to practice problem-solving skills. That’s why this chapter is called,\n“The way of the program”.\n\nOn one level, you will be learning to program, a useful skill by itself. On another level, you\nwill use programming as a means to an end. As we go along, that end will become clearer.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p023",
+          "max_size": 650,
+          "pdf_page": 23,
+          "char_count": 1955,
+          "chunk_index": 1,
+          "text_sha256": "5c5b7ed86c0aa32ffe80ba1cdf3a89991a76815a6baf678ec2d1cb3c1c78a171",
+          "chunk_method": "paragraph",
+          "printed_page": 1,
+          "chunk_char_count": 577,
+          "normalized_char_count": 1966
+        },
+        "score": 0.4344195205665238
+      }
+    ],
+    "context": "[paragraph-ffbc2eae5676dc4386dc] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=23 chapter=chapter_1\n<retrieved_document>\n1.1 What is a program?\n\nAprogramis a sequence of instructions that specifies how to perform a computation. The\ncomputation might be something mathematical, such as solving a system of equations or\nfinding the roots of a polynomial, but it can also be a symbolic computation, such as search-\ning and replacing text in a document or something graphical, like processing an image or\nplaying a video.\n\nThe details look different in different languages, but a few basic instructions appear in just\nabout every language:\n\ninput:Get data from the keyboard, a file, the network, or some other device.\n</retrieved_document>\n\n[paragraph-6f1ada177c08df7f1f93] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=28 chapter=chapter_1\n<retrieved_document>\ninterpreter:A program that reads another program and executes it\nprompt:Characters displayed by the interpreter to indicate that it is ready to take input\n       from the user.\n\nprogram:A set of instructions that specifies a computation.\n</retrieved_document>\n\n[paragraph-503544b0af1180fd7659] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=24 chapter=chapter_1\n<retrieved_document>\n2 Chapter 1. The way of the program\n\nrepetition:Perform some action repeatedly, usually with some variation.\n\nBelieve it or not, that’s pretty much all there is to it. Every program you’ve ever used,\nno matter how complicated, is made up of instructions that look pretty much like these.\nSo you can think of programming as the process of breaking a large, complex task into\nsmaller and smaller subtasks until the subtasks are simple enough to be performed with\none of these basic instructions.\n</retrieved_document>\n\n[paragraph-d1f567cfe6ebe2209b13] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=23 chapter=chapter_1\n<retrieved_document>\nChapter 1\n\nThe way of the program\n\nThe goal of this book is to teach you to think like a computer scientist. This way of think-\ning combines some of the best features of mathematics, engineering, and natural science.\nLike mathematicians, computer scientists use formal languages to denote ideas (specifi-\ncally computations). Like engineers, they design things, assembling components into sys-\ntems and evaluating tradeoffs among alternatives. Like scientists, they observe the behav-\nior of complex systems, form hypotheses, and test predictions.\n</retrieved_document>\n\n[paragraph-17e403dab039e9680398] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=23 chapter=chapter_1\n<retrieved_document>\nThe single most important skill for a computer scientist isproblem solving. Problem solv-\ning means the ability to formulate problems, think creatively about solutions, and express\na solution clearly and accurately. As it turns out, the process of learning to program is an\nexcellent opportunity to practice problem-solving skills. That’s why this chapter is called,\n“The way of the program”.\n\nOn one level, you will be learning to program, a useful skill by itself. On another level, you\nwill use programming as a means to an end. As we go along, that end will become clearer.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-ffbc2eae5676dc4386dc",
+      "paragraph-6f1ada177c08df7f1f93",
+      "paragraph-503544b0af1180fd7659",
+      "paragraph-d1f567cfe6ebe2209b13",
+      "paragraph-17e403dab039e9680398"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3279
+  },
+  {
+    "query_id": "D7-D02",
+    "split": "dev",
+    "answerable": true,
+    "query": "What environment does the author recommend for beginners to start running Python?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-abad02191d92918ebe99",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 24,
+        "text": "1.2 Running Python\n\nOne of the challenges of getting started with Python is that you might have to install\nPython and related software on your computer. If you are familiar with your operating\nsystem, and especially if you are comfortable with the command-line interface, you will\nhave no trouble installing Python. But for beginners, it can be painful to learn about sys-\ntem administration and programming at the same time.\n\nTo avoid that problem, I recommend that you start out running Python in a browser. Later,\nwhen you are comfortable with Python, I’ll make suggestions for installing Python on your\ncomputer.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p024",
+          "max_size": 650,
+          "pdf_page": 24,
+          "char_count": 2673,
+          "chunk_index": 1,
+          "text_sha256": "1ff5425c45a33f648924b0c68d738e380620c0ab0670337a7594546f13f9cdcf",
+          "chunk_method": "paragraph",
+          "printed_page": 2,
+          "chunk_char_count": 616,
+          "normalized_char_count": 2682
+        },
+        "score": 0.6312341690063477
+      },
+      {
+        "id": "paragraph-f88aa4f84e26cd31f6d7",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 24,
+        "text": "There are a number of web pages you can use to run Python. If you already have a fa-\nvorite, go ahead and use it. Otherwise I recommend PythonAnywhere. I provide detailed\ninstructions for getting started athttp://tinyurl.com/thinkpython2e.\n\nThere are two versions of Python, called Python 2 and Python 3. They are very similar, so\nif you learn one, it is easy to switch to the other. In fact, there are only a few differences you\nwill encounter as a beginner. This book is written for Python 3, but I include some notes\nabout Python 2.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p024",
+          "max_size": 650,
+          "pdf_page": 24,
+          "char_count": 2673,
+          "chunk_index": 2,
+          "text_sha256": "1ff5425c45a33f648924b0c68d738e380620c0ab0670337a7594546f13f9cdcf",
+          "chunk_method": "paragraph",
+          "printed_page": 2,
+          "chunk_char_count": 535,
+          "normalized_char_count": 2682
+        },
+        "score": 0.609658741375284
+      },
+      {
+        "id": "paragraph-bdfd69d25e83e52f010f",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 24,
+        "text": "The Pythoninterpreteris a program that reads and executes Python code. Depending\non your environment, you might start the interpreter by clicking on an icon, or by typing\npythonon a command line. When it starts, you should see output like this:\nPython 3.4.0 (default, Jun 19 2015, 14:20:21)\n[GCC 4.8.2] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>>\nThe first three lines contain information about the interpreter and the operating system it’s\nrunning on, so it might be different for you.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p024",
+          "max_size": 650,
+          "pdf_page": 24,
+          "char_count": 2673,
+          "chunk_index": 3,
+          "text_sha256": "1ff5425c45a33f648924b0c68d738e380620c0ab0670337a7594546f13f9cdcf",
+          "chunk_method": "paragraph",
+          "printed_page": 2,
+          "chunk_char_count": 526,
+          "normalized_char_count": 2682
+        },
+        "score": 0.516478419303894
+      },
+      {
+        "id": "paragraph-06b3f59a94795f0a2efb",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 24,
+        "text": "But you should check that the version number,\nwhich is3.4.0in this example, begins with 3, which indicates that you are running Python\n3. If it begins with 2, you are running (you guessed it) Python 2.\n\nThe last line is apromptthat indicates that the interpreter is ready for you to enter code. If\nyou type a line of code and hit Enter, the interpreter displays the result:\n>>> 1 + 1\n2\nNow you’re ready to get started. From here on, I assume that you know how to start the\nPython interpreter and run code.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p024",
+          "max_size": 650,
+          "pdf_page": 24,
+          "char_count": 2673,
+          "chunk_index": 4,
+          "text_sha256": "1ff5425c45a33f648924b0c68d738e380620c0ab0670337a7594546f13f9cdcf",
+          "chunk_method": "paragraph",
+          "printed_page": 2,
+          "chunk_char_count": 505,
+          "normalized_char_count": 2682
+        },
+        "score": 0.47259455919265747
+      },
+      {
+        "id": "paragraph-de6c90e9e7805c5f349c",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 33,
+        "text": "So far we have run Python ininteractive mode, which means that you interact directly\nwith the interpreter. Interactive mode is a good way to get started, but if you are working\nwith more than a few lines of code, it can be clumsy.\nThe alternative is to save code in a file called ascriptand then run the interpreter inscript\nmodeto execute the script. By convention, Python scripts have names that end with.py.\nIf you know how to create and run a script on your computer, you are ready to go. Oth-\nerwise I recommend using PythonAnywhere again. I have posted instructions for running\nin script mode athttp://tinyurl.com/thinkpython2e.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p033",
+          "max_size": 650,
+          "pdf_page": 33,
+          "char_count": 2382,
+          "chunk_index": 2,
+          "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+          "chunk_method": "paragraph",
+          "printed_page": 11,
+          "chunk_char_count": 634,
+          "normalized_char_count": 2387
+        },
+        "score": 0.44768852307268925
+      }
+    ],
+    "context": "[paragraph-abad02191d92918ebe99] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=24 chapter=chapter_1\n<retrieved_document>\n1.2 Running Python\n\nOne of the challenges of getting started with Python is that you might have to install\nPython and related software on your computer. If you are familiar with your operating\nsystem, and especially if you are comfortable with the command-line interface, you will\nhave no trouble installing Python. But for beginners, it can be painful to learn about sys-\ntem administration and programming at the same time.\n\nTo avoid that problem, I recommend that you start out running Python in a browser. Later,\nwhen you are comfortable with Python, I’ll make suggestions for installing Python on your\ncomputer.\n</retrieved_document>\n\n[paragraph-f88aa4f84e26cd31f6d7] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=24 chapter=chapter_1\n<retrieved_document>\nThere are a number of web pages you can use to run Python. If you already have a fa-\nvorite, go ahead and use it. Otherwise I recommend PythonAnywhere. I provide detailed\ninstructions for getting started athttp://tinyurl.com/thinkpython2e.\n\nThere are two versions of Python, called Python 2 and Python 3. They are very similar, so\nif you learn one, it is easy to switch to the other. In fact, there are only a few differences you\nwill encounter as a beginner. This book is written for Python 3, but I include some notes\nabout Python 2.\n</retrieved_document>\n\n[paragraph-bdfd69d25e83e52f010f] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=24 chapter=chapter_1\n<retrieved_document>\nThe Pythoninterpreteris a program that reads and executes Python code. Depending\non your environment, you might start the interpreter by clicking on an icon, or by typing\npythonon a command line. When it starts, you should see output like this:\nPython 3.4.0 (default, Jun 19 2015, 14:20:21)\n[GCC 4.8.2] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>>\nThe first three lines contain information about the interpreter and the operating system it’s\nrunning on, so it might be different for you.\n</retrieved_document>\n\n[paragraph-06b3f59a94795f0a2efb] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=24 chapter=chapter_1\n<retrieved_document>\nBut you should check that the version number,\nwhich is3.4.0in this example, begins with 3, which indicates that you are running Python\n3. If it begins with 2, you are running (you guessed it) Python 2.\n\nThe last line is apromptthat indicates that the interpreter is ready for you to enter code. If\nyou type a line of code and hit Enter, the interpreter displays the result:\n>>> 1 + 1\n2\nNow you’re ready to get started. From here on, I assume that you know how to start the\nPython interpreter and run code.\n</retrieved_document>\n\n[paragraph-de6c90e9e7805c5f349c] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\nSo far we have run Python ininteractive mode, which means that you interact directly\nwith the interpreter. Interactive mode is a good way to get started, but if you are working\nwith more than a few lines of code, it can be clumsy.\nThe alternative is to save code in a file called ascriptand then run the interpreter inscript\nmodeto execute the script. By convention, Python scripts have names that end with.py.\nIf you know how to create and run a script on your computer, you are ready to go. Oth-\nerwise I recommend using PythonAnywhere again. I have posted instructions for running\nin script mode athttp://tinyurl.com/thinkpython2e.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-abad02191d92918ebe99",
+      "paragraph-f88aa4f84e26cd31f6d7",
+      "paragraph-bdfd69d25e83e52f010f",
+      "paragraph-06b3f59a94795f0a2efb",
+      "paragraph-de6c90e9e7805c5f349c"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3649
+  },
+  {
+    "query_id": "D7-D03",
+    "split": "dev",
+    "answerable": true,
+    "query": "Which Python operator performs exponentiation rather than bitwise XOR?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-ce94d0642d1e4cbaa934",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 25,
+        "text": "Finally, the operator**performs exponentiation; that is, it raises a number to a power:\n>>> 6**2 + 6\n42\nIn some other languages,^is used for exponentiation, but in Python it is a bitwise operator\ncalled XOR. If you are not familiar with bitwise operators, the result will surprise you:\n>>> 6 ^ 2\n4\nI won’t cover bitwise operators in this book, but you can read about them athttp://wiki.\npython.org/moin/BitwiseOperators.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p025",
+          "max_size": 650,
+          "pdf_page": 25,
+          "char_count": 1748,
+          "chunk_index": 3,
+          "text_sha256": "59d146a31f7ea19e9ded7e930666fc75ed982bb0492247c1781bd8d3d579618f",
+          "chunk_method": "paragraph",
+          "printed_page": 3,
+          "chunk_char_count": 420,
+          "normalized_char_count": 1755
+        },
+        "score": 0.7506696730452984
+      },
+      {
+        "id": "paragraph-ce2dc9e967e781300bab",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 33,
+        "text": "2.5 Order of operations\n\nWhen an expression contains more than one operator, the order of evaluation depends\non theorder of operations. For mathematical operators, Python follows mathematical\nconvention. The acronymPEMDASis a useful way to remember the rules:",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p033",
+          "max_size": 650,
+          "pdf_page": 33,
+          "char_count": 2382,
+          "chunk_index": 5,
+          "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+          "chunk_method": "paragraph",
+          "printed_page": 11,
+          "chunk_char_count": 259,
+          "normalized_char_count": 2387
+        },
+        "score": 0.5668192764032328
+      },
+      {
+        "id": "paragraph-d967ebe299ed0d1f6b9f",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 25,
+        "text": "1.4 Arithmetic operators\n\nAfter “Hello, World”, the next step is arithmetic. Python providesoperators, which are\nspecial symbols that represent computations like addition and multiplication.\n\nThe operators+,-, and*perform addition, subtraction, and multiplication, as in the fol-\nlowing examples:\n>>> 40 + 2\n42\n>>> 43 - 1\n42\n>>> 6 * 7\n42\nThe operator/performs division:\n>>> 84 / 2\n42.0\nYou might wonder why the result is42.0instead of42. I’ll explain in the next section.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p025",
+          "max_size": 650,
+          "pdf_page": 25,
+          "char_count": 1748,
+          "chunk_index": 2,
+          "text_sha256": "59d146a31f7ea19e9ded7e930666fc75ed982bb0492247c1781bd8d3d579618f",
+          "chunk_method": "paragraph",
+          "printed_page": 3,
+          "chunk_char_count": 471,
+          "normalized_char_count": 1755
+        },
+        "score": 0.5383968903545272
+      },
+      {
+        "id": "paragraph-61a6e79256b1aafefa75",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 29,
+        "text": "1.9. Exercises 7\n\nprint statement:An instruction that causes the Python interpreter to display a value on\n       the screen.\n\noperator:A special symbol that represents a simple computation like addition, multipli-\n       cation, or string concatenation.\n\nvalue:One of the basic units of data, like a number or string, that a program manipulates.\n\ntype:A category of values. The types we have seen so far are integers (typeint), floating-\n       point numbers (typefloat), and strings (typestr).\n\ninteger:A type that represents whole numbers.\n\nfloating-point:A type that represents numbers with fractional parts.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p029",
+          "max_size": 650,
+          "pdf_page": 29,
+          "char_count": 2174,
+          "chunk_index": 0,
+          "text_sha256": "68750aea5d22350c8b9c457eb4fc242234f949a57dd1dc1e8255caa97550c4d2",
+          "chunk_method": "paragraph",
+          "printed_page": 7,
+          "chunk_char_count": 611,
+          "normalized_char_count": 2260
+        },
+        "score": 0.46543169227649694
+      },
+      {
+        "id": "paragraph-00a7cec88dd334d190b9",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 34,
+        "text": "12 Chapter 2. Variables, expressions and statements\n\n•Parentheses have the highest precedence and can be used to force an expression to\n       evaluate in the order you want. Since expressions in parentheses are evaluated first,\n       2 * (3-1)is 4, and(1+1)**(5-2)is 8. You can also use parentheses to make an\n       expression easier to read, as in(minute * 100) / 60, even if it doesn’t change the\n       result.\n\n•Exponentiation has the next highest precedence, so1 + 2**3is 9, not 27, and2 *\n       3**2is 18, not 36.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p034",
+          "max_size": 650,
+          "pdf_page": 34,
+          "char_count": 2236,
+          "chunk_index": 0,
+          "text_sha256": "b7e35cd757ca3c7690e9b69df578a8ed4e1b38be77c5809825611623f9a7333d",
+          "chunk_method": "paragraph",
+          "printed_page": 12,
+          "chunk_char_count": 523,
+          "normalized_char_count": 2326
+        },
+        "score": 0.435940716508585
+      }
+    ],
+    "context": "[paragraph-ce94d0642d1e4cbaa934] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=25 chapter=chapter_1\n<retrieved_document>\nFinally, the operator**performs exponentiation; that is, it raises a number to a power:\n>>> 6**2 + 6\n42\nIn some other languages,^is used for exponentiation, but in Python it is a bitwise operator\ncalled XOR. If you are not familiar with bitwise operators, the result will surprise you:\n>>> 6 ^ 2\n4\nI won’t cover bitwise operators in this book, but you can read about them athttp://wiki.\npython.org/moin/BitwiseOperators.\n</retrieved_document>\n\n[paragraph-ce2dc9e967e781300bab] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\n2.5 Order of operations\n\nWhen an expression contains more than one operator, the order of evaluation depends\non theorder of operations. For mathematical operators, Python follows mathematical\nconvention. The acronymPEMDASis a useful way to remember the rules:\n</retrieved_document>\n\n[paragraph-d967ebe299ed0d1f6b9f] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=25 chapter=chapter_1\n<retrieved_document>\n1.4 Arithmetic operators\n\nAfter “Hello, World”, the next step is arithmetic. Python providesoperators, which are\nspecial symbols that represent computations like addition and multiplication.\n\nThe operators+,-, and*perform addition, subtraction, and multiplication, as in the fol-\nlowing examples:\n>>> 40 + 2\n42\n>>> 43 - 1\n42\n>>> 6 * 7\n42\nThe operator/performs division:\n>>> 84 / 2\n42.0\nYou might wonder why the result is42.0instead of42. I’ll explain in the next section.\n</retrieved_document>\n\n[paragraph-61a6e79256b1aafefa75] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=29 chapter=chapter_1\n<retrieved_document>\n1.9. Exercises 7\n\nprint statement:An instruction that causes the Python interpreter to display a value on\n       the screen.\n\noperator:A special symbol that represents a simple computation like addition, multipli-\n       cation, or string concatenation.\n\nvalue:One of the basic units of data, like a number or string, that a program manipulates.\n\ntype:A category of values. The types we have seen so far are integers (typeint), floating-\n       point numbers (typefloat), and strings (typestr).\n\ninteger:A type that represents whole numbers.\n\nfloating-point:A type that represents numbers with fractional parts.\n</retrieved_document>\n\n[paragraph-00a7cec88dd334d190b9] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=34 chapter=chapter_2\n<retrieved_document>\n12 Chapter 2. Variables, expressions and statements\n\n•Parentheses have the highest precedence and can be used to force an expression to\n       evaluate in the order you want. Since expressions in parentheses are evaluated first,\n       2 * (3-1)is 4, and(1+1)**(5-2)is 8. You can also use parentheses to make an\n       expression easier to read, as in(minute * 100) / 60, even if it doesn’t change the\n       result.\n\n•Exponentiation has the next highest precedence, so1 + 2**3is 9, not 27, and2 *\n       3**2is 18, not 36.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-ce94d0642d1e4cbaa934",
+      "paragraph-ce2dc9e967e781300bab",
+      "paragraph-d967ebe299ed0d1f6b9f",
+      "paragraph-61a6e79256b1aafefa75",
+      "paragraph-00a7cec88dd334d190b9"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3117
+  },
+  {
+    "query_id": "D7-D04",
+    "split": "dev",
+    "answerable": true,
+    "query": "In the book, what are the types of the example values 2 and 42.0?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-6a63e5c250ce75fa0a6e",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 26,
+        "text": "4 Chapter 1. The way of the program\n1.5 Values and types\n\nAvalueis one of the basic things a program works with, like a letter or a number. Some\nvalues we have seen so far are2,42.0, and'Hello, World!'.\n\nThese values belong to differenttypes:2is aninteger,42.0is afloating-point number, and\n'Hello, World!'is astring, so-called because the letters it contains are strung together.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p026",
+          "max_size": 650,
+          "pdf_page": 26,
+          "char_count": 1945,
+          "chunk_index": 0,
+          "text_sha256": "305eedbd92be8afd4fa480ec87ee3efb90d45f4ae42be85d26e7c9852bbfe0b0",
+          "chunk_method": "paragraph",
+          "printed_page": 4,
+          "chunk_char_count": 380,
+          "normalized_char_count": 1969
+        },
+        "score": 0.5996883631309824
+      },
+      {
+        "id": "paragraph-3149f624e823bb9ed09e",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 26,
+        "text": "If you are not sure what type a value has, the interpreter can tell you:\n>>> type(2)\n<class'int'>\n>>> type(42.0)\n<class'float'>\n>>> type('Hello, World!')\n<class'str'>\nIn these results, the word “class” is used in the sense of a category; a type is a category of\nvalues.\n\nNot surprisingly, integers belong to the typeint, strings belong tostrand floating-point\nnumbers belong tofloat.\n\nWhat about values like'2'and'42.0'? They look like numbers, but they are in quotation\nmarks like strings.\n>>> type('2')\n<class'str'>\n>>> type('42.0')\n<class'str'>\nThey’re strings.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p026",
+          "max_size": 650,
+          "pdf_page": 26,
+          "char_count": 1945,
+          "chunk_index": 1,
+          "text_sha256": "305eedbd92be8afd4fa480ec87ee3efb90d45f4ae42be85d26e7c9852bbfe0b0",
+          "chunk_method": "paragraph",
+          "printed_page": 4,
+          "chunk_char_count": 564,
+          "normalized_char_count": 1969
+        },
+        "score": 0.5619184300996745
+      },
+      {
+        "id": "paragraph-61a6e79256b1aafefa75",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 29,
+        "text": "1.9. Exercises 7\n\nprint statement:An instruction that causes the Python interpreter to display a value on\n       the screen.\n\noperator:A special symbol that represents a simple computation like addition, multipli-\n       cation, or string concatenation.\n\nvalue:One of the basic units of data, like a number or string, that a program manipulates.\n\ntype:A category of values. The types we have seen so far are integers (typeint), floating-\n       point numbers (typefloat), and strings (typestr).\n\ninteger:A type that represents whole numbers.\n\nfloating-point:A type that represents numbers with fractional parts.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p029",
+          "max_size": 650,
+          "pdf_page": 29,
+          "char_count": 2174,
+          "chunk_index": 0,
+          "text_sha256": "68750aea5d22350c8b9c457eb4fc242234f949a57dd1dc1e8255caa97550c4d2",
+          "chunk_method": "paragraph",
+          "printed_page": 7,
+          "chunk_char_count": 611,
+          "normalized_char_count": 2260
+        },
+        "score": 0.52109035723863
+      },
+      {
+        "id": "paragraph-d967ebe299ed0d1f6b9f",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 25,
+        "text": "1.4 Arithmetic operators\n\nAfter “Hello, World”, the next step is arithmetic. Python providesoperators, which are\nspecial symbols that represent computations like addition and multiplication.\n\nThe operators+,-, and*perform addition, subtraction, and multiplication, as in the fol-\nlowing examples:\n>>> 40 + 2\n42\n>>> 43 - 1\n42\n>>> 6 * 7\n42\nThe operator/performs division:\n>>> 84 / 2\n42.0\nYou might wonder why the result is42.0instead of42. I’ll explain in the next section.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p025",
+          "max_size": 650,
+          "pdf_page": 25,
+          "char_count": 1748,
+          "chunk_index": 2,
+          "text_sha256": "59d146a31f7ea19e9ded7e930666fc75ed982bb0492247c1781bd8d3d579618f",
+          "chunk_method": "paragraph",
+          "printed_page": 3,
+          "chunk_char_count": 471,
+          "normalized_char_count": 1755
+        },
+        "score": 0.45724845442194284
+      },
+      {
+        "id": "paragraph-752f04cbc262867a5272",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 30,
+        "text": "8 Chapter 1. The way of the program\n\n4. In math notation, leading zeros are ok, as in09. What happens if you try this in Python?\n        What about011?\n\n5. What happens if you have two values with no operator between them?\nExercise 1.2.Start the Python interpreter and use it as a calculator.\n\n1. How many seconds are there in 42 minutes 42 seconds?\n\n2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.\n\n3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per\n        mile in minutes and seconds)? What is your average speed in miles per hour?",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p030",
+          "max_size": 650,
+          "pdf_page": 30,
+          "char_count": 599,
+          "chunk_index": 0,
+          "text_sha256": "c59a8054ef33c8543686ae4e198c5a3099270f9b8edba178d4b6c65ca915e5ae",
+          "chunk_method": "paragraph",
+          "printed_page": 8,
+          "chunk_char_count": 620,
+          "normalized_char_count": 640
+        },
+        "score": 0.44555784245291274
+      }
+    ],
+    "context": "[paragraph-6a63e5c250ce75fa0a6e] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=26 chapter=chapter_1\n<retrieved_document>\n4 Chapter 1. The way of the program\n1.5 Values and types\n\nAvalueis one of the basic things a program works with, like a letter or a number. Some\nvalues we have seen so far are2,42.0, and'Hello, World!'.\n\nThese values belong to differenttypes:2is aninteger,42.0is afloating-point number, and\n'Hello, World!'is astring, so-called because the letters it contains are strung together.\n</retrieved_document>\n\n[paragraph-3149f624e823bb9ed09e] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=26 chapter=chapter_1\n<retrieved_document>\nIf you are not sure what type a value has, the interpreter can tell you:\n>>> type(2)\n<class'int'>\n>>> type(42.0)\n<class'float'>\n>>> type('Hello, World!')\n<class'str'>\nIn these results, the word “class” is used in the sense of a category; a type is a category of\nvalues.\n\nNot surprisingly, integers belong to the typeint, strings belong tostrand floating-point\nnumbers belong tofloat.\n\nWhat about values like'2'and'42.0'? They look like numbers, but they are in quotation\nmarks like strings.\n>>> type('2')\n<class'str'>\n>>> type('42.0')\n<class'str'>\nThey’re strings.\n</retrieved_document>\n\n[paragraph-61a6e79256b1aafefa75] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=29 chapter=chapter_1\n<retrieved_document>\n1.9. Exercises 7\n\nprint statement:An instruction that causes the Python interpreter to display a value on\n       the screen.\n\noperator:A special symbol that represents a simple computation like addition, multipli-\n       cation, or string concatenation.\n\nvalue:One of the basic units of data, like a number or string, that a program manipulates.\n\ntype:A category of values. The types we have seen so far are integers (typeint), floating-\n       point numbers (typefloat), and strings (typestr).\n\ninteger:A type that represents whole numbers.\n\nfloating-point:A type that represents numbers with fractional parts.\n</retrieved_document>\n\n[paragraph-d967ebe299ed0d1f6b9f] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=25 chapter=chapter_1\n<retrieved_document>\n1.4 Arithmetic operators\n\nAfter “Hello, World”, the next step is arithmetic. Python providesoperators, which are\nspecial symbols that represent computations like addition and multiplication.\n\nThe operators+,-, and*perform addition, subtraction, and multiplication, as in the fol-\nlowing examples:\n>>> 40 + 2\n42\n>>> 43 - 1\n42\n>>> 6 * 7\n42\nThe operator/performs division:\n>>> 84 / 2\n42.0\nYou might wonder why the result is42.0instead of42. I’ll explain in the next section.\n</retrieved_document>\n\n[paragraph-752f04cbc262867a5272] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=30 chapter=chapter_1\n<retrieved_document>\n8 Chapter 1. The way of the program\n\n4. In math notation, leading zeros are ok, as in09. What happens if you try this in Python?\n        What about011?\n\n5. What happens if you have two values with no operator between them?\nExercise 1.2.Start the Python interpreter and use it as a calculator.\n\n1. How many seconds are there in 42 minutes 42 seconds?\n\n2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.\n\n3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per\n        mile in minutes and seconds)? What is your average speed in miles per hour?\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-6a63e5c250ce75fa0a6e",
+      "paragraph-3149f624e823bb9ed09e",
+      "paragraph-61a6e79256b1aafefa75",
+      "paragraph-d967ebe299ed0d1f6b9f",
+      "paragraph-752f04cbc262867a5272"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3479
+  },
+  {
+    "query_id": "D7-D05",
+    "split": "dev",
+    "answerable": true,
+    "query": "What two aspects are governed by formal-language syntax rules?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-af1cb23dfa68d00d3f31",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 27,
+        "text": "1.6. Formal and natural languages 5\n\nFormal languages tend to have strictsyntaxrules that govern the structure of statements.\nFor example, in mathematics the statement 3+3=6 has correct syntax, but 3+ =3$6\ndoes not. In chemistryH 2Ois a syntactically correct formula, but 2Zzis not.\n\nSyntax rules come in two flavors, pertaining totokensand structure. Tokens are the basic\nelements of the language, such as words, numbers, and chemical elements. One of the\nproblems with 3+ =3$6 is that $ is not a legal token in mathematics (at least as far as I\nknow). Similarly, 2Zzis not legal because there is no element with the abbreviationZz.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p027",
+          "max_size": 650,
+          "pdf_page": 27,
+          "char_count": 2845,
+          "chunk_index": 0,
+          "text_sha256": "b56f5374975d07482fd50ab2eb1252f539dc4a8eda7b572638502d29ea6890ea",
+          "chunk_method": "paragraph",
+          "printed_page": 5,
+          "chunk_char_count": 633,
+          "normalized_char_count": 2942
+        },
+        "score": 0.6415873169898987
+      },
+      {
+        "id": "paragraph-ec53db4379d52b6b7946",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 27,
+        "text": "Although formal and natural languages have many features in common—tokens, struc-\nture, and syntax—there are some differences:\n\nambiguity:Natural languages are full of ambiguity, which people deal with by using con-\n       textual clues and other information. Formal languages are designed to be nearly or\n       completely unambiguous, which means that any statement has exactly one meaning,\n       regardless of context.\n\nredundancy:In order to make up for ambiguity and reduce misunderstandings, natural\n       languages employ lots of redundancy. As a result, they are often verbose. Formal\n       languages are less redundant and more concise.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p027",
+          "max_size": 650,
+          "pdf_page": 27,
+          "char_count": 2845,
+          "chunk_index": 2,
+          "text_sha256": "b56f5374975d07482fd50ab2eb1252f539dc4a8eda7b572638502d29ea6890ea",
+          "chunk_method": "paragraph",
+          "printed_page": 5,
+          "chunk_char_count": 648,
+          "normalized_char_count": 2942
+        },
+        "score": 0.6170520782470703
+      },
+      {
+        "id": "paragraph-251968df8e8be5fb1402",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 27,
+        "text": "The second type of syntax rule pertains to the way tokens are combined. The equation\n3+/3 is illegal because even though+and / are legal tokens, you can’t have one right\nafter the other. Similarly, in a chemical formula the subscript comes after the element name,\nnot before.\n\nThis is @ well-structured Engli$h sentence with invalid t*kens in it. This sentence all valid\ntokens has, but invalid structure with.\n\nWhen you read a sentence in English or a statement in a formal language, you have to\nfigure out the structure (although in a natural language you do this subconsciously). This\nprocess is calledparsing.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p027",
+          "max_size": 650,
+          "pdf_page": 27,
+          "char_count": 2845,
+          "chunk_index": 1,
+          "text_sha256": "b56f5374975d07482fd50ab2eb1252f539dc4a8eda7b572638502d29ea6890ea",
+          "chunk_method": "paragraph",
+          "printed_page": 5,
+          "chunk_char_count": 613,
+          "normalized_char_count": 2942
+        },
+        "score": 0.6056395769119263
+      },
+      {
+        "id": "paragraph-5925899fcac2ced190b6",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 29,
+        "text": "string:A type that represents sequences of characters.\n\nnatural language:Any one of the languages that people speak that evolved naturally.\n\nformal language:Any one of the languages that people have designed for specific pur-\n       poses, such as representing mathematical ideas or computer programs; all program-\n       ming languages are formal languages.\n\ntoken:One of the basic elements of the syntactic structure of a program, analogous to a\n       word in a natural language.\n\nsyntax:The rules that govern the structure of a program.\n\nparse:To examine a program and analyze the syntactic structure.\n\nbug:An error in a program.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p029",
+          "max_size": 650,
+          "pdf_page": 29,
+          "char_count": 2174,
+          "chunk_index": 1,
+          "text_sha256": "68750aea5d22350c8b9c457eb4fc242234f949a57dd1dc1e8255caa97550c4d2",
+          "chunk_method": "paragraph",
+          "printed_page": 7,
+          "chunk_char_count": 633,
+          "normalized_char_count": 2260
+        },
+        "score": 0.5310187935829163
+      },
+      {
+        "id": "paragraph-37108a869eda893779e4",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 26,
+        "text": "1.6 Formal and natural languages\n\nNatural languagesare the languages people speak, such as English, Spanish, and French.\nThey were not designed by people (although people try to impose some order on them);\nthey evolved naturally.\n\nFormal languagesare languages that are designed by people for specific applications. For\nexample, the notation that mathematicians use is a formal language that is particularly\ngood at denoting relationships among numbers and symbols. Chemists use a formal lan-\nguage to represent the chemical structure of molecules. And most importantly:",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p026",
+          "max_size": 650,
+          "pdf_page": 26,
+          "char_count": 1945,
+          "chunk_index": 3,
+          "text_sha256": "305eedbd92be8afd4fa480ec87ee3efb90d45f4ae42be85d26e7c9852bbfe0b0",
+          "chunk_method": "paragraph",
+          "printed_page": 4,
+          "chunk_char_count": 570,
+          "normalized_char_count": 1969
+        },
+        "score": 0.5086785251689845
+      }
+    ],
+    "context": "[paragraph-af1cb23dfa68d00d3f31] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=27 chapter=chapter_1\n<retrieved_document>\n1.6. Formal and natural languages 5\n\nFormal languages tend to have strictsyntaxrules that govern the structure of statements.\nFor example, in mathematics the statement 3+3=6 has correct syntax, but 3+ =3$6\ndoes not. In chemistryH 2Ois a syntactically correct formula, but 2Zzis not.\n\nSyntax rules come in two flavors, pertaining totokensand structure. Tokens are the basic\nelements of the language, such as words, numbers, and chemical elements. One of the\nproblems with 3+ =3$6 is that $ is not a legal token in mathematics (at least as far as I\nknow). Similarly, 2Zzis not legal because there is no element with the abbreviationZz.\n</retrieved_document>\n\n[paragraph-ec53db4379d52b6b7946] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=27 chapter=chapter_1\n<retrieved_document>\nAlthough formal and natural languages have many features in common—tokens, struc-\nture, and syntax—there are some differences:\n\nambiguity:Natural languages are full of ambiguity, which people deal with by using con-\n       textual clues and other information. Formal languages are designed to be nearly or\n       completely unambiguous, which means that any statement has exactly one meaning,\n       regardless of context.\n\nredundancy:In order to make up for ambiguity and reduce misunderstandings, natural\n       languages employ lots of redundancy. As a result, they are often verbose. Formal\n       languages are less redundant and more concise.\n</retrieved_document>\n\n[paragraph-251968df8e8be5fb1402] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=27 chapter=chapter_1\n<retrieved_document>\nThe second type of syntax rule pertains to the way tokens are combined. The equation\n3+/3 is illegal because even though+and / are legal tokens, you can’t have one right\nafter the other. Similarly, in a chemical formula the subscript comes after the element name,\nnot before.\n\nThis is @ well-structured Engli$h sentence with invalid t*kens in it. This sentence all valid\ntokens has, but invalid structure with.\n\nWhen you read a sentence in English or a statement in a formal language, you have to\nfigure out the structure (although in a natural language you do this subconsciously). This\nprocess is calledparsing.\n</retrieved_document>\n\n[paragraph-5925899fcac2ced190b6] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=29 chapter=chapter_1\n<retrieved_document>\nstring:A type that represents sequences of characters.\n\nnatural language:Any one of the languages that people speak that evolved naturally.\n\nformal language:Any one of the languages that people have designed for specific pur-\n       poses, such as representing mathematical ideas or computer programs; all program-\n       ming languages are formal languages.\n\ntoken:One of the basic elements of the syntactic structure of a program, analogous to a\n       word in a natural language.\n\nsyntax:The rules that govern the structure of a program.\n\nparse:To examine a program and analyze the syntactic structure.\n\nbug:An error in a program.\n</retrieved_document>\n\n[paragraph-37108a869eda893779e4] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=26 chapter=chapter_1\n<retrieved_document>\n1.6 Formal and natural languages\n\nNatural languagesare the languages people speak, such as English, Spanish, and French.\nThey were not designed by people (although people try to impose some order on them);\nthey evolved naturally.\n\nFormal languagesare languages that are designed by people for specific applications. For\nexample, the notation that mathematicians use is a formal language that is particularly\ngood at denoting relationships among numbers and symbols. Chemists use a formal lan-\nguage to represent the chemical structure of molecules. And most importantly:\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-af1cb23dfa68d00d3f31",
+      "paragraph-ec53db4379d52b6b7946",
+      "paragraph-251968df8e8be5fb1402",
+      "paragraph-5925899fcac2ced190b6",
+      "paragraph-37108a869eda893779e4"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3930
+  },
+  {
+    "query_id": "D7-D06",
+    "split": "dev",
+    "answerable": true,
+    "query": "How does Chapter 2 define a variable?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-2d2ef0b895e0e0db9ee6",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 31,
+        "text": "Chapter 2\n\nVariables, expressions and\nstatements\n\nOne of the most powerful features of a programming language is the ability to manipulate\nvariables. A variable is a name that refers to a value.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p031",
+          "max_size": 650,
+          "pdf_page": 31,
+          "char_count": 1118,
+          "chunk_index": 0,
+          "text_sha256": "660ef63ec81db5532395abb86f4ce141ef25c8c53a25f9b41f4a85b5c31f83c6",
+          "chunk_method": "paragraph",
+          "printed_page": 9,
+          "chunk_char_count": 194,
+          "normalized_char_count": 1053
+        },
+        "score": 0.7122591652406768
+      },
+      {
+        "id": "paragraph-6f986a6b4992bad3a7a7",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 36,
+        "text": "14 Chapter 2. Variables, expressions and statements\n2.9 Glossary\n\nvariable:A name that refers to a value.\n\nassignment:A statement that assigns a value to a variable.\n\nstate diagram:A graphical representation of a set of variables and the values they refer to.\n\nkeyword:A reserved word that is used to parse a program; you cannot use keywords like\n       if,def, andwhileas variable names.\n\noperand:One of the values on which an operator operates.\n\nexpression:A combination of variables, operators, and values that represents a single re-\n       sult.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p036",
+          "max_size": 650,
+          "pdf_page": 36,
+          "char_count": 1922,
+          "chunk_index": 0,
+          "text_sha256": "c91a4447015ebe8d9b76791513ee0045f69cf13e1c6e8a4ca9ce89834ceba765",
+          "chunk_method": "paragraph",
+          "printed_page": 14,
+          "chunk_char_count": 550,
+          "normalized_char_count": 2003
+        },
+        "score": 0.6329386075808323
+      },
+      {
+        "id": "paragraph-e2676c7eee67d3a5106a",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 31,
+        "text": "2.2 Variable names\n\nProgrammers generally choose names for their variables that are meaningful—they docu-\nment what the variable is used for.\n\nFigure 2.1: State diagram.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p031",
+          "max_size": 650,
+          "pdf_page": 31,
+          "char_count": 1118,
+          "chunk_index": 3,
+          "text_sha256": "660ef63ec81db5532395abb86f4ce141ef25c8c53a25f9b41f4a85b5c31f83c6",
+          "chunk_method": "paragraph",
+          "printed_page": 9,
+          "chunk_char_count": 169,
+          "normalized_char_count": 1053
+        },
+        "score": 0.6091466415945762
+      },
+      {
+        "id": "paragraph-9eef08f5319ee96e0766",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 31,
+        "text": "2.1 Assignment statements\n\nAnassignment statementcreates a new variable and gives it a value:\n>>> message ='And now for something completely different'\n>>> n = 17\n>>> pi = 3.1415926535897932\nThis example makes three assignments. The first assigns a string to a new variable named\nmessage; the second gives the integer17ton; the third assigns the (approximate) value of\nπtopi.\nA common way to represent variables on paper is to write the name with an arrow pointing\nto its value. This kind of figure is called astate diagrambecause it shows what state each\nof the variables is in (think of it as the variable’s state of mind).",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p031",
+          "max_size": 650,
+          "pdf_page": 31,
+          "char_count": 1118,
+          "chunk_index": 1,
+          "text_sha256": "660ef63ec81db5532395abb86f4ce141ef25c8c53a25f9b41f4a85b5c31f83c6",
+          "chunk_method": "paragraph",
+          "printed_page": 9,
+          "chunk_char_count": 625,
+          "normalized_char_count": 1053
+        },
+        "score": 0.4940183169819966
+      },
+      {
+        "id": "paragraph-b9ae2e4d7f64738a7ea4",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 32,
+        "text": "10 Chapter 2. Variables, expressions and statements\n\nVariable names can be as long as you like. They can contain both letters and numbers, but\nthey can’t begin with a number. It is legal to use uppercase letters, but it is conventional to\nuse only lower case for variables names.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p032",
+          "max_size": 650,
+          "pdf_page": 32,
+          "char_count": 1903,
+          "chunk_index": 0,
+          "text_sha256": "2971846c3876d2852d2413a1b7889e021ce0085126e507519ededf135f2014b3",
+          "chunk_method": "paragraph",
+          "printed_page": 10,
+          "chunk_char_count": 279,
+          "normalized_char_count": 1908
+        },
+        "score": 0.46593031693335907
+      }
+    ],
+    "context": "[paragraph-2d2ef0b895e0e0db9ee6] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=31 chapter=chapter_2\n<retrieved_document>\nChapter 2\n\nVariables, expressions and\nstatements\n\nOne of the most powerful features of a programming language is the ability to manipulate\nvariables. A variable is a name that refers to a value.\n</retrieved_document>\n\n[paragraph-6f986a6b4992bad3a7a7] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=36 chapter=chapter_2\n<retrieved_document>\n14 Chapter 2. Variables, expressions and statements\n2.9 Glossary\n\nvariable:A name that refers to a value.\n\nassignment:A statement that assigns a value to a variable.\n\nstate diagram:A graphical representation of a set of variables and the values they refer to.\n\nkeyword:A reserved word that is used to parse a program; you cannot use keywords like\n       if,def, andwhileas variable names.\n\noperand:One of the values on which an operator operates.\n\nexpression:A combination of variables, operators, and values that represents a single re-\n       sult.\n</retrieved_document>\n\n[paragraph-e2676c7eee67d3a5106a] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=31 chapter=chapter_2\n<retrieved_document>\n2.2 Variable names\n\nProgrammers generally choose names for their variables that are meaningful—they docu-\nment what the variable is used for.\n\nFigure 2.1: State diagram.\n</retrieved_document>\n\n[paragraph-9eef08f5319ee96e0766] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=31 chapter=chapter_2\n<retrieved_document>\n2.1 Assignment statements\n\nAnassignment statementcreates a new variable and gives it a value:\n>>> message ='And now for something completely different'\n>>> n = 17\n>>> pi = 3.1415926535897932\nThis example makes three assignments. The first assigns a string to a new variable named\nmessage; the second gives the integer17ton; the third assigns the (approximate) value of\nπtopi.\nA common way to represent variables on paper is to write the name with an arrow pointing\nto its value. This kind of figure is called astate diagrambecause it shows what state each\nof the variables is in (think of it as the variable’s state of mind).\n</retrieved_document>\n\n[paragraph-b9ae2e4d7f64738a7ea4] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=32 chapter=chapter_2\n<retrieved_document>\n10 Chapter 2. Variables, expressions and statements\n\nVariable names can be as long as you like. They can contain both letters and numbers, but\nthey can’t begin with a number. It is legal to use uppercase letters, but it is conventional to\nuse only lower case for variables names.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-2d2ef0b895e0e0db9ee6",
+      "paragraph-6f986a6b4992bad3a7a7",
+      "paragraph-e2676c7eee67d3a5106a",
+      "paragraph-9eef08f5319ee96e0766",
+      "paragraph-b9ae2e4d7f64738a7ea4"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 2650
+  },
+  {
+    "query_id": "D7-D07",
+    "split": "dev",
+    "answerable": true,
+    "query": "In Chapter 2, why is class not permitted as a variable name?",
+    "filters": {
+      "chapter": "chapter_2"
+    },
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-4f0ffbfa7c995972f657",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 32,
+        "text": "The underscore character,_, can appear in a name. It is often used in names with multiple\nwords, such asyour_nameorairspeed_of_unladen_swallow.\nIf you give a variable an illegal name, you get a syntax error:\n>>> 76trombones ='big parade'\nSyntaxError: invalid syntax\n>>> more@ = 1000000\nSyntaxError: invalid syntax\n>>> class ='Advanced Theoretical Zymurgy'\nSyntaxError: invalid syntax\n76trombonesis illegal because it begins with a number.more@is illegal because it contains\nan illegal character,@. But what’s wrong withclass?",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p032",
+          "max_size": 650,
+          "pdf_page": 32,
+          "char_count": 1903,
+          "chunk_index": 1,
+          "text_sha256": "2971846c3876d2852d2413a1b7889e021ce0085126e507519ededf135f2014b3",
+          "chunk_method": "paragraph",
+          "printed_page": 10,
+          "chunk_char_count": 525,
+          "normalized_char_count": 1908
+        },
+        "score": 0.5824012409209476
+      },
+      {
+        "id": "paragraph-2d2ef0b895e0e0db9ee6",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 31,
+        "text": "Chapter 2\n\nVariables, expressions and\nstatements\n\nOne of the most powerful features of a programming language is the ability to manipulate\nvariables. A variable is a name that refers to a value.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p031",
+          "max_size": 650,
+          "pdf_page": 31,
+          "char_count": 1118,
+          "chunk_index": 0,
+          "text_sha256": "660ef63ec81db5532395abb86f4ce141ef25c8c53a25f9b41f4a85b5c31f83c6",
+          "chunk_method": "paragraph",
+          "printed_page": 9,
+          "chunk_char_count": 194,
+          "normalized_char_count": 1053
+        },
+        "score": 0.5351789551760012
+      },
+      {
+        "id": "paragraph-e2676c7eee67d3a5106a",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 31,
+        "text": "2.2 Variable names\n\nProgrammers generally choose names for their variables that are meaningful—they docu-\nment what the variable is used for.\n\nFigure 2.1: State diagram.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p031",
+          "max_size": 650,
+          "pdf_page": 31,
+          "char_count": 1118,
+          "chunk_index": 3,
+          "text_sha256": "660ef63ec81db5532395abb86f4ce141ef25c8c53a25f9b41f4a85b5c31f83c6",
+          "chunk_method": "paragraph",
+          "printed_page": 9,
+          "chunk_char_count": 169,
+          "normalized_char_count": 1053
+        },
+        "score": 0.511238663718781
+      },
+      {
+        "id": "paragraph-9963adce72df741a70f8",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 32,
+        "text": "It turns out thatclassis one of Python’skeywords. The interpreter uses keywords to\nrecognize the structure of the program, and they cannot be used as variable names.\nPython 3 has these keywords:\nFalse class finally is return\nNone continue for lambda try\nTrue def from nonlocal while\nand del global not with\nas elif if or yield\nassert else import pass\nbreak except in raise\nYou don’t have to memorize this list. In most development environments, keywords are\ndisplayed in a different color; if you try to use one as a variable name, you’ll know.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p032",
+          "max_size": 650,
+          "pdf_page": 32,
+          "char_count": 1903,
+          "chunk_index": 2,
+          "text_sha256": "2971846c3876d2852d2413a1b7889e021ce0085126e507519ededf135f2014b3",
+          "chunk_method": "paragraph",
+          "printed_page": 10,
+          "chunk_char_count": 544,
+          "normalized_char_count": 1908
+        },
+        "score": 0.5049122566089325
+      },
+      {
+        "id": "paragraph-6f986a6b4992bad3a7a7",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 36,
+        "text": "14 Chapter 2. Variables, expressions and statements\n2.9 Glossary\n\nvariable:A name that refers to a value.\n\nassignment:A statement that assigns a value to a variable.\n\nstate diagram:A graphical representation of a set of variables and the values they refer to.\n\nkeyword:A reserved word that is used to parse a program; you cannot use keywords like\n       if,def, andwhileas variable names.\n\noperand:One of the values on which an operator operates.\n\nexpression:A combination of variables, operators, and values that represents a single re-\n       sult.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p036",
+          "max_size": 650,
+          "pdf_page": 36,
+          "char_count": 1922,
+          "chunk_index": 0,
+          "text_sha256": "c91a4447015ebe8d9b76791513ee0045f69cf13e1c6e8a4ca9ce89834ceba765",
+          "chunk_method": "paragraph",
+          "printed_page": 14,
+          "chunk_char_count": 550,
+          "normalized_char_count": 2003
+        },
+        "score": 0.4872503884285466
+      }
+    ],
+    "context": "[paragraph-4f0ffbfa7c995972f657] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=32 chapter=chapter_2\n<retrieved_document>\nThe underscore character,_, can appear in a name. It is often used in names with multiple\nwords, such asyour_nameorairspeed_of_unladen_swallow.\nIf you give a variable an illegal name, you get a syntax error:\n>>> 76trombones ='big parade'\nSyntaxError: invalid syntax\n>>> more@ = 1000000\nSyntaxError: invalid syntax\n>>> class ='Advanced Theoretical Zymurgy'\nSyntaxError: invalid syntax\n76trombonesis illegal because it begins with a number.more@is illegal because it contains\nan illegal character,@. But what’s wrong withclass?\n</retrieved_document>\n\n[paragraph-2d2ef0b895e0e0db9ee6] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=31 chapter=chapter_2\n<retrieved_document>\nChapter 2\n\nVariables, expressions and\nstatements\n\nOne of the most powerful features of a programming language is the ability to manipulate\nvariables. A variable is a name that refers to a value.\n</retrieved_document>\n\n[paragraph-e2676c7eee67d3a5106a] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=31 chapter=chapter_2\n<retrieved_document>\n2.2 Variable names\n\nProgrammers generally choose names for their variables that are meaningful—they docu-\nment what the variable is used for.\n\nFigure 2.1: State diagram.\n</retrieved_document>\n\n[paragraph-9963adce72df741a70f8] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=32 chapter=chapter_2\n<retrieved_document>\nIt turns out thatclassis one of Python’skeywords. The interpreter uses keywords to\nrecognize the structure of the program, and they cannot be used as variable names.\nPython 3 has these keywords:\nFalse class finally is return\nNone continue for lambda try\nTrue def from nonlocal while\nand del global not with\nas elif if or yield\nassert else import pass\nbreak except in raise\nYou don’t have to memorize this list. In most development environments, keywords are\ndisplayed in a different color; if you try to use one as a variable name, you’ll know.\n</retrieved_document>\n\n[paragraph-6f986a6b4992bad3a7a7] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=36 chapter=chapter_2\n<retrieved_document>\n14 Chapter 2. Variables, expressions and statements\n2.9 Glossary\n\nvariable:A name that refers to a value.\n\nassignment:A statement that assigns a value to a variable.\n\nstate diagram:A graphical representation of a set of variables and the values they refer to.\n\nkeyword:A reserved word that is used to parse a program; you cannot use keywords like\n       if,def, andwhileas variable names.\n\noperand:One of the values on which an operator operates.\n\nexpression:A combination of variables, operators, and values that represents a single re-\n       sult.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-4f0ffbfa7c995972f657",
+      "paragraph-2d2ef0b895e0e0db9ee6",
+      "paragraph-e2676c7eee67d3a5106a",
+      "paragraph-9963adce72df741a70f8",
+      "paragraph-6f986a6b4992bad3a7a7"
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 2815
+  },
+  {
+    "query_id": "D7-D08",
+    "split": "dev",
+    "answerable": true,
+    "query": "Why does a bare expression produce no visible output in Python script mode, and what should be used instead?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-eb837ad0bb333d4e17c8",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 33,
+        "text": "Because Python provides both modes, you can test bits of code in interactive mode before\nyou put them in a script. But there are differences between interactive mode and script\nmode that can be confusing.\nFor example, if you are using Python as a calculator, you might type\n>>> miles = 26.2\n>>> miles * 1.61\n42.182\nThe first line assigns a value tomiles, but it has no visible effect. The second line is an ex-\npression, so the interpreter evaluates it and displays the result. It turns out that a marathon\nis about 42 kilometers.\nBut if you type the same code into a script and run it, you get no output at all.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p033",
+          "max_size": 650,
+          "pdf_page": 33,
+          "char_count": 2382,
+          "chunk_index": 3,
+          "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+          "chunk_method": "paragraph",
+          "printed_page": 11,
+          "chunk_char_count": 612,
+          "normalized_char_count": 2387
+        },
+        "score": 0.6352488615960572
+      },
+      {
+        "id": "paragraph-09593acb3b4cc5786177",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 33,
+        "text": "In script\nmode an expression, all by itself, has no visible effect. Python evaluates the expression, but\nit doesn’t display the result. To display the result, you need aprintstatement like this:\nmiles = 26.2\nprint(miles * 1.61)\nThis behavior can be confusing at first. To check your understanding, type the following\nstatements in the Python interpreter and see what they do:\n5\nx = 5\nx + 1\nNow put the same statements in a script and run it. What is the output? Modify the script\nby transforming each expression into a print statement and then run it again.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p033",
+          "max_size": 650,
+          "pdf_page": 33,
+          "char_count": 2382,
+          "chunk_index": 4,
+          "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+          "chunk_method": "paragraph",
+          "printed_page": 11,
+          "chunk_char_count": 557,
+          "normalized_char_count": 2387
+        },
+        "score": 0.5898810273479813
+      },
+      {
+        "id": "paragraph-692abcae3ae6979928fd",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 25,
+        "text": "In Python 2, the print statement is slightly different; it is not a function, so it doesn’t use\nparentheses.\n>>> print'Hello, World!'\nThis distinction will make more sense soon, but that’s enough to get started.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p025",
+          "max_size": 650,
+          "pdf_page": 25,
+          "char_count": 1748,
+          "chunk_index": 1,
+          "text_sha256": "59d146a31f7ea19e9ded7e930666fc75ed982bb0492247c1781bd8d3d579618f",
+          "chunk_method": "paragraph",
+          "printed_page": 3,
+          "chunk_char_count": 211,
+          "normalized_char_count": 1755
+        },
+        "score": 0.5544094112867478
+      },
+      {
+        "id": "paragraph-b775da5494ec6d054b18",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 33,
+        "text": "2.4. Script mode 11\n\nThe first line is an assignment statement that gives a value ton. The second line is a print\nstatement that displays the value ofn.\nWhen you type a statement, the interpreterexecutesit, which means that it does whatever\nthe statement says. In general, statements don’t have values.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p033",
+          "max_size": 650,
+          "pdf_page": 33,
+          "char_count": 2382,
+          "chunk_index": 0,
+          "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+          "chunk_method": "paragraph",
+          "printed_page": 11,
+          "chunk_char_count": 302,
+          "normalized_char_count": 2387
+        },
+        "score": 0.5190457105636597
+      },
+      {
+        "id": "paragraph-f3a869194d5511d28659",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 36,
+        "text": "evaluate:To simplify an expression by performing the operations in order to yield a single\n       value.\n\nstatement:A section of code that represents a command or action. So far, the statements\n       we have seen are assignments and print statements.\n\nexecute:To run a statement and do what it says.\n\ninteractive mode:A way of using the Python interpreter by typing code at the prompt.\n\nscript mode:A way of using the Python interpreter to read code from a script and run it.\n\nscript:A program stored in a file.\n\norder of operations:Rules governing the order in which expressions involving multiple\n       operators and operands are evaluated.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p036",
+          "max_size": 650,
+          "pdf_page": 36,
+          "char_count": 1922,
+          "chunk_index": 1,
+          "text_sha256": "c91a4447015ebe8d9b76791513ee0045f69cf13e1c6e8a4ca9ce89834ceba765",
+          "chunk_method": "paragraph",
+          "printed_page": 14,
+          "chunk_char_count": 644,
+          "normalized_char_count": 2003
+        },
+        "score": 0.49688512124000894
+      }
+    ],
+    "context": "[paragraph-eb837ad0bb333d4e17c8] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\nBecause Python provides both modes, you can test bits of code in interactive mode before\nyou put them in a script. But there are differences between interactive mode and script\nmode that can be confusing.\nFor example, if you are using Python as a calculator, you might type\n>>> miles = 26.2\n>>> miles * 1.61\n42.182\nThe first line assigns a value tomiles, but it has no visible effect. The second line is an ex-\npression, so the interpreter evaluates it and displays the result. It turns out that a marathon\nis about 42 kilometers.\nBut if you type the same code into a script and run it, you get no output at all.\n</retrieved_document>\n\n[paragraph-09593acb3b4cc5786177] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\nIn script\nmode an expression, all by itself, has no visible effect. Python evaluates the expression, but\nit doesn’t display the result. To display the result, you need aprintstatement like this:\nmiles = 26.2\nprint(miles * 1.61)\nThis behavior can be confusing at first. To check your understanding, type the following\nstatements in the Python interpreter and see what they do:\n5\nx = 5\nx + 1\nNow put the same statements in a script and run it. What is the output? Modify the script\nby transforming each expression into a print statement and then run it again.\n</retrieved_document>\n\n[paragraph-692abcae3ae6979928fd] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=25 chapter=chapter_1\n<retrieved_document>\nIn Python 2, the print statement is slightly different; it is not a function, so it doesn’t use\nparentheses.\n>>> print'Hello, World!'\nThis distinction will make more sense soon, but that’s enough to get started.\n</retrieved_document>\n\n[paragraph-b775da5494ec6d054b18] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\n2.4. Script mode 11\n\nThe first line is an assignment statement that gives a value ton. The second line is a print\nstatement that displays the value ofn.\nWhen you type a statement, the interpreterexecutesit, which means that it does whatever\nthe statement says. In general, statements don’t have values.\n</retrieved_document>\n\n[paragraph-f3a869194d5511d28659] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=36 chapter=chapter_2\n<retrieved_document>\nevaluate:To simplify an expression by performing the operations in order to yield a single\n       value.\n\nstatement:A section of code that represents a command or action. So far, the statements\n       we have seen are assignments and print statements.\n\nexecute:To run a statement and do what it says.\n\ninteractive mode:A way of using the Python interpreter by typing code at the prompt.\n\nscript mode:A way of using the Python interpreter to read code from a script and run it.\n\nscript:A program stored in a file.\n\norder of operations:Rules governing the order in which expressions involving multiple\n       operators and operands are evaluated.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-eb837ad0bb333d4e17c8",
+      "paragraph-09593acb3b4cc5786177",
+      "paragraph-692abcae3ae6979928fd",
+      "paragraph-b775da5494ec6d054b18",
+      "paragraph-f3a869194d5511d28659"
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3159
+  },
+  {
+    "query_id": "D7-D09",
+    "split": "dev",
+    "answerable": true,
+    "query": "What is string concatenation using the + operator?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-4ee8376cd1eed49d920f",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 34,
+        "text": "This use of+and*makes sense by analogy with addition and multiplication. Just as4*3\nis equivalent to4+4+4, we expect'Spam'*3to be the same as'Spam'+'Spam', and'+'Spam\nit is. On the other hand, there is a significant way in which string concatenation and repe-\ntition are different from integer addition and multiplication. Can you think of a property\nthat addition has that string concatenation does not?",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p034",
+          "max_size": 650,
+          "pdf_page": 34,
+          "char_count": 2236,
+          "chunk_index": 3,
+          "text_sha256": "b7e35cd757ca3c7690e9b69df578a8ed4e1b38be77c5809825611623f9a7333d",
+          "chunk_method": "paragraph",
+          "printed_page": 12,
+          "chunk_char_count": 404,
+          "normalized_char_count": 2326
+        },
+        "score": 0.6250725239428894
+      },
+      {
+        "id": "paragraph-3a983b172caa41487bf4",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 34,
+        "text": "2.6 String operations\n\nIn general, you can’t perform mathematical operations on strings, even if the strings look\nlike numbers, so the following are illegal:\n'chinese'-'food' 'eggs'/'easy' 'third'*'a charm'\nBut there are two exceptions,+and*.\n\nThe+operator performsstring concatenation, which means it joins the strings by linking\nthem end-to-end. For example:\n>>> first ='throat'\n>>> second ='warbler'\n>>> first + second\nthroatwarbler\nThe*operator also works on strings; it performs repetition. For example,'Spam'*3is\n'SpamSpamSpam'. If one of the values is a string, the other has to be an integer.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p034",
+          "max_size": 650,
+          "pdf_page": 34,
+          "char_count": 2236,
+          "chunk_index": 2,
+          "text_sha256": "b7e35cd757ca3c7690e9b69df578a8ed4e1b38be77c5809825611623f9a7333d",
+          "chunk_method": "paragraph",
+          "printed_page": 12,
+          "chunk_char_count": 600,
+          "normalized_char_count": 2326
+        },
+        "score": 0.604518509180458
+      },
+      {
+        "id": "paragraph-0d078ed3ecb87e3d2533",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 55,
+        "text": "This syntax makes the program more readable. It is also a reminder about how arguments\nand parameters work: when you call a function, the arguments are assigned to the param-\neters.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p055",
+          "max_size": 650,
+          "pdf_page": 55,
+          "char_count": 2464,
+          "chunk_index": 2,
+          "text_sha256": "d4914e6b6a2fead8bad50714587a1e7090c03ca79bd04d6bb51a92aea718231b",
+          "chunk_method": "paragraph",
+          "printed_page": 33,
+          "chunk_char_count": 181,
+          "normalized_char_count": 2496
+        },
+        "score": 0.45864823707054714
+      },
+      {
+        "id": "paragraph-db6272acb122be55283b",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 29,
+        "text": "1. In a print statement, what happens if you leave out one of the parentheses, or both?\n\n2. If you are trying to print a string, what happens if you leave out one of the quotation marks,\n       or both?\n\n3. You can use a minus sign to make a negative number like-2. What happens if you put a plus\n       sign before a number? What about2++2?",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p029",
+          "max_size": 650,
+          "pdf_page": 29,
+          "char_count": 2174,
+          "chunk_index": 4,
+          "text_sha256": "68750aea5d22350c8b9c457eb4fc242234f949a57dd1dc1e8255caa97550c4d2",
+          "chunk_method": "paragraph",
+          "printed_page": 7,
+          "chunk_char_count": 341,
+          "normalized_char_count": 2260
+        },
+        "score": 0.44674181938171387
+      },
+      {
+        "id": "paragraph-61a6e79256b1aafefa75",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 29,
+        "text": "1.9. Exercises 7\n\nprint statement:An instruction that causes the Python interpreter to display a value on\n       the screen.\n\noperator:A special symbol that represents a simple computation like addition, multipli-\n       cation, or string concatenation.\n\nvalue:One of the basic units of data, like a number or string, that a program manipulates.\n\ntype:A category of values. The types we have seen so far are integers (typeint), floating-\n       point numbers (typefloat), and strings (typestr).\n\ninteger:A type that represents whole numbers.\n\nfloating-point:A type that represents numbers with fractional parts.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p029",
+          "max_size": 650,
+          "pdf_page": 29,
+          "char_count": 2174,
+          "chunk_index": 0,
+          "text_sha256": "68750aea5d22350c8b9c457eb4fc242234f949a57dd1dc1e8255caa97550c4d2",
+          "chunk_method": "paragraph",
+          "printed_page": 7,
+          "chunk_char_count": 611,
+          "normalized_char_count": 2260
+        },
+        "score": 0.43310657143592834
+      }
+    ],
+    "context": "[paragraph-4ee8376cd1eed49d920f] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=34 chapter=chapter_2\n<retrieved_document>\nThis use of+and*makes sense by analogy with addition and multiplication. Just as4*3\nis equivalent to4+4+4, we expect'Spam'*3to be the same as'Spam'+'Spam', and'+'Spam\nit is. On the other hand, there is a significant way in which string concatenation and repe-\ntition are different from integer addition and multiplication. Can you think of a property\nthat addition has that string concatenation does not?\n</retrieved_document>\n\n[paragraph-3a983b172caa41487bf4] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=34 chapter=chapter_2\n<retrieved_document>\n2.6 String operations\n\nIn general, you can’t perform mathematical operations on strings, even if the strings look\nlike numbers, so the following are illegal:\n'chinese'-'food' 'eggs'/'easy' 'third'*'a charm'\nBut there are two exceptions,+and*.\n\nThe+operator performsstring concatenation, which means it joins the strings by linking\nthem end-to-end. For example:\n>>> first ='throat'\n>>> second ='warbler'\n>>> first + second\nthroatwarbler\nThe*operator also works on strings; it performs repetition. For example,'Spam'*3is\n'SpamSpamSpam'. If one of the values is a string, the other has to be an integer.\n</retrieved_document>\n\n[paragraph-0d078ed3ecb87e3d2533] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=55 chapter=chapter_4\n<retrieved_document>\nThis syntax makes the program more readable. It is also a reminder about how arguments\nand parameters work: when you call a function, the arguments are assigned to the param-\neters.\n</retrieved_document>\n\n[paragraph-db6272acb122be55283b] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=29 chapter=chapter_1\n<retrieved_document>\n1. In a print statement, what happens if you leave out one of the parentheses, or both?\n\n2. If you are trying to print a string, what happens if you leave out one of the quotation marks,\n       or both?\n\n3. You can use a minus sign to make a negative number like-2. What happens if you put a plus\n       sign before a number? What about2++2?\n</retrieved_document>\n\n[paragraph-61a6e79256b1aafefa75] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=29 chapter=chapter_1\n<retrieved_document>\n1.9. Exercises 7\n\nprint statement:An instruction that causes the Python interpreter to display a value on\n       the screen.\n\noperator:A special symbol that represents a simple computation like addition, multipli-\n       cation, or string concatenation.\n\nvalue:One of the basic units of data, like a number or string, that a program manipulates.\n\ntype:A category of values. The types we have seen so far are integers (typeint), floating-\n       point numbers (typefloat), and strings (typestr).\n\ninteger:A type that represents whole numbers.\n\nfloating-point:A type that represents numbers with fractional parts.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-4ee8376cd1eed49d920f",
+      "paragraph-3a983b172caa41487bf4",
+      "paragraph-0d078ed3ecb87e3d2533",
+      "paragraph-db6272acb122be55283b",
+      "paragraph-61a6e79256b1aafefa75"
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 2970
+  },
+  {
+    "query_id": "D7-D10",
+    "split": "dev",
+    "answerable": true,
+    "query": "Should a useful code comment prioritize explaining what the code does or why it does it?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-8259af61514e076515c4",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 35,
+        "text": "It is\nreasonable to assume that the reader can figure outwhatthe code does; it is more useful to\nexplainwhy.\nThis comment is redundant with the code and useless:\nv = 5 # assign 5 to v\nThis comment contains useful information that is not in the code:\nv = 5 # velocity in meters/second.\nGood variable names can reduce the need for comments, but long names can make com-\nplex expressions hard to read, so there is a tradeoff.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p035",
+          "max_size": 650,
+          "pdf_page": 35,
+          "char_count": 2641,
+          "chunk_index": 1,
+          "text_sha256": "c7817419d3b5fecf5e76be0e061ba6931444bc82a0de9aee622a4a559c3bf52e",
+          "chunk_method": "paragraph",
+          "printed_page": 13,
+          "chunk_char_count": 422,
+          "normalized_char_count": 2764
+        },
+        "score": 0.4761496810734652
+      },
+      {
+        "id": "paragraph-7f0d16b8555e69a53acd",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 34,
+        "text": "2.7 Comments\n\nAs programs get bigger and more complicated, they get more difficult to read. Formal\nlanguages are dense, and it is often difficult to look at a piece of code and figure out what\nit is doing, or why.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p034",
+          "max_size": 650,
+          "pdf_page": 34,
+          "char_count": 2236,
+          "chunk_index": 4,
+          "text_sha256": "b7e35cd757ca3c7690e9b69df578a8ed4e1b38be77c5809825611623f9a7333d",
+          "chunk_method": "paragraph",
+          "printed_page": 12,
+          "chunk_char_count": 213,
+          "normalized_char_count": 2326
+        },
+        "score": 0.45739105597787844
+      },
+      {
+        "id": "paragraph-35ee670a0bf97d2dc6cd",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 35,
+        "text": "2.8. Debugging 13\n\nFor this reason, it is a good idea to add notes to your programs to explain in natural lan-\nguage what the program is doing. These notes are calledcomments, and they start with\nthe#symbol:\n# compute the percentage of the hour that has elapsed\npercentage = (minute * 100) / 60\nIn this case, the comment appears on a line by itself. You can also put comments at the end\nof a line:\npercentage = (minute * 100) / 60 # percentage of an hour\nEverything from the#to the end of the line is ignored—it has no effect on the execution of\nthe program.\nComments are most useful when they document non-obvious features of the code.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p035",
+          "max_size": 650,
+          "pdf_page": 35,
+          "char_count": 2641,
+          "chunk_index": 0,
+          "text_sha256": "c7817419d3b5fecf5e76be0e061ba6931444bc82a0de9aee622a4a559c3bf52e",
+          "chunk_method": "paragraph",
+          "printed_page": 13,
+          "chunk_char_count": 636,
+          "normalized_char_count": 2764
+        },
+        "score": 0.40565774407042676
+      },
+      {
+        "id": "paragraph-9cd2fca15e63b5827ff9",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 43,
+        "text": "Sometimes it makes more sense if you follow the flow of execution.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p043",
+          "max_size": 650,
+          "pdf_page": 43,
+          "char_count": 2486,
+          "chunk_index": 4,
+          "text_sha256": "56cff93e8e5da7baa3859c1cd35cbd1b86836ac171e71aa9502f4b3a98831ab8",
+          "chunk_method": "paragraph",
+          "printed_page": 21,
+          "chunk_char_count": 66,
+          "normalized_char_count": 2506
+        },
+        "score": 0.3881728715793573
+      },
+      {
+        "id": "paragraph-6e215eb75730ec87f978",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 57,
+        "text": "5. Look for opportunities to improve the program by refactoring. For example, if you\n       have similar code in several places, consider factoring it into an appropriately general\n       function.\n\nThis process has some drawbacks—we will see alternatives later—but it can be useful if\nyou don’t know ahead of time how to divide the program into functions. This approach\nlets you design as you go along.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p057",
+          "max_size": 650,
+          "pdf_page": 57,
+          "char_count": 2023,
+          "chunk_index": 2,
+          "text_sha256": "4ca853b536c228ffd83956b5964593def8c2dc99a5373c0ed91835435409cfb2",
+          "chunk_method": "paragraph",
+          "printed_page": 35,
+          "chunk_char_count": 403,
+          "normalized_char_count": 2119
+        },
+        "score": 0.3760964646281926
+      }
+    ],
+    "context": "[paragraph-8259af61514e076515c4] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=35 chapter=chapter_2\n<retrieved_document>\nIt is\nreasonable to assume that the reader can figure outwhatthe code does; it is more useful to\nexplainwhy.\nThis comment is redundant with the code and useless:\nv = 5 # assign 5 to v\nThis comment contains useful information that is not in the code:\nv = 5 # velocity in meters/second.\nGood variable names can reduce the need for comments, but long names can make com-\nplex expressions hard to read, so there is a tradeoff.\n</retrieved_document>\n\n[paragraph-7f0d16b8555e69a53acd] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=34 chapter=chapter_2\n<retrieved_document>\n2.7 Comments\n\nAs programs get bigger and more complicated, they get more difficult to read. Formal\nlanguages are dense, and it is often difficult to look at a piece of code and figure out what\nit is doing, or why.\n</retrieved_document>\n\n[paragraph-35ee670a0bf97d2dc6cd] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=35 chapter=chapter_2\n<retrieved_document>\n2.8. Debugging 13\n\nFor this reason, it is a good idea to add notes to your programs to explain in natural lan-\nguage what the program is doing. These notes are calledcomments, and they start with\nthe#symbol:\n# compute the percentage of the hour that has elapsed\npercentage = (minute * 100) / 60\nIn this case, the comment appears on a line by itself. You can also put comments at the end\nof a line:\npercentage = (minute * 100) / 60 # percentage of an hour\nEverything from the#to the end of the line is ignored—it has no effect on the execution of\nthe program.\nComments are most useful when they document non-obvious features of the code.\n</retrieved_document>\n\n[paragraph-9cd2fca15e63b5827ff9] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=43 chapter=chapter_3\n<retrieved_document>\nSometimes it makes more sense if you follow the flow of execution.\n</retrieved_document>\n\n[paragraph-6e215eb75730ec87f978] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=57 chapter=chapter_4\n<retrieved_document>\n5. Look for opportunities to improve the program by refactoring. For example, if you\n       have similar code in several places, consider factoring it into an appropriately general\n       function.\n\nThis process has some drawbacks—we will see alternatives later—but it can be useful if\nyou don’t know ahead of time how to divide the program into functions. This approach\nlets you design as you go along.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-8259af61514e076515c4",
+      "paragraph-7f0d16b8555e69a53acd",
+      "paragraph-35ee670a0bf97d2dc6cd",
+      "paragraph-9cd2fca15e63b5827ff9",
+      "paragraph-6e215eb75730ec87f978"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 2573
+  },
+  {
+    "query_id": "D7-D11",
+    "split": "dev",
+    "answerable": true,
+    "query": "Does int() round floating-point inputs or truncate their fractional part?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-86d330119286c47b778c",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 39,
+        "text": "Theintfunction\ntakes any value and converts it to an integer, if it can, or complains otherwise:\n>>> int('32')\n32\n>>> int('Hello')\nValueError: invalid literal for int(): Hello\nintcan convert floating-point values to integers, but it doesn’t round off; it chops off the\nfraction part:\n>>> int(3.99999)\n3\n>>> int(-2.3)\n-2\nfloatconverts integers and strings to floating-point numbers:\n>>> float(32)\n32.0\n>>> float('3.14159')\n3.14159",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p039",
+          "max_size": 650,
+          "pdf_page": 39,
+          "char_count": 1130,
+          "chunk_index": 2,
+          "text_sha256": "76ce55c0b8e15d400457df55ff3cc2ade648991a83598b12e9807e6c67104f39",
+          "chunk_method": "paragraph",
+          "printed_page": 17,
+          "chunk_char_count": 429,
+          "normalized_char_count": 1134
+        },
+        "score": 0.6484060287475586
+      },
+      {
+        "id": "paragraph-61a6e79256b1aafefa75",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 29,
+        "text": "1.9. Exercises 7\n\nprint statement:An instruction that causes the Python interpreter to display a value on\n       the screen.\n\noperator:A special symbol that represents a simple computation like addition, multipli-\n       cation, or string concatenation.\n\nvalue:One of the basic units of data, like a number or string, that a program manipulates.\n\ntype:A category of values. The types we have seen so far are integers (typeint), floating-\n       point numbers (typefloat), and strings (typestr).\n\ninteger:A type that represents whole numbers.\n\nfloating-point:A type that represents numbers with fractional parts.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p029",
+          "max_size": 650,
+          "pdf_page": 29,
+          "char_count": 2174,
+          "chunk_index": 0,
+          "text_sha256": "68750aea5d22350c8b9c457eb4fc242234f949a57dd1dc1e8255caa97550c4d2",
+          "chunk_method": "paragraph",
+          "printed_page": 7,
+          "chunk_char_count": 611,
+          "normalized_char_count": 2260
+        },
+        "score": 0.5018726587295532
+      },
+      {
+        "id": "paragraph-3149f624e823bb9ed09e",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 26,
+        "text": "If you are not sure what type a value has, the interpreter can tell you:\n>>> type(2)\n<class'int'>\n>>> type(42.0)\n<class'float'>\n>>> type('Hello, World!')\n<class'str'>\nIn these results, the word “class” is used in the sense of a category; a type is a category of\nvalues.\n\nNot surprisingly, integers belong to the typeint, strings belong tostrand floating-point\nnumbers belong tofloat.\n\nWhat about values like'2'and'42.0'? They look like numbers, but they are in quotation\nmarks like strings.\n>>> type('2')\n<class'str'>\n>>> type('42.0')\n<class'str'>\nThey’re strings.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p026",
+          "max_size": 650,
+          "pdf_page": 26,
+          "char_count": 1945,
+          "chunk_index": 1,
+          "text_sha256": "305eedbd92be8afd4fa480ec87ee3efb90d45f4ae42be85d26e7c9852bbfe0b0",
+          "chunk_method": "paragraph",
+          "printed_page": 4,
+          "chunk_char_count": 564,
+          "normalized_char_count": 1969
+        },
+        "score": 0.42887428826843044
+      },
+      {
+        "id": "paragraph-b4a253ed34d1a2bc08ac",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 40,
+        "text": "The second example finds the sine ofradians. The variable nameradiansis a hint that\nsinand the other trigonometric functions (cos,tan, etc.) take arguments in radians. To\nconvert from degrees to radians, divide by 180 and multiply byπ:\n>>> degrees = 45\n>>> radians = degrees / 180.0 * math.pi\n>>> math.sin(radians)\n0.707106781187\nThe expressionmath.pigets the variablepifrom the math module. Its value is a floating-\npoint approximation ofπ, accurate to about 15 digits.\n\nIf you know trigonometry, you can check the previous result by comparing it to the square\nroot of two, divided by two:\n>>> math.sqrt(2) / 2.0\n0.707106781187",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p040",
+          "max_size": 650,
+          "pdf_page": 40,
+          "char_count": 1761,
+          "chunk_index": 4,
+          "text_sha256": "f40465ccd532284371c4690e8ba266f58eda8ce00440485c3927f1d77d4eb45f",
+          "chunk_method": "paragraph",
+          "printed_page": 18,
+          "chunk_char_count": 628,
+          "normalized_char_count": 1768
+        },
+        "score": 0.3845885235561728
+      },
+      {
+        "id": "paragraph-d967ebe299ed0d1f6b9f",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 25,
+        "text": "1.4 Arithmetic operators\n\nAfter “Hello, World”, the next step is arithmetic. Python providesoperators, which are\nspecial symbols that represent computations like addition and multiplication.\n\nThe operators+,-, and*perform addition, subtraction, and multiplication, as in the fol-\nlowing examples:\n>>> 40 + 2\n42\n>>> 43 - 1\n42\n>>> 6 * 7\n42\nThe operator/performs division:\n>>> 84 / 2\n42.0\nYou might wonder why the result is42.0instead of42. I’ll explain in the next section.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p025",
+          "max_size": 650,
+          "pdf_page": 25,
+          "char_count": 1748,
+          "chunk_index": 2,
+          "text_sha256": "59d146a31f7ea19e9ded7e930666fc75ed982bb0492247c1781bd8d3d579618f",
+          "chunk_method": "paragraph",
+          "printed_page": 3,
+          "chunk_char_count": 471,
+          "normalized_char_count": 1755
+        },
+        "score": 0.36055404778992917
+      }
+    ],
+    "context": "[paragraph-86d330119286c47b778c] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=39 chapter=chapter_3\n<retrieved_document>\nTheintfunction\ntakes any value and converts it to an integer, if it can, or complains otherwise:\n>>> int('32')\n32\n>>> int('Hello')\nValueError: invalid literal for int(): Hello\nintcan convert floating-point values to integers, but it doesn’t round off; it chops off the\nfraction part:\n>>> int(3.99999)\n3\n>>> int(-2.3)\n-2\nfloatconverts integers and strings to floating-point numbers:\n>>> float(32)\n32.0\n>>> float('3.14159')\n3.14159\n</retrieved_document>\n\n[paragraph-61a6e79256b1aafefa75] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=29 chapter=chapter_1\n<retrieved_document>\n1.9. Exercises 7\n\nprint statement:An instruction that causes the Python interpreter to display a value on\n       the screen.\n\noperator:A special symbol that represents a simple computation like addition, multipli-\n       cation, or string concatenation.\n\nvalue:One of the basic units of data, like a number or string, that a program manipulates.\n\ntype:A category of values. The types we have seen so far are integers (typeint), floating-\n       point numbers (typefloat), and strings (typestr).\n\ninteger:A type that represents whole numbers.\n\nfloating-point:A type that represents numbers with fractional parts.\n</retrieved_document>\n\n[paragraph-3149f624e823bb9ed09e] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=26 chapter=chapter_1\n<retrieved_document>\nIf you are not sure what type a value has, the interpreter can tell you:\n>>> type(2)\n<class'int'>\n>>> type(42.0)\n<class'float'>\n>>> type('Hello, World!')\n<class'str'>\nIn these results, the word “class” is used in the sense of a category; a type is a category of\nvalues.\n\nNot surprisingly, integers belong to the typeint, strings belong tostrand floating-point\nnumbers belong tofloat.\n\nWhat about values like'2'and'42.0'? They look like numbers, but they are in quotation\nmarks like strings.\n>>> type('2')\n<class'str'>\n>>> type('42.0')\n<class'str'>\nThey’re strings.\n</retrieved_document>\n\n[paragraph-b4a253ed34d1a2bc08ac] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=40 chapter=chapter_3\n<retrieved_document>\nThe second example finds the sine ofradians. The variable nameradiansis a hint that\nsinand the other trigonometric functions (cos,tan, etc.) take arguments in radians. To\nconvert from degrees to radians, divide by 180 and multiply byπ:\n>>> degrees = 45\n>>> radians = degrees / 180.0 * math.pi\n>>> math.sin(radians)\n0.707106781187\nThe expressionmath.pigets the variablepifrom the math module. Its value is a floating-\npoint approximation ofπ, accurate to about 15 digits.\n\nIf you know trigonometry, you can check the previous result by comparing it to the square\nroot of two, divided by two:\n>>> math.sqrt(2) / 2.0\n0.707106781187\n</retrieved_document>\n\n[paragraph-d967ebe299ed0d1f6b9f] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=25 chapter=chapter_1\n<retrieved_document>\n1.4 Arithmetic operators\n\nAfter “Hello, World”, the next step is arithmetic. Python providesoperators, which are\nspecial symbols that represent computations like addition and multiplication.\n\nThe operators+,-, and*perform addition, subtraction, and multiplication, as in the fol-\nlowing examples:\n>>> 40 + 2\n42\n>>> 43 - 1\n42\n>>> 6 * 7\n42\nThe operator/performs division:\n>>> 84 / 2\n42.0\nYou might wonder why the result is42.0instead of42. I’ll explain in the next section.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-86d330119286c47b778c",
+      "paragraph-61a6e79256b1aafefa75",
+      "paragraph-3149f624e823bb9ed09e",
+      "paragraph-b4a253ed34d1a2bc08ac",
+      "paragraph-d967ebe299ed0d1f6b9f"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3536
+  },
+  {
+    "query_id": "D7-D12",
+    "split": "dev",
+    "answerable": true,
+    "query": "In Chapter 3, how are functions in a module accessed using dot notation?",
+    "filters": {
+      "chapter": "chapter_3"
+    },
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-8e6b1b34e2e24509b772",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 48,
+        "text": "dot notation:The syntax for calling a function in another module by specifying the mod-\n       ule name followed by a dot (period) and the function name.\n\ncomposition:Using an expression as part of a larger expression, or a statement as part of\n       a larger statement.\n\nflow of execution:The order statements run in.\n\nstack diagram:A graphical representation of a stack of functions, their variables, and the\n       values they refer to.\n\nframe:A box in a stack diagram that represents a function call. It contains the local vari-\n       ables and parameters of the function.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p048",
+          "max_size": 650,
+          "pdf_page": 48,
+          "char_count": 2164,
+          "chunk_index": 2,
+          "text_sha256": "88571117bcf82abfb9eb6da532dad3a569e285fe5bf2127c2857a2d5f7c35f94",
+          "chunk_method": "paragraph",
+          "printed_page": 26,
+          "chunk_char_count": 578,
+          "normalized_char_count": 2256
+        },
+        "score": 0.7197951579460232
+      },
+      {
+        "id": "paragraph-3e22573f15c3b9344e42",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 39,
+        "text": "Chapter 3\n\nFunctions\n\nIn the context of programming, afunctionis a named sequence of statements that performs\na computation. When you define a function, you specify the name and the sequence of\nstatements. Later, you can “call” the function by name.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p039",
+          "max_size": 650,
+          "pdf_page": 39,
+          "char_count": 1130,
+          "chunk_index": 0,
+          "text_sha256": "76ce55c0b8e15d400457df55ff3cc2ade648991a83598b12e9807e6c67104f39",
+          "chunk_method": "paragraph",
+          "printed_page": 17,
+          "chunk_char_count": 249,
+          "normalized_char_count": 1134
+        },
+        "score": 0.493612021207813
+      },
+      {
+        "id": "paragraph-c39cc245f179dc1d7d0e",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 48,
+        "text": "26 Chapter 3. Functions\n\nbody:The sequence of statements inside a function definition.\n\nparameter:A name used inside a function to refer to the value passed as an argument.\n\nfunction call:A statement that runs a function. It consists of the function name followed\n       by an argument list in parentheses.\n\nargument:A value provided to a function when the function is called. This value is as-\n       signed to the corresponding parameter in the function.\n\nlocal variable:A variable defined inside a function. A local variable can only be used\n       inside its function.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p048",
+          "max_size": 650,
+          "pdf_page": 48,
+          "char_count": 2164,
+          "chunk_index": 0,
+          "text_sha256": "88571117bcf82abfb9eb6da532dad3a569e285fe5bf2127c2857a2d5f7c35f94",
+          "chunk_method": "paragraph",
+          "printed_page": 26,
+          "chunk_char_count": 572,
+          "normalized_char_count": 2256
+        },
+        "score": 0.4825723181621847
+      },
+      {
+        "id": "paragraph-6e7a8fef66bef8ecf506",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 40,
+        "text": "3.2 Math functions\n\nPython has a math module that provides most of the familiar mathematical functions. A\nmoduleis a file that contains a collection of related functions.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p040",
+          "max_size": 650,
+          "pdf_page": 40,
+          "char_count": 1761,
+          "chunk_index": 1,
+          "text_sha256": "f40465ccd532284371c4690e8ba266f58eda8ce00440485c3927f1d77d4eb45f",
+          "chunk_method": "paragraph",
+          "printed_page": 18,
+          "chunk_char_count": 170,
+          "normalized_char_count": 1768
+        },
+        "score": 0.47727039591846576
+      },
+      {
+        "id": "paragraph-ddc787a6ca6a4281d2c5",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 48,
+        "text": "return value:The result of a function. If a function call is used as an expression, the return\n       value is the value of the expression.\n\nfruitful function:A function that returns a value.\n\nvoid function:A function that always returnsNone.\n\nNone: A special value returned by void functions.\n\nmodule:A file that contains a collection of related functions and other definitions.\n\nimport statement:A statement that reads a module file and creates a module object.\n\nmodule object:A value created by animportstatement that provides access to the values\n       defined in a module.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p048",
+          "max_size": 650,
+          "pdf_page": 48,
+          "char_count": 2164,
+          "chunk_index": 1,
+          "text_sha256": "88571117bcf82abfb9eb6da532dad3a569e285fe5bf2127c2857a2d5f7c35f94",
+          "chunk_method": "paragraph",
+          "printed_page": 26,
+          "chunk_char_count": 578,
+          "normalized_char_count": 2256
+        },
+        "score": 0.47350919562468574
+      }
+    ],
+    "context": "[paragraph-8e6b1b34e2e24509b772] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=48 chapter=chapter_3\n<retrieved_document>\ndot notation:The syntax for calling a function in another module by specifying the mod-\n       ule name followed by a dot (period) and the function name.\n\ncomposition:Using an expression as part of a larger expression, or a statement as part of\n       a larger statement.\n\nflow of execution:The order statements run in.\n\nstack diagram:A graphical representation of a stack of functions, their variables, and the\n       values they refer to.\n\nframe:A box in a stack diagram that represents a function call. It contains the local vari-\n       ables and parameters of the function.\n</retrieved_document>\n\n[paragraph-3e22573f15c3b9344e42] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=39 chapter=chapter_3\n<retrieved_document>\nChapter 3\n\nFunctions\n\nIn the context of programming, afunctionis a named sequence of statements that performs\na computation. When you define a function, you specify the name and the sequence of\nstatements. Later, you can “call” the function by name.\n</retrieved_document>\n\n[paragraph-c39cc245f179dc1d7d0e] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=48 chapter=chapter_3\n<retrieved_document>\n26 Chapter 3. Functions\n\nbody:The sequence of statements inside a function definition.\n\nparameter:A name used inside a function to refer to the value passed as an argument.\n\nfunction call:A statement that runs a function. It consists of the function name followed\n       by an argument list in parentheses.\n\nargument:A value provided to a function when the function is called. This value is as-\n       signed to the corresponding parameter in the function.\n\nlocal variable:A variable defined inside a function. A local variable can only be used\n       inside its function.\n</retrieved_document>\n\n[paragraph-6e7a8fef66bef8ecf506] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=40 chapter=chapter_3\n<retrieved_document>\n3.2 Math functions\n\nPython has a math module that provides most of the familiar mathematical functions. A\nmoduleis a file that contains a collection of related functions.\n</retrieved_document>\n\n[paragraph-ddc787a6ca6a4281d2c5] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=48 chapter=chapter_3\n<retrieved_document>\nreturn value:The result of a function. If a function call is used as an expression, the return\n       value is the value of the expression.\n\nfruitful function:A function that returns a value.\n\nvoid function:A function that always returnsNone.\n\nNone: A special value returned by void functions.\n\nmodule:A file that contains a collection of related functions and other definitions.\n\nimport statement:A statement that reads a module file and creates a module object.\n\nmodule object:A value created by animportstatement that provides access to the values\n       defined in a module.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-8e6b1b34e2e24509b772",
+      "paragraph-3e22573f15c3b9344e42",
+      "paragraph-c39cc245f179dc1d7d0e",
+      "paragraph-6e7a8fef66bef8ecf506",
+      "paragraph-ddc787a6ca6a4281d2c5"
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "context_hit": false,
+    "candidate_count": 5,
+    "context_chars": 2980
+  },
+  {
+    "query_id": "D7-D13",
+    "split": "dev",
+    "answerable": true,
+    "query": "Does defining a function immediately run its body or print output?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-4a5fa426f2eeaf309230",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 43,
+        "text": "3.6 Flow of execution\n\nTo ensure that a function is defined before its first use, you have to know the order state-\nments run in, which is called theflow of execution.\nExecution always begins at the first statement of the program. Statements are run one at a\ntime, in order from top to bottom.\n\nFunction definitions do not alter the flow of execution of the program, but remember that\nstatements inside the function don’t run until the function is called.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p043",
+          "max_size": 650,
+          "pdf_page": 43,
+          "char_count": 2486,
+          "chunk_index": 1,
+          "text_sha256": "56cff93e8e5da7baa3859c1cd35cbd1b86836ac171e71aa9502f4b3a98831ab8",
+          "chunk_method": "paragraph",
+          "printed_page": 21,
+          "chunk_char_count": 455,
+          "normalized_char_count": 2506
+        },
+        "score": 0.6044641608638615
+      },
+      {
+        "id": "paragraph-548b4cae607ea8603cb6",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 42,
+        "text": "3.5 Definitions and uses\n\nPulling together the code fragments from the previous section, the whole program looks\nlike this:\ndef print_lyrics():\n      print(\"I'm a lumberjack, and I'm okay.\")\n      print(\"I sleep all night and I work all day.\")\n\ndef repeat_lyrics():\n      print_lyrics()\n      print_lyrics()\n\nrepeat_lyrics()\nThis program contains two function definitions:print_lyricsandrepeat_lyrics. Func-\ntion definitions get executed just like other statements, but the effect is to create function\nobjects. The statements inside the function do not run until the function is called, and the\nfunction definition generates no output.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p042",
+          "max_size": 650,
+          "pdf_page": 42,
+          "char_count": 1598,
+          "chunk_index": 3,
+          "text_sha256": "ef7db18b8ed6ce29fa57d88d83ad2fc7fc315c3f5573e72dc9b67188da1f726e",
+          "chunk_method": "paragraph",
+          "printed_page": 20,
+          "chunk_char_count": 636,
+          "normalized_char_count": 1640
+        },
+        "score": 0.5464714439826353
+      },
+      {
+        "id": "paragraph-ceef3493bd5a59d82e5a",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 43,
+        "text": "A function call is like a detour in the flow of execution. Instead of going to the next state-\nment, the flow jumps to the body of the function, runs the statements there, and then comes\nback to pick up where it left off.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p043",
+          "max_size": 650,
+          "pdf_page": 43,
+          "char_count": 2486,
+          "chunk_index": 2,
+          "text_sha256": "56cff93e8e5da7baa3859c1cd35cbd1b86836ac171e71aa9502f4b3a98831ab8",
+          "chunk_method": "paragraph",
+          "printed_page": 21,
+          "chunk_char_count": 221,
+          "normalized_char_count": 2506
+        },
+        "score": 0.5352948861962731
+      },
+      {
+        "id": "paragraph-c39cc245f179dc1d7d0e",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 48,
+        "text": "26 Chapter 3. Functions\n\nbody:The sequence of statements inside a function definition.\n\nparameter:A name used inside a function to refer to the value passed as an argument.\n\nfunction call:A statement that runs a function. It consists of the function name followed\n       by an argument list in parentheses.\n\nargument:A value provided to a function when the function is called. This value is as-\n       signed to the corresponding parameter in the function.\n\nlocal variable:A variable defined inside a function. A local variable can only be used\n       inside its function.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p048",
+          "max_size": 650,
+          "pdf_page": 48,
+          "char_count": 2164,
+          "chunk_index": 0,
+          "text_sha256": "88571117bcf82abfb9eb6da532dad3a569e285fe5bf2127c2857a2d5f7c35f94",
+          "chunk_method": "paragraph",
+          "printed_page": 26,
+          "chunk_char_count": 572,
+          "normalized_char_count": 2256
+        },
+        "score": 0.5177148580551147
+      },
+      {
+        "id": "paragraph-57786695d0bba8fcfd71",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 47,
+        "text": "3.13 Glossary\n\nfunction:A named sequence of statements that performs some useful operation. Func-\n      tions may or may not take arguments and may or may not produce a result.\n\nfunction definition:A statement that creates a new function, specifying its name, param-\n      eters, and the statements it contains.\n\nfunction object:A value created by a function definition. The name of the function is a\n      variable that refers to a function object.\n\nheader:The first line of a function definition.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p047",
+          "max_size": 650,
+          "pdf_page": 47,
+          "char_count": 2526,
+          "chunk_index": 4,
+          "text_sha256": "d97ac744292298fc38b4eab19d53b37fe6996f346a07bcb94aa2b8b8eeb9eb67",
+          "chunk_method": "paragraph",
+          "printed_page": 25,
+          "chunk_char_count": 498,
+          "normalized_char_count": 2595
+        },
+        "score": 0.4942470192909241
+      }
+    ],
+    "context": "[paragraph-4a5fa426f2eeaf309230] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=43 chapter=chapter_3\n<retrieved_document>\n3.6 Flow of execution\n\nTo ensure that a function is defined before its first use, you have to know the order state-\nments run in, which is called theflow of execution.\nExecution always begins at the first statement of the program. Statements are run one at a\ntime, in order from top to bottom.\n\nFunction definitions do not alter the flow of execution of the program, but remember that\nstatements inside the function don’t run until the function is called.\n</retrieved_document>\n\n[paragraph-548b4cae607ea8603cb6] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=42 chapter=chapter_3\n<retrieved_document>\n3.5 Definitions and uses\n\nPulling together the code fragments from the previous section, the whole program looks\nlike this:\ndef print_lyrics():\n      print(\"I'm a lumberjack, and I'm okay.\")\n      print(\"I sleep all night and I work all day.\")\n\ndef repeat_lyrics():\n      print_lyrics()\n      print_lyrics()\n\nrepeat_lyrics()\nThis program contains two function definitions:print_lyricsandrepeat_lyrics. Func-\ntion definitions get executed just like other statements, but the effect is to create function\nobjects. The statements inside the function do not run until the function is called, and the\nfunction definition generates no output.\n</retrieved_document>\n\n[paragraph-ceef3493bd5a59d82e5a] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=43 chapter=chapter_3\n<retrieved_document>\nA function call is like a detour in the flow of execution. Instead of going to the next state-\nment, the flow jumps to the body of the function, runs the statements there, and then comes\nback to pick up where it left off.\n</retrieved_document>\n\n[paragraph-c39cc245f179dc1d7d0e] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=48 chapter=chapter_3\n<retrieved_document>\n26 Chapter 3. Functions\n\nbody:The sequence of statements inside a function definition.\n\nparameter:A name used inside a function to refer to the value passed as an argument.\n\nfunction call:A statement that runs a function. It consists of the function name followed\n       by an argument list in parentheses.\n\nargument:A value provided to a function when the function is called. This value is as-\n       signed to the corresponding parameter in the function.\n\nlocal variable:A variable defined inside a function. A local variable can only be used\n       inside its function.\n</retrieved_document>\n\n[paragraph-57786695d0bba8fcfd71] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=47 chapter=chapter_3\n<retrieved_document>\n3.13 Glossary\n\nfunction:A named sequence of statements that performs some useful operation. Func-\n      tions may or may not take arguments and may or may not produce a result.\n\nfunction definition:A statement that creates a new function, specifying its name, param-\n      eters, and the statements it contains.\n\nfunction object:A value created by a function definition. The name of the function is a\n      variable that refers to a function object.\n\nheader:The first line of a function definition.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-4a5fa426f2eeaf309230",
+      "paragraph-548b4cae607ea8603cb6",
+      "paragraph-ceef3493bd5a59d82e5a",
+      "paragraph-c39cc245f179dc1d7d0e",
+      "paragraph-57786695d0bba8fcfd71"
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3215
+  },
+  {
+    "query_id": "D7-D14",
+    "split": "dev",
+    "answerable": true,
+    "query": "In Chapter 4, what Turtle methods move backward and turn left or right?",
+    "filters": {
+      "chapter": "chapter_4"
+    },
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-6b3863c3810c03f5e917",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 52,
+        "text": "The argument offdis a distance in pixels, so the actual size depends on your display.\n\nOther methods you can call on a Turtle arebkto move backward,ltfor left turn, andrt\nright turn. The argument forltandrtis an angle in degrees.\n\nAlso, each Turtle is holding a pen, which is either down or up; if the pen is down, the Turtle\nleaves a trail when it moves. The methodspuandpdstand for “pen up” and “pen down”.\n\nTo draw a right angle, add these lines to the program (after creatingboband before calling\nmainloop):\nbob.fd(100)\nbob.lt(90)\nbob.fd(100)\nWhen you run this program, you should seebobmove east and then north, leaving two\nline segments behind.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p052",
+          "max_size": 650,
+          "pdf_page": 52,
+          "char_count": 1676,
+          "chunk_index": 1,
+          "text_sha256": "efeb91bdd34082f7a4e74c94043effb7353dcab0d046938734c44284e4234dbb",
+          "chunk_method": "paragraph",
+          "printed_page": 30,
+          "chunk_char_count": 650,
+          "normalized_char_count": 1695
+        },
+        "score": 0.6241902298984002
+      },
+      {
+        "id": "paragraph-a5bfd1146397961df166",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 53,
+        "text": "This version is actually a little different from the previous square-drawing code because it\nmakes another turn after drawing the last side of the square. The extra turn takes more\ntime, but it simplifies the code if we do the same thing every time through the loop. This\nversion also has the effect of leaving the turtle back in the starting position, facing in the\nstarting direction.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p053",
+          "max_size": 650,
+          "pdf_page": 53,
+          "char_count": 2546,
+          "chunk_index": 1,
+          "text_sha256": "b28e998fc7cc63d5e58ffb6830a9228773b0df983a2803bef62fbe33d664ca34",
+          "chunk_method": "paragraph",
+          "printed_page": 31,
+          "chunk_char_count": 386,
+          "normalized_char_count": 2667
+        },
+        "score": 0.6001668810744963
+      },
+      {
+        "id": "paragraph-6574bbbbe588b8f2ae51",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 52,
+        "text": "30 Chapter 4. Case study: interface design\n\nThis means thatbobrefers to an object with typeTurtleas defined in moduleturtle.\n\nmainlooptells the window to wait for the user to do something, although in this case\nthere’s not much for the user to do except close the window.\n\nOnce you create a Turtle, you can call amethodto move it around the window. A method\nis similar to a function, but it uses slightly different syntax. For example, to move the turtle\nforward:\nbob.fd(100)\nThe method,fd, is associated with the turtle object we’re callingbob. Calling a method is\nlike making a request: you are askingbobto move forward.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p052",
+          "max_size": 650,
+          "pdf_page": 52,
+          "char_count": 1676,
+          "chunk_index": 0,
+          "text_sha256": "efeb91bdd34082f7a4e74c94043effb7353dcab0d046938734c44284e4234dbb",
+          "chunk_method": "paragraph",
+          "printed_page": 30,
+          "chunk_char_count": 622,
+          "normalized_char_count": 1695
+        },
+        "score": 0.5322635173797607
+      },
+      {
+        "id": "paragraph-6b2dec52326601813419",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 51,
+        "text": "4.1 The turtle module\n\nTo check whether you have theturtlemodule, open the Python interpreter and type\n>>> import turtle\n>>> bob = turtle.Turtle()\nWhen you run this code, it should create a new window with small arrow that represents\nthe turtle. Close the window.\n\nCreate a file namedmypolygon.pyand type in the following code:\nimport turtle\nbob = turtle.Turtle()\nprint(bob)\nturtle.mainloop()\nTheturtlemodule (with a lowercase ’t’) provides a function calledTurtle(with an up-\npercase ’T’) that creates a Turtle object, which we assign to a variable namedbob. Printing\nbobdisplays something like:\n<turtle.Turtle object at 0xb7bfbf4c>",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p051",
+          "max_size": 650,
+          "pdf_page": 51,
+          "char_count": 1356,
+          "chunk_index": 2,
+          "text_sha256": "dbfcfdd5d2f722eaea363c4779194317314eeac793aba4f12c60996593ed055a",
+          "chunk_method": "paragraph",
+          "printed_page": 29,
+          "chunk_char_count": 633,
+          "normalized_char_count": 1364
+        },
+        "score": 0.4753236770629883
+      },
+      {
+        "id": "paragraph-0e5b77315d5e2afb4644",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 54,
+        "text": "32 Chapter 4. Case study: interface design\n4.4 Encapsulation\n\nThe first exercise asks you to put your square-drawing code into a function definition and\nthen call the function, passing the turtle as a parameter. Here is a solution:\ndef square(t):\n     for i in range(4):\n        t.fd(100)\n        t.lt(90)\n\nsquare(bob)\nThe innermost statements,fdandltare indented twice to show that they are inside the\nforloop, which is inside the function definition. The next line,square(bob), is flush with\nthe left margin, which indicates the end of both theforloop and the function definition.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p054",
+          "max_size": 650,
+          "pdf_page": 54,
+          "char_count": 1791,
+          "chunk_index": 0,
+          "text_sha256": "8af2fcf15e0ade4cf98c5389431764546f7710da3b91dffc5470c88d210e00bb",
+          "chunk_method": "paragraph",
+          "printed_page": 32,
+          "chunk_char_count": 582,
+          "normalized_char_count": 1867
+        },
+        "score": 0.47102928161621094
+      }
+    ],
+    "context": "[paragraph-6b3863c3810c03f5e917] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=52 chapter=chapter_4\n<retrieved_document>\nThe argument offdis a distance in pixels, so the actual size depends on your display.\n\nOther methods you can call on a Turtle arebkto move backward,ltfor left turn, andrt\nright turn. The argument forltandrtis an angle in degrees.\n\nAlso, each Turtle is holding a pen, which is either down or up; if the pen is down, the Turtle\nleaves a trail when it moves. The methodspuandpdstand for “pen up” and “pen down”.\n\nTo draw a right angle, add these lines to the program (after creatingboband before calling\nmainloop):\nbob.fd(100)\nbob.lt(90)\nbob.fd(100)\nWhen you run this program, you should seebobmove east and then north, leaving two\nline segments behind.\n</retrieved_document>\n\n[paragraph-a5bfd1146397961df166] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=53 chapter=chapter_4\n<retrieved_document>\nThis version is actually a little different from the previous square-drawing code because it\nmakes another turn after drawing the last side of the square. The extra turn takes more\ntime, but it simplifies the code if we do the same thing every time through the loop. This\nversion also has the effect of leaving the turtle back in the starting position, facing in the\nstarting direction.\n</retrieved_document>\n\n[paragraph-6574bbbbe588b8f2ae51] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=52 chapter=chapter_4\n<retrieved_document>\n30 Chapter 4. Case study: interface design\n\nThis means thatbobrefers to an object with typeTurtleas defined in moduleturtle.\n\nmainlooptells the window to wait for the user to do something, although in this case\nthere’s not much for the user to do except close the window.\n\nOnce you create a Turtle, you can call amethodto move it around the window. A method\nis similar to a function, but it uses slightly different syntax. For example, to move the turtle\nforward:\nbob.fd(100)\nThe method,fd, is associated with the turtle object we’re callingbob. Calling a method is\nlike making a request: you are askingbobto move forward.\n</retrieved_document>\n\n[paragraph-6b2dec52326601813419] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=51 chapter=chapter_4\n<retrieved_document>\n4.1 The turtle module\n\nTo check whether you have theturtlemodule, open the Python interpreter and type\n>>> import turtle\n>>> bob = turtle.Turtle()\nWhen you run this code, it should create a new window with small arrow that represents\nthe turtle. Close the window.\n\nCreate a file namedmypolygon.pyand type in the following code:\nimport turtle\nbob = turtle.Turtle()\nprint(bob)\nturtle.mainloop()\nTheturtlemodule (with a lowercase ’t’) provides a function calledTurtle(with an up-\npercase ’T’) that creates a Turtle object, which we assign to a variable namedbob. Printing\nbobdisplays something like:\n<turtle.Turtle object at 0xb7bfbf4c>\n</retrieved_document>\n\n[paragraph-0e5b77315d5e2afb4644] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=54 chapter=chapter_4\n<retrieved_document>\n32 Chapter 4. Case study: interface design\n4.4 Encapsulation\n\nThe first exercise asks you to put your square-drawing code into a function definition and\nthen call the function, passing the turtle as a parameter. Here is a solution:\ndef square(t):\n     for i in range(4):\n        t.fd(100)\n        t.lt(90)\n\nsquare(bob)\nThe innermost statements,fdandltare indented twice to show that they are inside the\nforloop, which is inside the function definition. The next line,square(bob), is flush with\nthe left margin, which indicates the end of both theforloop and the function definition.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-6b3863c3810c03f5e917",
+      "paragraph-a5bfd1146397961df166",
+      "paragraph-6574bbbbe588b8f2ae51",
+      "paragraph-6b2dec52326601813419",
+      "paragraph-0e5b77315d5e2afb4644"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3706
+  },
+  {
+    "query_id": "D7-D15",
+    "split": "dev",
+    "answerable": true,
+    "query": "Why does adding a length parameter to square() count as generalization?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-a93548c08a7571afd378",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 54,
+        "text": "4.5 Generalization\n\nThe next step is to add alengthparameter tosquare. Here is a solution:\ndef square(t, length):\n     for i in range(4):\n        t.fd(length)\n        t.lt(90)\n\nsquare(bob, 100)\nAdding a parameter to a function is calledgeneralizationbecause it makes the function\nmore general: in the previous version, the square is always the same size; in this version it\ncan be any size.\n\nThe next step is also a generalization. Instead of drawing squares,polygondraws regular\npolygons with any number of sides. Here is a solution:\ndef polygon(t, n, length):\n     angle = 360 / n\n     for i in range(n):\n        t.fd(length)\n        t.lt(angle)",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p054",
+          "max_size": 650,
+          "pdf_page": 54,
+          "char_count": 1791,
+          "chunk_index": 2,
+          "text_sha256": "8af2fcf15e0ade4cf98c5389431764546f7710da3b91dffc5470c88d210e00bb",
+          "chunk_method": "paragraph",
+          "printed_page": 32,
+          "chunk_char_count": 647,
+          "normalized_char_count": 1867
+        },
+        "score": 0.4922553598880768
+      },
+      {
+        "id": "paragraph-0e5b77315d5e2afb4644",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 54,
+        "text": "32 Chapter 4. Case study: interface design\n4.4 Encapsulation\n\nThe first exercise asks you to put your square-drawing code into a function definition and\nthen call the function, passing the turtle as a parameter. Here is a solution:\ndef square(t):\n     for i in range(4):\n        t.fd(100)\n        t.lt(90)\n\nsquare(bob)\nThe innermost statements,fdandltare indented twice to show that they are inside the\nforloop, which is inside the function definition. The next line,square(bob), is flush with\nthe left margin, which indicates the end of both theforloop and the function definition.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p054",
+          "max_size": 650,
+          "pdf_page": 54,
+          "char_count": 1791,
+          "chunk_index": 0,
+          "text_sha256": "8af2fcf15e0ade4cf98c5389431764546f7710da3b91dffc5470c88d210e00bb",
+          "chunk_method": "paragraph",
+          "printed_page": 32,
+          "chunk_char_count": 582,
+          "normalized_char_count": 1867
+        },
+        "score": 0.4229844808578491
+      },
+      {
+        "id": "paragraph-ef92fb5c940141619a37",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 43,
+        "text": "3.7 Parameters and arguments\n\nSome of the functions we have seen require arguments. For example, when you call\nmath.sinyou pass a number as an argument. Some functions take more than one ar-\ngument:math.powtakes two, the base and the exponent.\n\nInside the function, the arguments are assigned to variables calledparameters. Here is a\ndefinition for a function that takes an argument:\ndef print_twice(bruce):\n     print(bruce)\n     print(bruce)\nThis function assigns the argument to a parameter namedbruce. When the function is\ncalled, it prints the value of the parameter (whatever it is) twice.",
+        "metadata": {
+          "chapter": "chapter_3",
+          "page_id": "thinkpython2_pdf_p043",
+          "max_size": 650,
+          "pdf_page": 43,
+          "char_count": 2486,
+          "chunk_index": 5,
+          "text_sha256": "56cff93e8e5da7baa3859c1cd35cbd1b86836ac171e71aa9502f4b3a98831ab8",
+          "chunk_method": "paragraph",
+          "printed_page": 21,
+          "chunk_char_count": 595,
+          "normalized_char_count": 2506
+        },
+        "score": 0.42067725720039795
+      },
+      {
+        "id": "paragraph-fa86533501c636b2aba6",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 53,
+        "text": "4.3 Exercises\n\nThe following is a series of exercises using theturtlemodule. They are meant to be fun,\nbut they have a point, too. While you are working on them, think about what the point is.\nThe following sections have solutions to the exercises, so don’t look until you have finished\n(or at least tried).\n   1. Write a function calledsquarethat takes a parameter namedt, which is a turtle. It\n       should use the turtle to draw a square.\n       Write a function call that passesbobas an argument tosquare, and then run the\n       program again.\n   2. Add another parameter, namedlength, tosquare.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p053",
+          "max_size": 650,
+          "pdf_page": 53,
+          "char_count": 2546,
+          "chunk_index": 2,
+          "text_sha256": "b28e998fc7cc63d5e58ffb6830a9228773b0df983a2803bef62fbe33d664ca34",
+          "chunk_method": "paragraph",
+          "printed_page": 31,
+          "chunk_char_count": 601,
+          "normalized_char_count": 2667
+        },
+        "score": 0.380279541015625
+      },
+      {
+        "id": "paragraph-0d078ed3ecb87e3d2533",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 55,
+        "text": "This syntax makes the program more readable. It is also a reminder about how arguments\nand parameters work: when you call a function, the arguments are assigned to the param-\neters.",
+        "metadata": {
+          "chapter": "chapter_4",
+          "page_id": "thinkpython2_pdf_p055",
+          "max_size": 650,
+          "pdf_page": 55,
+          "char_count": 2464,
+          "chunk_index": 2,
+          "text_sha256": "d4914e6b6a2fead8bad50714587a1e7090c03ca79bd04d6bb51a92aea718231b",
+          "chunk_method": "paragraph",
+          "printed_page": 33,
+          "chunk_char_count": 181,
+          "normalized_char_count": 2496
+        },
+        "score": 0.38010708212214284
+      }
+    ],
+    "context": "[paragraph-a93548c08a7571afd378] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=54 chapter=chapter_4\n<retrieved_document>\n4.5 Generalization\n\nThe next step is to add alengthparameter tosquare. Here is a solution:\ndef square(t, length):\n     for i in range(4):\n        t.fd(length)\n        t.lt(90)\n\nsquare(bob, 100)\nAdding a parameter to a function is calledgeneralizationbecause it makes the function\nmore general: in the previous version, the square is always the same size; in this version it\ncan be any size.\n\nThe next step is also a generalization. Instead of drawing squares,polygondraws regular\npolygons with any number of sides. Here is a solution:\ndef polygon(t, n, length):\n     angle = 360 / n\n     for i in range(n):\n        t.fd(length)\n        t.lt(angle)\n</retrieved_document>\n\n[paragraph-0e5b77315d5e2afb4644] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=54 chapter=chapter_4\n<retrieved_document>\n32 Chapter 4. Case study: interface design\n4.4 Encapsulation\n\nThe first exercise asks you to put your square-drawing code into a function definition and\nthen call the function, passing the turtle as a parameter. Here is a solution:\ndef square(t):\n     for i in range(4):\n        t.fd(100)\n        t.lt(90)\n\nsquare(bob)\nThe innermost statements,fdandltare indented twice to show that they are inside the\nforloop, which is inside the function definition. The next line,square(bob), is flush with\nthe left margin, which indicates the end of both theforloop and the function definition.\n</retrieved_document>\n\n[paragraph-ef92fb5c940141619a37] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=43 chapter=chapter_3\n<retrieved_document>\n3.7 Parameters and arguments\n\nSome of the functions we have seen require arguments. For example, when you call\nmath.sinyou pass a number as an argument. Some functions take more than one ar-\ngument:math.powtakes two, the base and the exponent.\n\nInside the function, the arguments are assigned to variables calledparameters. Here is a\ndefinition for a function that takes an argument:\ndef print_twice(bruce):\n     print(bruce)\n     print(bruce)\nThis function assigns the argument to a parameter namedbruce. When the function is\ncalled, it prints the value of the parameter (whatever it is) twice.\n</retrieved_document>\n\n[paragraph-fa86533501c636b2aba6] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=53 chapter=chapter_4\n<retrieved_document>\n4.3 Exercises\n\nThe following is a series of exercises using theturtlemodule. They are meant to be fun,\nbut they have a point, too. While you are working on them, think about what the point is.\nThe following sections have solutions to the exercises, so don’t look until you have finished\n(or at least tried).\n   1. Write a function calledsquarethat takes a parameter namedt, which is a turtle. It\n       should use the turtle to draw a square.\n       Write a function call that passesbobas an argument tosquare, and then run the\n       program again.\n   2. Add another parameter, namedlength, tosquare.\n</retrieved_document>\n\n[paragraph-0d078ed3ecb87e3d2533] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=55 chapter=chapter_4\n<retrieved_document>\nThis syntax makes the program more readable. It is also a reminder about how arguments\nand parameters work: when you call a function, the arguments are assigned to the param-\neters.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-a93548c08a7571afd378",
+      "paragraph-0e5b77315d5e2afb4644",
+      "paragraph-ef92fb5c940141619a37",
+      "paragraph-fa86533501c636b2aba6",
+      "paragraph-0d078ed3ecb87e3d2533"
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "context_hit": true,
+    "candidate_count": 5,
+    "context_chars": 3439
+  },
+  {
+    "query_id": "D7-D16",
+    "split": "dev",
+    "answerable": false,
+    "query": "According to the indexed chapters, how does Python evaluate a list comprehension with an if clause?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-91841e63429de5213d65",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 25,
+        "text": "1.3. The first program 3\n1.3 The first program\n\nTraditionally, the first program you write in a new language is called “Hello, World!” be-\ncause all it does is display the words “Hello, World!”. In Python, it looks like this:\n>>> print('Hello, World!')\nThis is an example of aprint statement, although it doesn’t actually print anything on\npaper. It displays a result on the screen. In this case, the result is the words\nHello, World!\nThe quotation marks in the program mark the beginning and end of the text to be dis-\nplayed; they don’t appear in the result.\n\nThe parentheses indicate thatprintis a function. We’ll get to functions in Chapter 3.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p025",
+          "max_size": 650,
+          "pdf_page": 25,
+          "char_count": 1748,
+          "chunk_index": 0,
+          "text_sha256": "59d146a31f7ea19e9ded7e930666fc75ed982bb0492247c1781bd8d3d579618f",
+          "chunk_method": "paragraph",
+          "printed_page": 3,
+          "chunk_char_count": 647,
+          "normalized_char_count": 1755
+        },
+        "score": 0.4237735993794681
+      },
+      {
+        "id": "paragraph-918a5499e5daba9fd150",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 37,
+        "text": "2.10. Exercises 15\n\n•How aboutx = y = 1?\n\n•In some languages every statement ends with a semi-colon,;. What happens if you put a\n        semi-colon at the end of a Python statement?\n\n•What if you put a period at the end of a statement?\n\n•In math notation you can multiply x and y like this: xy. What happens if you try that in\n        Python?\nExercise 2.2.Practice using the Python interpreter as a calculator:\n\n1. The volume of a sphere with radius r is 43πr 3. What is the volume of a sphere with radius 5?",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p037",
+          "max_size": 650,
+          "pdf_page": 37,
+          "char_count": 884,
+          "chunk_index": 0,
+          "text_sha256": "dcf231d2396cf4536ee272d386b017b320f14253f51e44acd801920a5e62acb2",
+          "chunk_method": "paragraph",
+          "printed_page": 15,
+          "chunk_char_count": 508,
+          "normalized_char_count": 959
+        },
+        "score": 0.4110500338986528
+      },
+      {
+        "id": "paragraph-f3a869194d5511d28659",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 36,
+        "text": "evaluate:To simplify an expression by performing the operations in order to yield a single\n       value.\n\nstatement:A section of code that represents a command or action. So far, the statements\n       we have seen are assignments and print statements.\n\nexecute:To run a statement and do what it says.\n\ninteractive mode:A way of using the Python interpreter by typing code at the prompt.\n\nscript mode:A way of using the Python interpreter to read code from a script and run it.\n\nscript:A program stored in a file.\n\norder of operations:Rules governing the order in which expressions involving multiple\n       operators and operands are evaluated.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p036",
+          "max_size": 650,
+          "pdf_page": 36,
+          "char_count": 1922,
+          "chunk_index": 1,
+          "text_sha256": "c91a4447015ebe8d9b76791513ee0045f69cf13e1c6e8a4ca9ce89834ceba765",
+          "chunk_method": "paragraph",
+          "printed_page": 14,
+          "chunk_char_count": 644,
+          "normalized_char_count": 2003
+        },
+        "score": 0.3913732119167004
+      },
+      {
+        "id": "paragraph-ce2dc9e967e781300bab",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 33,
+        "text": "2.5 Order of operations\n\nWhen an expression contains more than one operator, the order of evaluation depends\non theorder of operations. For mathematical operators, Python follows mathematical\nconvention. The acronymPEMDASis a useful way to remember the rules:",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p033",
+          "max_size": 650,
+          "pdf_page": 33,
+          "char_count": 2382,
+          "chunk_index": 5,
+          "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+          "chunk_method": "paragraph",
+          "printed_page": 11,
+          "chunk_char_count": 259,
+          "normalized_char_count": 2387
+        },
+        "score": 0.3791202717757307
+      },
+      {
+        "id": "paragraph-eb837ad0bb333d4e17c8",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 33,
+        "text": "Because Python provides both modes, you can test bits of code in interactive mode before\nyou put them in a script. But there are differences between interactive mode and script\nmode that can be confusing.\nFor example, if you are using Python as a calculator, you might type\n>>> miles = 26.2\n>>> miles * 1.61\n42.182\nThe first line assigns a value tomiles, but it has no visible effect. The second line is an ex-\npression, so the interpreter evaluates it and displays the result. It turns out that a marathon\nis about 42 kilometers.\nBut if you type the same code into a script and run it, you get no output at all.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p033",
+          "max_size": 650,
+          "pdf_page": 33,
+          "char_count": 2382,
+          "chunk_index": 3,
+          "text_sha256": "a0d02e07a4a04c9ccaedaff42579a092b7d3af595c9ca069458af8017003bd27",
+          "chunk_method": "paragraph",
+          "printed_page": 11,
+          "chunk_char_count": 612,
+          "normalized_char_count": 2387
+        },
+        "score": 0.3726113923605876
+      }
+    ],
+    "context": "[paragraph-91841e63429de5213d65] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=25 chapter=chapter_1\n<retrieved_document>\n1.3. The first program 3\n1.3 The first program\n\nTraditionally, the first program you write in a new language is called “Hello, World!” be-\ncause all it does is display the words “Hello, World!”. In Python, it looks like this:\n>>> print('Hello, World!')\nThis is an example of aprint statement, although it doesn’t actually print anything on\npaper. It displays a result on the screen. In this case, the result is the words\nHello, World!\nThe quotation marks in the program mark the beginning and end of the text to be dis-\nplayed; they don’t appear in the result.\n\nThe parentheses indicate thatprintis a function. We’ll get to functions in Chapter 3.\n</retrieved_document>\n\n[paragraph-918a5499e5daba9fd150] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=37 chapter=chapter_2\n<retrieved_document>\n2.10. Exercises 15\n\n•How aboutx = y = 1?\n\n•In some languages every statement ends with a semi-colon,;. What happens if you put a\n        semi-colon at the end of a Python statement?\n\n•What if you put a period at the end of a statement?\n\n•In math notation you can multiply x and y like this: xy. What happens if you try that in\n        Python?\nExercise 2.2.Practice using the Python interpreter as a calculator:\n\n1. The volume of a sphere with radius r is 43πr 3. What is the volume of a sphere with radius 5?\n</retrieved_document>\n\n[paragraph-f3a869194d5511d28659] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=36 chapter=chapter_2\n<retrieved_document>\nevaluate:To simplify an expression by performing the operations in order to yield a single\n       value.\n\nstatement:A section of code that represents a command or action. So far, the statements\n       we have seen are assignments and print statements.\n\nexecute:To run a statement and do what it says.\n\ninteractive mode:A way of using the Python interpreter by typing code at the prompt.\n\nscript mode:A way of using the Python interpreter to read code from a script and run it.\n\nscript:A program stored in a file.\n\norder of operations:Rules governing the order in which expressions involving multiple\n       operators and operands are evaluated.\n</retrieved_document>\n\n[paragraph-ce2dc9e967e781300bab] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\n2.5 Order of operations\n\nWhen an expression contains more than one operator, the order of evaluation depends\non theorder of operations. For mathematical operators, Python follows mathematical\nconvention. The acronymPEMDASis a useful way to remember the rules:\n</retrieved_document>\n\n[paragraph-eb837ad0bb333d4e17c8] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=33 chapter=chapter_2\n<retrieved_document>\nBecause Python provides both modes, you can test bits of code in interactive mode before\nyou put them in a script. But there are differences between interactive mode and script\nmode that can be confusing.\nFor example, if you are using Python as a calculator, you might type\n>>> miles = 26.2\n>>> miles * 1.61\n42.182\nThe first line assigns a value tomiles, but it has no visible effect. The second line is an ex-\npression, so the interpreter evaluates it and displays the result. It turns out that a marathon\nis about 42 kilometers.\nBut if you type the same code into a script and run it, you get no output at all.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-91841e63429de5213d65",
+      "paragraph-918a5499e5daba9fd150",
+      "paragraph-f3a869194d5511d28659",
+      "paragraph-ce2dc9e967e781300bab",
+      "paragraph-eb837ad0bb333d4e17c8"
+    ],
+    "hit1": null,
+    "hit3": null,
+    "hit5": null,
+    "context_hit": null,
+    "candidate_count": 5,
+    "context_chars": 3503
+  },
+  {
+    "query_id": "D7-D17",
+    "split": "dev",
+    "answerable": false,
+    "query": "What syntax does the book give for declaring a Python class with an inherited base class?",
+    "filters": null,
+    "strategy": "dense_top5_context5000",
+    "top_k": 5,
+    "context_budget_chars": 5000,
+    "results": [
+      {
+        "id": "paragraph-9963adce72df741a70f8",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 32,
+        "text": "It turns out thatclassis one of Python’skeywords. The interpreter uses keywords to\nrecognize the structure of the program, and they cannot be used as variable names.\nPython 3 has these keywords:\nFalse class finally is return\nNone continue for lambda try\nTrue def from nonlocal while\nand del global not with\nas elif if or yield\nassert else import pass\nbreak except in raise\nYou don’t have to memorize this list. In most development environments, keywords are\ndisplayed in a different color; if you try to use one as a variable name, you’ll know.",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p032",
+          "max_size": 650,
+          "pdf_page": 32,
+          "char_count": 1903,
+          "chunk_index": 2,
+          "text_sha256": "2971846c3876d2852d2413a1b7889e021ce0085126e507519ededf135f2014b3",
+          "chunk_method": "paragraph",
+          "printed_page": 10,
+          "chunk_char_count": 544,
+          "normalized_char_count": 1908
+        },
+        "score": 0.46392673254013395
+      },
+      {
+        "id": "paragraph-4f0ffbfa7c995972f657",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 32,
+        "text": "The underscore character,_, can appear in a name. It is often used in names with multiple\nwords, such asyour_nameorairspeed_of_unladen_swallow.\nIf you give a variable an illegal name, you get a syntax error:\n>>> 76trombones ='big parade'\nSyntaxError: invalid syntax\n>>> more@ = 1000000\nSyntaxError: invalid syntax\n>>> class ='Advanced Theoretical Zymurgy'\nSyntaxError: invalid syntax\n76trombonesis illegal because it begins with a number.more@is illegal because it contains\nan illegal character,@. But what’s wrong withclass?",
+        "metadata": {
+          "chapter": "chapter_2",
+          "page_id": "thinkpython2_pdf_p032",
+          "max_size": 650,
+          "pdf_page": 32,
+          "char_count": 1903,
+          "chunk_index": 1,
+          "text_sha256": "2971846c3876d2852d2413a1b7889e021ce0085126e507519ededf135f2014b3",
+          "chunk_method": "paragraph",
+          "printed_page": 10,
+          "chunk_char_count": 525,
+          "normalized_char_count": 1908
+        },
+        "score": 0.45508360595009445
+      },
+      {
+        "id": "paragraph-91841e63429de5213d65",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 25,
+        "text": "1.3. The first program 3\n1.3 The first program\n\nTraditionally, the first program you write in a new language is called “Hello, World!” be-\ncause all it does is display the words “Hello, World!”. In Python, it looks like this:\n>>> print('Hello, World!')\nThis is an example of aprint statement, although it doesn’t actually print anything on\npaper. It displays a result on the screen. In this case, the result is the words\nHello, World!\nThe quotation marks in the program mark the beginning and end of the text to be dis-\nplayed; they don’t appear in the result.\n\nThe parentheses indicate thatprintis a function. We’ll get to functions in Chapter 3.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p025",
+          "max_size": 650,
+          "pdf_page": 25,
+          "char_count": 1748,
+          "chunk_index": 0,
+          "text_sha256": "59d146a31f7ea19e9ded7e930666fc75ed982bb0492247c1781bd8d3d579618f",
+          "chunk_method": "paragraph",
+          "printed_page": 3,
+          "chunk_char_count": 647,
+          "normalized_char_count": 1755
+        },
+        "score": 0.4480684666674424
+      },
+      {
+        "id": "paragraph-3149f624e823bb9ed09e",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 26,
+        "text": "If you are not sure what type a value has, the interpreter can tell you:\n>>> type(2)\n<class'int'>\n>>> type(42.0)\n<class'float'>\n>>> type('Hello, World!')\n<class'str'>\nIn these results, the word “class” is used in the sense of a category; a type is a category of\nvalues.\n\nNot surprisingly, integers belong to the typeint, strings belong tostrand floating-point\nnumbers belong tofloat.\n\nWhat about values like'2'and'42.0'? They look like numbers, but they are in quotation\nmarks like strings.\n>>> type('2')\n<class'str'>\n>>> type('42.0')\n<class'str'>\nThey’re strings.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p026",
+          "max_size": 650,
+          "pdf_page": 26,
+          "char_count": 1945,
+          "chunk_index": 1,
+          "text_sha256": "305eedbd92be8afd4fa480ec87ee3efb90d45f4ae42be85d26e7c9852bbfe0b0",
+          "chunk_method": "paragraph",
+          "printed_page": 4,
+          "chunk_char_count": 564,
+          "normalized_char_count": 1969
+        },
+        "score": 0.42054563760757746
+      },
+      {
+        "id": "paragraph-692abcae3ae6979928fd",
+        "source_id": "thinkpython2_pdf",
+        "source": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+        "page": 25,
+        "text": "In Python 2, the print statement is slightly different; it is not a function, so it doesn’t use\nparentheses.\n>>> print'Hello, World!'\nThis distinction will make more sense soon, but that’s enough to get started.",
+        "metadata": {
+          "chapter": "chapter_1",
+          "page_id": "thinkpython2_pdf_p025",
+          "max_size": 650,
+          "pdf_page": 25,
+          "char_count": 1748,
+          "chunk_index": 1,
+          "text_sha256": "59d146a31f7ea19e9ded7e930666fc75ed982bb0492247c1781bd8d3d579618f",
+          "chunk_method": "paragraph",
+          "printed_page": 3,
+          "chunk_char_count": 211,
+          "normalized_char_count": 1755
+        },
+        "score": 0.414025843143466
+      }
+    ],
+    "context": "[paragraph-9963adce72df741a70f8] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=32 chapter=chapter_2\n<retrieved_document>\nIt turns out thatclassis one of Python’skeywords. The interpreter uses keywords to\nrecognize the structure of the program, and they cannot be used as variable names.\nPython 3 has these keywords:\nFalse class finally is return\nNone continue for lambda try\nTrue def from nonlocal while\nand del global not with\nas elif if or yield\nassert else import pass\nbreak except in raise\nYou don’t have to memorize this list. In most development environments, keywords are\ndisplayed in a different color; if you try to use one as a variable name, you’ll know.\n</retrieved_document>\n\n[paragraph-4f0ffbfa7c995972f657] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=32 chapter=chapter_2\n<retrieved_document>\nThe underscore character,_, can appear in a name. It is often used in names with multiple\nwords, such asyour_nameorairspeed_of_unladen_swallow.\nIf you give a variable an illegal name, you get a syntax error:\n>>> 76trombones ='big parade'\nSyntaxError: invalid syntax\n>>> more@ = 1000000\nSyntaxError: invalid syntax\n>>> class ='Advanced Theoretical Zymurgy'\nSyntaxError: invalid syntax\n76trombonesis illegal because it begins with a number.more@is illegal because it contains\nan illegal character,@. But what’s wrong withclass?\n</retrieved_document>\n\n[paragraph-91841e63429de5213d65] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=25 chapter=chapter_1\n<retrieved_document>\n1.3. The first program 3\n1.3 The first program\n\nTraditionally, the first program you write in a new language is called “Hello, World!” be-\ncause all it does is display the words “Hello, World!”. In Python, it looks like this:\n>>> print('Hello, World!')\nThis is an example of aprint statement, although it doesn’t actually print anything on\npaper. It displays a result on the screen. In this case, the result is the words\nHello, World!\nThe quotation marks in the program mark the beginning and end of the text to be dis-\nplayed; they don’t appear in the result.\n\nThe parentheses indicate thatprintis a function. We’ll get to functions in Chapter 3.\n</retrieved_document>\n\n[paragraph-3149f624e823bb9ed09e] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=26 chapter=chapter_1\n<retrieved_document>\nIf you are not sure what type a value has, the interpreter can tell you:\n>>> type(2)\n<class'int'>\n>>> type(42.0)\n<class'float'>\n>>> type('Hello, World!')\n<class'str'>\nIn these results, the word “class” is used in the sense of a category; a type is a category of\nvalues.\n\nNot surprisingly, integers belong to the typeint, strings belong tostrand floating-point\nnumbers belong tofloat.\n\nWhat about values like'2'and'42.0'? They look like numbers, but they are in quotation\nmarks like strings.\n>>> type('2')\n<class'str'>\n>>> type('42.0')\n<class'str'>\nThey’re strings.\n</retrieved_document>\n\n[paragraph-692abcae3ae6979928fd] source=https://greenteapress.com/thinkpython2/thinkpython2.pdf page=25 chapter=chapter_1\n<retrieved_document>\nIn Python 2, the print statement is slightly different; it is not a function, so it doesn’t use\nparentheses.\n>>> print'Hello, World!'\nThis distinction will make more sense soon, but that’s enough to get started.\n</retrieved_document>",
+    "context_ids": [
+      "paragraph-9963adce72df741a70f8",
+      "paragraph-4f0ffbfa7c995972f657",
+      "paragraph-91841e63429de5213d65",
+      "paragraph-3149f624e823bb9ed09e",
+      "paragraph-692abcae3ae6979928fd"
+    ],
+    "hit1": null,
+    "hit3": null,
+    "hit5": null,
+    "context_hit": null,
+    "candidate_count": 5,
+    "context_chars": 3324
+  }
+]

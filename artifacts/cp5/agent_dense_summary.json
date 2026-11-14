@@ -1,0 +1,63 @@
+{
+  "strategy": "dense",
+  "split": "dev",
+  "model": "gemini-3.5-flash-lite",
+  "review_type": "AI-assisted source-reading draft; not independent human-verified",
+  "human_confirmed": false,
+  "total_cases": 17,
+  "status_counts": {
+    "answered": 15,
+    "abstain": 2
+  },
+  "agent_exact_gold_context": {
+    "n": 13,
+    "N": 15,
+    "rate": 0.8666666666666667
+  },
+  "agent_metrics": {
+    "cases": 17,
+    "provider_errors": 0,
+    "tool_use": {
+      "n": 17,
+      "N": 17
+    },
+    "grounded_answer": {
+      "0": 0,
+      "1": 2,
+      "2": 13,
+      "N": 15,
+      "mean": 1.8666666666666667
+    },
+    "citation_validity": {
+      "n": 20,
+      "N": 21
+    },
+    "answer_citation_coverage": {
+      "n": 15,
+      "N": 15
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 15
+    }
+  },
+  "search_calls_total": 22,
+  "model_calls_total": 39,
+  "tool_call_distribution": {
+    "1": 13,
+    "2": 3,
+    "3": 1
+  },
+  "total_reported_input_tokens": 33048,
+  "total_reported_output_tokens": 1644,
+  "total_reported_tokens": 34692,
+  "mean_run_elapsed_ms": 3835.03,
+  "median_run_elapsed_ms": 2982.4,
+  "api_cost_usd": null,
+  "historical_provider_errors": "Transient HTTP 429 responses were recorded separately; final resumed runs are scored here.",
+  "benchmark_dev_sha256": "f8b4944b60b36704edf0e143d3409761d9ef49ff385ca7bc19caead4ba848967"
+}

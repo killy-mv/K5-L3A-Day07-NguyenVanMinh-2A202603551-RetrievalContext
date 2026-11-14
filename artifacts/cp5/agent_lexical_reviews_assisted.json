@@ -1,0 +1,353 @@
+[
+  {
+    "query_id": "D7-D01",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-ffbc2eae5676dc4386dc",
+        "source_id": "thinkpython2_pdf",
+        "page": 23,
+        "support": true,
+        "reason": "Source defines a program as instructions specifying computation; examples of computation are also present."
+      },
+      {
+        "chunk_id": "paragraph-6f1ada177c08df7f1f93",
+        "source_id": "thinkpython2_pdf",
+        "page": 28,
+        "support": true,
+        "reason": "Source defines a program as instructions specifying computation; examples of computation are also present."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source defines a program as instructions specifying computation; examples of computation are also present."
+  },
+  {
+    "query_id": "D7-D02",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-abad02191d92918ebe99",
+        "source_id": "thinkpython2_pdf",
+        "page": 24,
+        "support": true,
+        "reason": "Author recommends running Python in a browser, with PythonAnywhere as a specific example."
+      },
+      {
+        "chunk_id": "paragraph-f88aa4f84e26cd31f6d7",
+        "source_id": "thinkpython2_pdf",
+        "page": 24,
+        "support": true,
+        "reason": "Author recommends running Python in a browser, with PythonAnywhere as a specific example."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Author recommends running Python in a browser, with PythonAnywhere as a specific example."
+  },
+  {
+    "query_id": "D7-D03",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-ce94d0642d1e4cbaa934",
+        "source_id": "thinkpython2_pdf",
+        "page": 25,
+        "support": true,
+        "reason": "Source distinguishes exponentiation ** from bitwise XOR ^; generated answer states only **."
+      }
+    ],
+    "answer_grade": 1,
+    "answer_reason": "Correctly identifies ** for exponentiation, but omits that ^ is XOR in Python; the expected contrast is incomplete."
+  },
+  {
+    "query_id": "D7-D04",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-3149f624e823bb9ed09e",
+        "source_id": "thinkpython2_pdf",
+        "page": 26,
+        "support": true,
+        "reason": "Source uses type(2) -> int and type(42.0) -> float; auxiliary glossary is general, not direct evidence for examples."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source uses type(2) -> int and type(42.0) -> float; auxiliary glossary is general, not direct evidence for examples."
+  },
+  {
+    "query_id": "D7-D05",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-af1cb23dfa68d00d3f31",
+        "source_id": "thinkpython2_pdf",
+        "page": 27,
+        "support": true,
+        "reason": "Source explicitly distinguishes syntax tokens and structural combinations of tokens."
+      },
+      {
+        "chunk_id": "paragraph-251968df8e8be5fb1402",
+        "source_id": "thinkpython2_pdf",
+        "page": 27,
+        "support": true,
+        "reason": "Source explicitly distinguishes syntax tokens and structural combinations of tokens."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source explicitly distinguishes syntax tokens and structural combinations of tokens."
+  },
+  {
+    "query_id": "D7-D06",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-2d2ef0b895e0e0db9ee6",
+        "source_id": "thinkpython2_pdf",
+        "page": 31,
+        "support": true,
+        "reason": "Source defines variable as a name referring to a value, including a chapter glossary."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source defines variable as a name referring to a value, including a chapter glossary."
+  },
+  {
+    "query_id": "D7-D07",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-9963adce72df741a70f8",
+        "source_id": "thinkpython2_pdf",
+        "page": 32,
+        "support": true,
+        "reason": "Source lists class among Python keywords and explains that keywords cannot be variable names."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source lists class among Python keywords and explains that keywords cannot be variable names."
+  },
+  {
+    "query_id": "D7-D08",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-09593acb3b4cc5786177",
+        "source_id": "thinkpython2_pdf",
+        "page": 33,
+        "support": true,
+        "reason": "Source says standalone expression is evaluated but not printed in script mode and recommends print."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source says standalone expression is evaluated but not printed in script mode and recommends print."
+  },
+  {
+    "query_id": "D7-D09",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-3a983b172caa41487bf4",
+        "source_id": "thinkpython2_pdf",
+        "page": 34,
+        "support": true,
+        "reason": "Source defines string concatenation as linking strings end-to-end with +."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source defines string concatenation as linking strings end-to-end with +."
+  },
+  {
+    "query_id": "D7-D10",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-8259af61514e076515c4",
+        "source_id": "thinkpython2_pdf",
+        "page": 35,
+        "support": true,
+        "reason": "Source contrasts why versus what in comments and illustrates redundant versus useful comments."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source contrasts why versus what in comments and illustrates redundant versus useful comments."
+  },
+  {
+    "query_id": "D7-D11",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-86d330119286c47b778c",
+        "source_id": "thinkpython2_pdf",
+        "page": 39,
+        "support": true,
+        "reason": "Source explicitly states int() chops off fractional part rather than rounding."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source explicitly states int() chops off fractional part rather than rounding."
+  },
+  {
+    "query_id": "D7-D12",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-0bda5cb2cad9c2474b31",
+        "source_id": "thinkpython2_pdf",
+        "page": 40,
+        "support": true,
+        "reason": "Source defines module dot notation and shows module.function examples."
+      },
+      {
+        "chunk_id": "paragraph-8e6b1b34e2e24509b772",
+        "source_id": "thinkpython2_pdf",
+        "page": 48,
+        "support": true,
+        "reason": "Source defines module dot notation and shows module.function examples."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source defines module dot notation and shows module.function examples."
+  },
+  {
+    "query_id": "D7-D13",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-548b4cae607ea8603cb6",
+        "source_id": "thinkpython2_pdf",
+        "page": 42,
+        "support": true,
+        "reason": "Source states a function definition creates an object without executing its body until called."
+      },
+      {
+        "chunk_id": "paragraph-fed798b2fc8acde34953",
+        "source_id": "thinkpython2_pdf",
+        "page": 42,
+        "support": true,
+        "reason": "Source states a function definition creates an object without executing its body until called."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source states a function definition creates an object without executing its body until called."
+  },
+  {
+    "query_id": "D7-D14",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-6b3863c3810c03f5e917",
+        "source_id": "thinkpython2_pdf",
+        "page": 52,
+        "support": true,
+        "reason": "Source names bk, lt, rt and states turn angle is in degrees; generated answer omits angle detail."
+      }
+    ],
+    "answer_grade": 1,
+    "answer_reason": "Correctly identifies bk/lt/rt, but does not mention that lt/rt angles are expressed in degrees; expected detail omitted."
+  },
+  {
+    "query_id": "D7-D15",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [
+      true,
+      true
+    ],
+    "citation_checks": [
+      {
+        "chunk_id": "paragraph-a93548c08a7571afd378",
+        "source_id": "thinkpython2_pdf",
+        "page": 54,
+        "support": true,
+        "reason": "Source shows fixed size square generalized into square(t,length) that supports any length."
+      },
+      {
+        "chunk_id": "paragraph-fa463abcb9e00b5eae87",
+        "source_id": "thinkpython2_pdf",
+        "page": 58,
+        "support": true,
+        "reason": "Source shows fixed size square generalized into square(t,length) that supports any length."
+      }
+    ],
+    "answer_grade": 2,
+    "answer_reason": "Source shows fixed size square generalized into square(t,length) that supports any length."
+  },
+  {
+    "query_id": "D7-D16",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [],
+    "citation_checks": [],
+    "abstention_correct": true,
+    "answer_reason": "Out-of-scope topic for the indexed four chapters; correct behavior is to search and abstain."
+  },
+  {
+    "query_id": "D7-D17",
+    "review_type": "AI-assisted source-reading draft",
+    "human_confirmed": false,
+    "citation_support": [],
+    "citation_checks": [],
+    "abstention_correct": true,
+    "answer_reason": "Out-of-scope topic for the indexed four chapters; correct behavior is to search and abstain."
+  }
+]

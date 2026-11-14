@@ -1,0 +1,104 @@
+{
+  "split": "dev",
+  "methods": [
+    "dense",
+    "lexical",
+    "hybrid"
+  ],
+  "hashes": {
+    "dev": "f8b4944b60b36704edf0e143d3409761d9ef49ff385ca7bc19caead4ba848967",
+    "corpus": "4760a9463bd0a99d461d07e4cb946921454e8f4fc6d88d0ba3422e00bf7b3306"
+  },
+  "rows": [
+    {
+      "strategy": "dense",
+      "split": "dev",
+      "query_type": "original_user_question",
+      "processed": 17,
+      "answerable": 15,
+      "unanswerable": 2,
+      "hit1": {
+        "n": 10,
+        "N": 15,
+        "rate": 0.6666666666666666
+      },
+      "evidence_hit3": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.8666666666666667
+      },
+      "context_evidence_rate": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.8666666666666667
+      },
+      "top_k": 3,
+      "context_budget_chars": 3800,
+      "mean_retrieval_ms": 473.381,
+      "median_retrieval_ms": 27.134,
+      "mean_context_chars": 1942.9,
+      "retrieval_service_cost_usd": 0,
+      "note": "Machine exact gold substring/source/page matching only; independent semantic grading pending."
+    },
+    {
+      "strategy": "lexical",
+      "split": "dev",
+      "query_type": "original_user_question",
+      "processed": 17,
+      "answerable": 15,
+      "unanswerable": 2,
+      "hit1": {
+        "n": 12,
+        "N": 15,
+        "rate": 0.8
+      },
+      "evidence_hit3": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.9333333333333333
+      },
+      "context_evidence_rate": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.9333333333333333
+      },
+      "top_k": 3,
+      "context_budget_chars": 3800,
+      "mean_retrieval_ms": 0.42,
+      "median_retrieval_ms": 0.368,
+      "mean_context_chars": 2062,
+      "retrieval_service_cost_usd": 0,
+      "note": "Machine exact gold substring/source/page matching only; independent semantic grading pending."
+    },
+    {
+      "strategy": "hybrid",
+      "split": "dev",
+      "query_type": "original_user_question",
+      "processed": 17,
+      "answerable": 15,
+      "unanswerable": 2,
+      "hit1": {
+        "n": 12,
+        "N": 15,
+        "rate": 0.8
+      },
+      "evidence_hit3": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "context_evidence_rate": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "top_k": 3,
+      "context_budget_chars": 3800,
+      "mean_retrieval_ms": 33.326,
+      "median_retrieval_ms": 32.16,
+      "mean_context_chars": 2047.8,
+      "retrieval_service_cost_usd": 0,
+      "note": "Machine exact gold substring/source/page matching only; independent semantic grading pending."
+    }
+  ]
+}

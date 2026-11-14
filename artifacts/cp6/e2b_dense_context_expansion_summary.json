@@ -1,0 +1,188 @@
+{
+  "experiment": "E2b_dense_context_expansion",
+  "split": "dev",
+  "status": "measured after E2 prompt became provider-blocked",
+  "baseline": {
+    "dense_top_k": 3,
+    "context_budget_chars": 3800,
+    "hit1": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.6666666666666666
+    },
+    "hit3": {
+      "n": 13,
+      "N": 15,
+      "rate": 0.8666666666666667
+    },
+    "context_evidence_rate": {
+      "n": 13,
+      "N": 15,
+      "rate": 0.8666666666666667
+    }
+  },
+  "changed": {
+    "dense_top_k": 5,
+    "context_budget_chars": 5000,
+    "hit1": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.6666666666666666
+    },
+    "hit3": {
+      "n": 13,
+      "N": 15,
+      "rate": 0.8666666666666667
+    },
+    "hit5": {
+      "n": 14,
+      "N": 15,
+      "rate": 0.9333333333333333
+    },
+    "context_evidence_rate": {
+      "n": 14,
+      "N": 15,
+      "rate": 0.9333333333333333
+    }
+  },
+  "per_case": [
+    {
+      "id": "D7-D01",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3279
+    },
+    {
+      "id": "D7-D02",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3649
+    },
+    {
+      "id": "D7-D03",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3117
+    },
+    {
+      "id": "D7-D04",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3479
+    },
+    {
+      "id": "D7-D05",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3930
+    },
+    {
+      "id": "D7-D06",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 2650
+    },
+    {
+      "id": "D7-D07",
+      "baseline_context_hit": false,
+      "expanded_context_hit": true,
+      "baseline_hit3": false,
+      "expanded_hit3": false,
+      "context_chars": 2815
+    },
+    {
+      "id": "D7-D08",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3159
+    },
+    {
+      "id": "D7-D09",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 2970
+    },
+    {
+      "id": "D7-D10",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 2573
+    },
+    {
+      "id": "D7-D11",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3536
+    },
+    {
+      "id": "D7-D12",
+      "baseline_context_hit": false,
+      "expanded_context_hit": false,
+      "baseline_hit3": false,
+      "expanded_hit3": false,
+      "context_chars": 2980
+    },
+    {
+      "id": "D7-D13",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3215
+    },
+    {
+      "id": "D7-D14",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3706
+    },
+    {
+      "id": "D7-D15",
+      "baseline_context_hit": true,
+      "expanded_context_hit": true,
+      "baseline_hit3": true,
+      "expanded_hit3": true,
+      "context_chars": 3439
+    },
+    {
+      "id": "D7-D16",
+      "baseline_context_hit": null,
+      "expanded_context_hit": null,
+      "baseline_hit3": null,
+      "expanded_hit3": null,
+      "context_chars": 3503
+    },
+    {
+      "id": "D7-D17",
+      "baseline_context_hit": null,
+      "expanded_context_hit": null,
+      "baseline_hit3": null,
+      "expanded_hit3": null,
+      "context_chars": 3324
+    }
+  ],
+  "test_evaluated": false,
+  "warning": "This is a dev-only substitute experiment, not a result of the preregistered E2 Gemini prompt; it changes two linked context-size parameters and requires more tokens. Hit@3 remains same-cutoff."
+}

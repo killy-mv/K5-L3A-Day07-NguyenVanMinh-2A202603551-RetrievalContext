@@ -111,13 +111,18 @@ class HybridRRFRetriever:
     strategy = 'hybrid'
 
     def __init__(self, dense: Any, lexical: Any, *,
-                 rrf_k: int = RRF_K, candidate_k: int = DEFAULT_CANDIDATES):
+                 rrf_k: int = RRF_K, candidate_k: int = DEFAULT_CANDIDATES,
+                 dense_weight: float = 1.0, lexical_weight: float = 1.0):
         if type(rrf_k) is not int or rrf_k < 1:
             raise ValueError('rrf_k must be a positive integer')
         if type(candidate_k) is not int or not 1 <= candidate_k <= 100:
             raise ValueError('candidate_k must be 1..100')
         self.dense, self.lexical = dense, lexical
+        if (not math.isfinite(dense_weight) or not math.isfinite(lexical_weight) or
+                dense_weight <= 0 or lexical_weight <= 0):
+            raise ValueError('RRF weights must be positive finite numbers')
         self.rrf_k, self.candidate_k = rrf_k, candidate_k
+        self.dense_weight, self.lexical_weight = dense_weight, lexical_weight
 
     def search(self, query: str, *, filters: dict[str, str] | None = None,
                top_k: int = 3) -> list[dict[str, Any]]:
@@ -149,9 +154,10 @@ class HybridRRFRetriever:
                             raise ValueError(f'Mismatched dense/lexical content for {cid}')
                 rows[cid]['ranks'][label] = rank
                 rows[cid]['component_scores'][label] = chunk['score']
-                rows[cid]['rrf_score'] += 1.0 / (self.rrf_k + rank)
+                weight = self.dense_weight if label == 'dense' else self.lexical_weight
+                rows[cid]['rrf_score'] += weight / (self.rrf_k + rank)
         for row in rows.values():
-            row['score'] = row['rrf_score'] * (self.rrf_k + 1) / 2
+            row['score'] = row['rrf_score'] * (self.rrf_k + 1) / (self.dense_weight + self.lexical_weight)
         ordered = sorted(rows.values(), key=lambda row: (-row['score'], row['id']))
         return ordered[:top_k]
 
@@ -159,7 +165,8 @@ class HybridRRFRetriever:
 def make_retriever(strategy: str, *, url: str | None = None,
                    corpus_path: Path | None = None,
                    dense: Any = None, lexical: Any = None,
-                   candidate_k: int = DEFAULT_CANDIDATES) -> Any:
+                   candidate_k: int = DEFAULT_CANDIDATES,
+                   dense_weight: float = 1.0, lexical_weight: float = 1.0) -> Any:
     """Build only components needed by the selected strategy.
 
     Tests may inject custom retrievers; CLI always uses real CP1 corpus and
@@ -178,4 +185,5 @@ def make_retriever(strategy: str, *, url: str | None = None,
         return dense
     if strategy == 'lexical':
         return lexical
-    return HybridRRFRetriever(dense, lexical, candidate_k=candidate_k)
+    return HybridRRFRetriever(dense, lexical, candidate_k=candidate_k,
+                              dense_weight=dense_weight, lexical_weight=lexical_weight)

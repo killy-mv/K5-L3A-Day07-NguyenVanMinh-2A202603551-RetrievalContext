@@ -47,3 +47,11 @@ PYTHONUTF8=1 py -m unittest discover -s tests -v
 ## Chưa làm ở CP2
 
 Không có kết quả Hit@1, Hit@3, grounding/citation/abstention/latency của agent; các chỉ số đó cần retrieval và agent thật ở các chặng sau. Không gán kết quả từ unit test thành benchmark chất lượng.
+
+## CP2 audit bổ sung — hoàn tất trước CP5 (14/11/2026)
+
+Đã chạy `py scripts/cp2_audit.py` và lưu `artifacts/cp2_audit.json`: xác nhận lock SHA256 corpus/dev/test còn đúng, 160 chunks/35 trang/4 chương/1 source, 15/15 gold dev khớp nguyên văn vào source/page/chunk thật, 2 câu dev thiếu evidence được rà theo phạm vi corpus. **Không gửi gold vào Agent và không chạy retrieval trên test.**
+
+Evidence ngắn hoặc quote bị chia chunk phải được phân biệt với chất lượng ngữ nghĩa của đáp án: D7-D03 có đoạn nguyên văn chứng minh `**` và source chunk cũng giải thích `^` là XOR; D7-D10 có quote rút gọn nhằm nằm trọn một chunk; D7-D13 về function definition phải đọc cả nội dung chunk, không chỉ từ khóa trùng. Kiểm toán nguồn/chuỗi là tự động, các assertion này chưa được thay bằng đánh giá độc lập con người.
+
+Các file benchmark và checksum **không bị sửa**, vì thay đổi gold khi đã bắt đầu dùng dev/test sẽ khiến đối chiếu thí nghiệm kém tin cậy. Những nghi vấn hay cách chấm bảo thủ được đưa vào báo cáo audit và nhãn CP5, thay vì sửa âm thầm.

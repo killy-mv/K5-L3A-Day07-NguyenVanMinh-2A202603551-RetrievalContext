@@ -1,0 +1,280 @@
+{
+  "stage": "CP2_AUDIT",
+  "benchmark_counts": {
+    "dev": {
+      "answerable": 15,
+      "unanswerable": 2,
+      "total": 17
+    },
+    "test": {
+      "answerable": 5,
+      "unanswerable": 2,
+      "total": 7
+    },
+    "total": 24
+  },
+  "corpus": {
+    "chunks": 160,
+    "pdf_pages": 35,
+    "source_ids": [
+      "thinkpython2_pdf"
+    ],
+    "chapters": [
+      "chapter_1",
+      "chapter_2",
+      "chapter_3",
+      "chapter_4"
+    ]
+  },
+  "split_lock_verified": true,
+  "sha256_canonical": {
+    "corpus": "4760a9463bd0a99d461d07e4cb946921454e8f4fc6d88d0ba3422e00bf7b3306",
+    "dev": "f8b4944b60b36704edf0e143d3409761d9ef49ff385ca7bc19caead4ba848967",
+    "test": "598a74450f9fd24cfa68642c58837fce12e4b09ced6c33b1bbe1904bbd02c964"
+  },
+  "dev_gold_exact_alignment": 15,
+  "dev_unanswerable_count": 2,
+  "test_queries_evaluated": 0,
+  "dev_case_audit": [
+    {
+      "id": "D7-D01",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-ffbc2eae5676dc4386dc",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 23,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 82
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D02",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-abad02191d92918ebe99",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 24,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 82
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D03",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-ce94d0642d1e4cbaa934",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 25,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 87
+        }
+      ],
+      "semantic_review": "source-aligned; potential multi-claim/chunk-boundary evidence. Review full cited context before awarding grade 2."
+    },
+    {
+      "id": "D7-D04",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-6a63e5c250ce75fa0a6e",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 26,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 176
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D05",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-af1cb23dfa68d00d3f31",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 27,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 67
+        }
+      ],
+      "semantic_review": "source-aligned; potential multi-claim/chunk-boundary evidence. Review full cited context before awarding grade 2."
+    },
+    {
+      "id": "D7-D06",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-2d2ef0b895e0e0db9ee6",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 31,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 44
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D07",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-9963adce72df741a70f8",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 32,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 165
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D08",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-09593acb3b4cc5786177",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 33,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 183
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D09",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-3a983b172caa41487bf4",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 34,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 103
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D10",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-8259af61514e076515c4",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 35,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 32
+        }
+      ],
+      "semantic_review": "source-aligned; potential multi-claim/chunk-boundary evidence. Review full cited context before awarding grade 2."
+    },
+    {
+      "id": "D7-D11",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-86d330119286c47b778c",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 39,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 107
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D12",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-0bda5cb2cad9c2474b31",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 40,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 184
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D13",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-548b4cae607ea8603cb6",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 42,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 311
+        }
+      ],
+      "semantic_review": "source-aligned; potential multi-claim/chunk-boundary evidence. Review full cited context before awarding grade 2."
+    },
+    {
+      "id": "D7-D14",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-6b3863c3810c03f5e917",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 52,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 142
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D15",
+      "answerable": true,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "evidence": [
+        {
+          "chunk_id": "paragraph-a93548c08a7571afd378",
+          "source_id": "thinkpython2_pdf",
+          "pdf_page": 54,
+          "evidence_exact_in_chunk": true,
+          "evidence_chars": 196
+        }
+      ],
+      "semantic_review": "source-aligned; answer-support must be checked from passage when grading"
+    },
+    {
+      "id": "D7-D16",
+      "answerable": false,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "absence_reason": "Chapters 1–4 in the indexed corpus do not teach list-comprehension syntax or its conditional evaluation.",
+      "absence_review": "machine term scan + scoped chapter review, not formal semantic proof"
+    },
+    {
+      "id": "D7-D17",
+      "answerable": false,
+      "source_scope": "indexed Think Python chapters 1-4",
+      "absence_reason": "The indexed chapters discuss basic values, functions, and turtle graphics, not class definition or inheritance syntax.",
+      "absence_review": "machine term scan + scoped chapter review, not formal semantic proof"
+    }
+  ],
+  "limitation": "Exact evidence alignment is machine-verified, not an independent human semantic review. Four absence claims require review against source scope."
+}
