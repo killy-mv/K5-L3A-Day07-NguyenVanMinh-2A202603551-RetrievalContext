@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-11-14T07:56:34.372915+00:00",
+  "policy": "Tune only on dev; never expose test gold to retrieval/agent. Day 6 test excluded.",
+  "counts": {
+    "dev": {
+      "answerable": 15,
+      "unanswerable": 2,
+      "total": 17
+    },
+    "test": {
+      "answerable": 5,
+      "unanswerable": 2,
+      "total": 7
+    },
+    "total": 24
+  },
+  "sha256_canonical": {
+    "corpus": "4760a9463bd0a99d461d07e4cb946921454e8f4fc6d88d0ba3422e00bf7b3306",
+    "dev": "f8b4944b60b36704edf0e143d3409761d9ef49ff385ca7bc19caead4ba848967",
+    "test": "598a74450f9fd24cfa68642c58837fce12e4b09ced6c33b1bbe1904bbd02c964"
+  },
+  "source_corpus": "Day 6 B: 160 chunks, Think Python chapters 1–4",
+  "test_evaluated": false
+}

@@ -31,3 +31,11 @@ Index một tài liệu thực tế từ **100 trang** có bảng, ảnh và bi�
 ![Các bước thử nghiệm trên dev và đánh giá trên test](assets/experiment-loop.svg)
 
 Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/individual/MSSV_HoTen.md). Thời gian ở [checkpoints](CHECKPOINTS.md) là gợi ý, có thể điều chỉnh theo lớp và phạm vi thử nghiệm.
+
+## Bài làm cá nhân — CP1
+
+Đã kết nối dữ liệu/index Day 6 và chạy xác thực thực tế, xem [docs/CP1_SETUP.md](docs/CP1_SETUP.md). Script `scripts/cp1_prepare.py` kiểm tra checksum nguồn, khớp 160 chunks với pgvector và thử hai truy vấn ngoài benchmark; không ghi lại index. Tiếp theo: CP2 benchmark dev/test mới.
+
+## Bài làm cá nhân — CP2
+
+Đã tạo và khóa [benchmark CP2](docs/CP2_BENCHMARK.md): 17 câu dev (15 có evidence, 2 thiếu evidence) và 7 câu test mới (5 có evidence, 2 thiếu evidence), tổng 24 câu. Các gold câu có evidence đều đối chiếu được với chunk nguồn/trang. Chưa chạy test benchmark. Kiểm chứng: `py scripts/cp2_validate.py`.

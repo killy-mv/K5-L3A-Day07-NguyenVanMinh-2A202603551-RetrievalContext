@@ -1,0 +1,361 @@
+[
+  {
+    "id": "D7-D01",
+    "split": "dev",
+    "question_type": "direct",
+    "question": "According to Chapter 1, what is a program?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "A sequence of instructions specifying how to perform a computation.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 23,
+        "evidence": "Aprogramis a sequence of instructions that specifies how to perform a computation.",
+        "chunk_id": "paragraph-ffbc2eae5676dc4386dc"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q01",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    },
+    "filter": {
+      "chapter": "chapter_1"
+    },
+    "filter_origin": "explicit chapter scope in question"
+  },
+  {
+    "id": "D7-D02",
+    "split": "dev",
+    "question_type": "paraphrase",
+    "question": "What environment does the author recommend for beginners to start running Python?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Run Python in a web browser first, to avoid learning system administration and programming simultaneously.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 24,
+        "evidence": "To avoid that problem, I recommend that you start out running Python in a browser.",
+        "chunk_id": "paragraph-abad02191d92918ebe99"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q02",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D03",
+    "split": "dev",
+    "question_type": "direct",
+    "question": "Which Python operator performs exponentiation rather than bitwise XOR?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "** is exponentiation; ^ is bitwise XOR.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 25,
+        "evidence": "Finally, the operator**performs exponentiation; that is, it raises a number to a power:",
+        "chunk_id": "paragraph-ce94d0642d1e4cbaa934"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q03",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D04",
+    "split": "dev",
+    "question_type": "direct",
+    "question": "In the book, what are the types of the example values 2 and 42.0?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "2 is an integer and 42.0 is a floating-point number.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 26,
+        "evidence": "These values belong to differenttypes:2is aninteger,42.0is afloating-point number, and\n'Hello, World!'is astring, so-called because the letters it contains are strung together.",
+        "chunk_id": "paragraph-6a63e5c250ce75fa0a6e"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q04",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D05",
+    "split": "dev",
+    "question_type": "paraphrase",
+    "question": "What two aspects are governed by formal-language syntax rules?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Rules govern tokens (legal basic elements) and the structure/combination of tokens.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 27,
+        "evidence": "Syntax rules come in two flavors, pertaining totokensand structure.",
+        "chunk_id": "paragraph-af1cb23dfa68d00d3f31"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q05",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D06",
+    "split": "dev",
+    "question_type": "direct",
+    "question": "How does Chapter 2 define a variable?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "A variable is a name that refers to a value.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 31,
+        "evidence": "A variable is a name that refers to a value.",
+        "chunk_id": "paragraph-2d2ef0b895e0e0db9ee6"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q06",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D07",
+    "split": "dev",
+    "question_type": "conditional",
+    "question": "In Chapter 2, why is class not permitted as a variable name?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "class is a reserved Python keyword; keywords are used by the interpreter and cannot be variable names.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 32,
+        "evidence": "It turns out thatclassis one of Python’skeywords. The interpreter uses keywords to\nrecognize the structure of the program, and they cannot be used as variable names.",
+        "chunk_id": "paragraph-9963adce72df741a70f8"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q07",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    },
+    "filter": {
+      "chapter": "chapter_2"
+    },
+    "filter_origin": "explicit chapter scope in question"
+  },
+  {
+    "id": "D7-D08",
+    "split": "dev",
+    "question_type": "conditional",
+    "question": "Why does a bare expression produce no visible output in Python script mode, and what should be used instead?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "A bare expression is evaluated without displaying its result; use print to display it.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 33,
+        "evidence": "In script\nmode an expression, all by itself, has no visible effect. Python evaluates the expression, but\nit doesn’t display the result. To display the result, you need aprintstatement",
+        "chunk_id": "paragraph-09593acb3b4cc5786177"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q08",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D09",
+    "split": "dev",
+    "question_type": "direct",
+    "question": "What is string concatenation using the + operator?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "It joins strings end-to-end.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 34,
+        "evidence": "The+operator performsstring concatenation, which means it joins the strings by linking\nthem end-to-end.",
+        "chunk_id": "paragraph-3a983b172caa41487bf4"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q09",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D10",
+    "split": "dev",
+    "question_type": "paraphrase",
+    "question": "Should a useful code comment prioritize explaining what the code does or why it does it?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "It is more useful to explain why, especially for non-obvious behavior.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 35,
+        "evidence": "it is more useful to\nexplainwhy.",
+        "chunk_id": "paragraph-8259af61514e076515c4"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q10",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    },
+    "evidence_alignment_note": "Original Day 6 quote crosses chunk boundary; gold shortened to supporting source text."
+  },
+  {
+    "id": "D7-D11",
+    "split": "dev",
+    "question_type": "conditional",
+    "question": "Does int() round floating-point inputs or truncate their fractional part?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "It truncates/removes the fractional part rather than rounding.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 39,
+        "evidence": "intcan convert floating-point values to integers, but it doesn’t round off; it chops off the\nfraction part:",
+        "chunk_id": "paragraph-86d330119286c47b778c"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q11",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D12",
+    "split": "dev",
+    "question_type": "direct",
+    "question": "In Chapter 3, how are functions in a module accessed using dot notation?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Use the module name and the function name separated by a dot.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 40,
+        "evidence": "To access\none of the functions, you have to specify the name of the module and the name of the\nfunction, separated by a dot (also known as a period). This format is calleddot notation.",
+        "chunk_id": "paragraph-0bda5cb2cad9c2474b31"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q12",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    },
+    "filter": {
+      "chapter": "chapter_3"
+    },
+    "filter_origin": "explicit chapter scope in question"
+  },
+  {
+    "id": "D7-D13",
+    "split": "dev",
+    "question_type": "conditional",
+    "question": "Does defining a function immediately run its body or print output?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "No. Defining creates a function object; the statements in its body run only when called, and a definition produces no output.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 42,
+        "evidence": "This program contains two function definitions:print_lyricsandrepeat_lyrics. Func-\ntion definitions get executed just like other statements, but the effect is to create function\nobjects. The statements inside the function do not run until the function is called, and the\nfunction definition generates no output.",
+        "chunk_id": "paragraph-548b4cae607ea8603cb6"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q13",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D14",
+    "split": "dev",
+    "question_type": "direct",
+    "question": "In Chapter 4, what Turtle methods move backward and turn left or right?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "bk moves backward, lt turns left, and rt turns right. Turn arguments are angles in degrees.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 52,
+        "evidence": "Other methods you can call on a Turtle arebkto move backward,ltfor left turn, andrt\nright turn. The argument forltandrtis an angle in degrees.",
+        "chunk_id": "paragraph-6b3863c3810c03f5e917"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q14",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    },
+    "filter": {
+      "chapter": "chapter_4"
+    },
+    "filter_origin": "explicit chapter scope in question"
+  },
+  {
+    "id": "D7-D15",
+    "split": "dev",
+    "question_type": "paraphrase",
+    "question": "Why does adding a length parameter to square() count as generalization?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "The parameter replaces a fixed square size and allows the function to draw squares of any size.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 54,
+        "evidence": "Adding a parameter to a function is calledgeneralizationbecause it makes the function\nmore general: in the previous version, the square is always the same size; in this version it\ncan be any size.",
+        "chunk_id": "paragraph-a93548c08a7571afd378"
+      }
+    ],
+    "provenance": {
+      "origin": "Day 6 dev Q15",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-D16",
+    "split": "dev",
+    "question": "According to the indexed chapters, how does Python evaluate a list comprehension with an if clause?",
+    "absence_reason": "Chapters 1–4 in the indexed corpus do not teach list-comprehension syntax or its conditional evaluation.",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_check_scope": "Day 6 indexed corpus: 160 chunks, four chapters",
+    "absence_check_terms": [
+      "list comprehension",
+      "comprehensions"
+    ]
+  },
+  {
+    "id": "D7-D17",
+    "split": "dev",
+    "question": "What syntax does the book give for declaring a Python class with an inherited base class?",
+    "absence_reason": "The indexed chapters discuss basic values, functions, and turtle graphics, not class definition or inheritance syntax.",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_check_scope": "Day 6 indexed corpus: 160 chunks, four chapters",
+    "absence_check_terms": [
+      "class definition",
+      "inheritance",
+      "subclass"
+    ]
+  }
+]

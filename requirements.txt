@@ -1,0 +1,4 @@
+# Reuse the Day 6 Python virtualenv and pinned embedding/index versions.
+psycopg[binary]>=3.3,<4
+python-dotenv>=1,<2
+sentence-transformers==6.3.0

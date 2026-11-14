@@ -9,3 +9,9 @@ __pycache__/
 # Local datasets and generated output; share permitted artifacts deliberately
 starter/data/
 starter/results/
+
+# CP1 generated corpus and result snapshots
+/data/chunks.json
+/data/benchmark_dev.json
+/data/benchmark_test.json
+/results/

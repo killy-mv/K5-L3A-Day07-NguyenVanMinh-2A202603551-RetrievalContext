@@ -1,0 +1,133 @@
+[
+  {
+    "id": "D7-T01",
+    "split": "test",
+    "question_type": "explanation",
+    "question": "When a function is called, how does the flow of execution return to where it left off?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Execution jumps into the function body, executes it, and then returns to the caller.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 43,
+        "evidence": "A function call is like a detour in the flow of execution. Instead of going to the next state-\nment, the flow jumps to the body of the function, runs the statements there, and then comes\nback to pick up where it left off.",
+        "chunk_id": "paragraph-ceef3493bd5a59d82e5a"
+      }
+    ],
+    "provenance": {
+      "origin": "new Lab 7 held-out test",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-T02",
+    "split": "test",
+    "question_type": "scope",
+    "question": "What happens to a local variable created inside a function after that function finishes?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "It exists only within the function and is destroyed when the function terminates.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 44,
+        "evidence": "3.8 Variables and parameters are local\n\nWhen you create a variable inside a function, it islocal, which means that it only exists\ninside the function. For example:\ndef cat_twice(part1, part2):\n     cat = part1 + part2\n     print_twice(cat)\nThis function takes two arguments, concatenates them, and prints the result twice. Here is\nan example that uses it:\n>>> line1 ='Bing tiddle'\n>>> line2 ='tiddle bang.'\n>>> cat_twice(line1, line2)\nBing tiddle tiddle bang.\nBing tiddle tiddle bang.\nWhencat_twiceterminates, the variablecatis destroyed. If we try to print it, we get an\nexception:",
+        "chunk_id": "paragraph-f8a4a8ab7a5624922901"
+      }
+    ],
+    "provenance": {
+      "origin": "new Lab 7 held-out test",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-T03",
+    "split": "test",
+    "question_type": "definition",
+    "question": "In a stack diagram, what does each frame represent?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "A function, with its name and the parameters and variables belonging to it.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 45,
+        "evidence": "3.9 Stack diagrams\n\nTo keep track of which variables can be used where, it is sometimes useful to draw astack\ndiagram. Like state diagrams, stack diagrams show the value of each variable, but they\nalso show the function each variable belongs to.\n\nEach function is represented by aframe. A frame is a box with the name of a function\nbeside it and the parameters and variables of the function inside it. The stack diagram for\nthe previous example is shown in Figure 3.1.",
+        "chunk_id": "paragraph-6cef8fdd9c8548f66e18"
+      }
+    ],
+    "provenance": {
+      "origin": "new Lab 7 held-out test",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-T04",
+    "split": "test",
+    "question_type": "comparison",
+    "question": "When designing circle(t, r), why should the radius be part of the interface but not necessarily the segment count n?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Radius specifies the circle requested by the caller, whereas n is an internal rendering detail.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 55,
+        "evidence": "In this example,rbelongs in the interface because it specifies the circle to be drawn.nis\nless appropriate because it pertains to the details ofhowthe circle should be rendered.\nRather than clutter up the interface, it is better to choose an appropriate value ofndepend-\ning oncircumference:",
+        "chunk_id": "paragraph-7138c016653f20355e8e"
+      }
+    ],
+    "provenance": {
+      "origin": "new Lab 7 held-out test",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-T05",
+    "split": "test",
+    "question_type": "sequence",
+    "question": "What are the initial three steps of the encapsulation-and-generalization development plan?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Start with a small program without functions; encapsulate a working piece in a named function; generalize it by adding suitable parameters.",
+    "gold": [
+      {
+        "source_id": "thinkpython2_pdf",
+        "page": 57,
+        "evidence": "4.8 A development plan\n\nAdevelopment planis a process for writing programs. The process we used in this case\nstudy is “encapsulation and generalization”. The steps of this process are:\n\n1. Start by writing a small program with no function definitions.\n\n2. Once you get the program working, identify a coherent piece of it, encapsulate the\n       piece in a function and give it a name.\n\n3. Generalize the function by adding appropriate parameters.\n\n4. Repeat steps 1–3 until you have a set of working functions. Copy and paste working\n       code to avoid retyping (and re-debugging).",
+        "chunk_id": "paragraph-10fd1b2737eaf51126cb"
+      }
+    ],
+    "provenance": {
+      "origin": "new Lab 7 held-out test",
+      "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+    }
+  },
+  {
+    "id": "D7-T06",
+    "split": "test",
+    "question": "According to the indexed chapters, what is the syntax for declaring an asynchronous coroutine with async def?",
+    "absence_reason": "Asynchronous function declarations and async/await are outside the indexed chapters 1–4.",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_check_scope": "Day 6 indexed corpus: 160 chunks, four chapters",
+    "absence_check_terms": [
+      "async def",
+      "await "
+    ]
+  },
+  {
+    "id": "D7-T07",
+    "split": "test",
+    "question": "How does the yield from statement delegate iteration to a subgenerator according to the indexed book chapters?",
+    "absence_reason": "Generators and the yield from statement are not covered by the indexed first four chapters.",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_check_scope": "Day 6 indexed corpus: 160 chunks, four chapters",
+    "absence_check_terms": [
+      "yield from",
+      "subgenerator"
+    ]
+  }
+]
